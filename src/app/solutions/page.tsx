@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const featuredSolutions = [
   {
     title: "AWS Infrastructure for Healthcare Data Platform",
@@ -130,7 +132,7 @@ export default function SolutionsPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredSolutions.map((sol) => (
             <div key={sol.title} className="bg-white rounded-xl shadow p-8 flex flex-col items-center hover:shadow-lg transition">
-              <img src={sol.icon} alt={sol.title} className="w-14 h-14 mb-4" />
+              <Image src={sol.icon} alt={sol.title} width={56} height={56} className="w-14 h-14 mb-4" />
               <h3 className="text-xl font-bold text-blue-700 mb-2 text-center">{sol.title}</h3>
               <p className="text-gray-600 text-center">{sol.description}</p>
             </div>
@@ -141,7 +143,7 @@ export default function SolutionsPage() {
       <section className="container mx-auto py-8 px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {industries.map((industry) => (
           <div key={industry.name} className="bg-white rounded-xl shadow p-8 flex flex-col items-center hover:shadow-lg transition">
-            <img src={industry.icon} alt={industry.name} className="w-16 h-16 mb-4" />
+            <Image src={industry.icon} alt={industry.name} width={64} height={64} className="w-16 h-16 mb-4" />
             <h2 className="text-2xl font-bold text-blue-700 mb-2">{industry.name}</h2>
             <div className="w-full mb-4">
               <h3 className="text-lg font-semibold text-blue-600 mb-1">DevOps Solutions</h3>

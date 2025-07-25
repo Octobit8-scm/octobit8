@@ -1,37 +1,6 @@
 "use client";
 
-const cloudSolutions = [
-  {
-    title: "AWS Infrastructure for Healthcare Data Platform",
-    icon: "/icons/aws.svg",
-    description: "Design and deploy HIPAA-compliant AWS infrastructure for secure, scalable healthcare data platforms."
-  },
-  {
-    title: "AWS Migration",
-    icon: "/icons/aws-migration.svg",
-    description: "Plan and execute seamless migration of workloads to AWS, ensuring performance and cost optimization."
-  },
-  {
-    title: "Cloud Security",
-    icon: "/icons/cloud-security.svg",
-    description: "Implement advanced cloud security controls, monitoring, and compliance for your cloud environments."
-  },
-  {
-    title: "Database Migration",
-    icon: "/icons/database.svg",
-    description: "Seamlessly migrate databases to the cloud or between platforms with zero downtime and data integrity."
-  },
-  {
-    title: "Cloud-Native Applications",
-    icon: "/icons/cloud-native.svg",
-    description: "Build and run scalable, resilient applications using containers, microservices, and serverless architectures."
-  },
-  {
-    title: "Cloud Monitoring & Optimization",
-    icon: "/icons/monitoring.svg",
-    description: "Gain real-time visibility and optimize performance with advanced cloud monitoring and analytics."
-  }
-];
+import Image from "next/image";
 
 export default function CloudPage() {
   return (
@@ -60,7 +29,7 @@ export default function CloudPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-10">
             <div className="flex items-center gap-3 mb-2">
-              <img src="/icons/cloud.svg" alt="Cloud" className="w-10 h-10" />
+              <Image src="/icons/cloud.svg" alt="Cloud" width={40} height={40} />
               <h2 className="text-3xl font-bold text-blue-800 text-center">Core Cloud Services</h2>
             </div>
             <p className="text-lg text-gray-700 text-center max-w-2xl">Octobit8 delivers a full spectrum of cloud services to help you modernize, secure, and scale your business.</p>
@@ -69,7 +38,7 @@ export default function CloudPage() {
             {/* Service 1: Cloud Infrastructure & Migration */}
             <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <img src="/icons/aws-migration.svg" alt="Cloud Migration" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                <Image src="/icons/aws-migration.svg" alt="Cloud Migration" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold text-lg tracking-wide">Cloud Migration</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -105,7 +74,7 @@ export default function CloudPage() {
             {/* Service 2: Cloud Security & Compliance */}
             <div className="relative group flex flex-col items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl border-r-8 border-indigo-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-indigo-600 to-indigo-400 p-8 md:p-10">
-                <img src="/icons/cloud-security.svg" alt="Cloud Security" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                <Image src="/icons/cloud-security.svg" alt="Cloud Security" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold text-lg tracking-wide">Cloud Security</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -141,7 +110,7 @@ export default function CloudPage() {
             {/* Service 3: Cloud-Native Application Development */}
             <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <img src="/icons/cloud-native.svg" alt="Cloud-Native Apps" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                <Image src="/icons/cloud-native.svg" alt="Cloud-Native Apps" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold text-lg tracking-wide">Cloud-Native Apps</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -177,7 +146,7 @@ export default function CloudPage() {
             {/* Service 4: Cloud Data & Analytics */}
             <div className="relative group flex flex-col items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl border-r-8 border-cyan-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-cyan-600 to-cyan-400 p-8 md:p-10">
-                <img src="/icons/data-lake.svg" alt="Cloud Data & Analytics" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                <Image src="/icons/data-lake.svg" alt="Cloud Data & Analytics" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold text-lg tracking-wide">Cloud Data</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -213,7 +182,7 @@ export default function CloudPage() {
             {/* Service 5: Cloud Monitoring & Optimization */}
             <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                <img src="/icons/monitoring.svg" alt="Cloud Monitoring" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                <Image src="/icons/monitoring.svg" alt="Cloud Monitoring" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold text-lg tracking-wide">Monitoring</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -249,7 +218,7 @@ export default function CloudPage() {
             {/* Service 6: Cloud AI & ML Services */}
             <div className="relative group flex flex-col items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl border-r-8 border-purple-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-purple-600 to-purple-400 p-8 md:p-10">
-                <img src="/icons/ai.svg" alt="Cloud AI & ML" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                <Image src="/icons/ai.svg" alt="Cloud AI & ML" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold text-lg tracking-wide">Cloud AI/ML</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -291,7 +260,7 @@ export default function CloudPage() {
       <section className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-center mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <img src="/icons/cloud.svg" alt="Cloud" className="w-10 h-10" />
+            <Image src="/icons/cloud.svg" alt="Cloud" width={40} height={40} />
             <h2 className="text-3xl font-bold text-blue-800 text-center">Cloud Use Cases</h2>
           </div>
           <p className="text-lg text-gray-700 text-center max-w-2xl">Explore real-world cloud solutions delivered by Octobit8 for modern businesses.</p>
@@ -299,7 +268,7 @@ export default function CloudPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-8">
           {/* Use Case 1 */}
           <div className="bg-white rounded-2xl shadow-xl border-l-8 border-blue-400 p-8 flex flex-col hover:shadow-2xl transition group">
-            <img src="/icons/notification.svg" alt="Centralized Alarm and Notification" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/notification.svg" alt="Centralized Alarm and Notification" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-blue-700 mb-2">Architecture Design and Implementation of Centralized Alarm and Notification System</h3>
             <p className="text-gray-700 mb-2"><b>Use Case:</b> A website or application requires a centralized system to deliver real-time alerts (e.g., system health, user notifications) across multiple services and user interfaces.</p>
             <p className="text-gray-700 mb-2"><b>Solution:</b> Octobit8 designs a cloud-based centralized alarm and notification system for seamless communication.</p>
@@ -319,7 +288,7 @@ export default function CloudPage() {
           </div>
           {/* Use Case 2 */}
           <div className="bg-white rounded-2xl shadow-xl border-l-8 border-green-400 p-8 flex flex-col hover:shadow-2xl transition group">
-            <img src="/icons/iot.svg" alt="EV Charging Station Management" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/iot.svg" alt="EV Charging Station Management" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-green-700 mb-2">Infrastructure Development for Electric Vehicle Charging Station Management Software</h3>
             <p className="text-gray-700 mb-2"><b>Use Case:</b> A platform managing EV charging stations needs robust infrastructure to monitor, control, and display real-time station data.</p>
             <p className="text-gray-700 mb-2"><b>Solution:</b> Octobit8 builds a cloud-based infrastructure to support EV charging station management.</p>
@@ -339,7 +308,7 @@ export default function CloudPage() {
           </div>
           {/* Use Case 3 */}
           <div className="bg-white rounded-2xl shadow-xl border-l-8 border-purple-400 p-8 flex flex-col hover:shadow-2xl transition group">
-            <img src="/icons/ai.svg" alt="AI-ML Email Responder" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/ai.svg" alt="AI-ML Email Responder" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-purple-700 mb-2">Architecture Design and Implementation of AI-ML Based Intelligent Email Responder</h3>
             <p className="text-gray-700 mb-2"><b>Use Case:</b> A customer support website needs an AI-driven email responder to handle inquiries with personalized, context-aware replies.</p>
             <p className="text-gray-700 mb-2"><b>Solution:</b> Octobit8 develops an AI/ML-based intelligent email responder integrated with the website’s support system.</p>
@@ -359,7 +328,7 @@ export default function CloudPage() {
           </div>
           {/* Use Case 4 */}
           <div className="bg-white rounded-2xl shadow-xl border-l-8 border-cyan-400 p-8 flex flex-col hover:shadow-2xl transition group">
-            <img src="/icons/api.svg" alt="Multi-Region API Gateway" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/api.svg" alt="Multi-Region API Gateway" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-cyan-700 mb-2">Multi-Region API Gateway with CloudFront</h3>
             <p className="text-gray-700 mb-2"><b>Use Case:</b> A global e-commerce website requires a low-latency, secure API to manage content and transactions across multiple regions.</p>
             <p className="text-gray-700 mb-2"><b>Solution:</b> Octobit8 implements a multi-region API gateway with Amazon CloudFront for optimized content delivery.</p>
@@ -379,7 +348,7 @@ export default function CloudPage() {
           </div>
           {/* Use Case 5 */}
           <div className="bg-white rounded-2xl shadow-xl border-l-8 border-orange-400 p-8 flex flex-col hover:shadow-2xl transition group">
-            <img src="/icons/data-lake.svg" alt="Transportation and Logistics Data Lake" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/data-lake.svg" alt="Transportation and Logistics Data Lake" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-orange-700 mb-2">Transportation and Logistics Data Lake</h3>
             <p className="text-gray-700 mb-2"><b>Use Case:</b> A logistics company’s website needs to display insights from transportation data to customers and stakeholders.</p>
             <p className="text-gray-700 mb-2"><b>Solution:</b> Octobit8 builds a cloud-based data lake to centralize and analyze transportation data.</p>
@@ -399,7 +368,7 @@ export default function CloudPage() {
           </div>
           {/* Use Case 6 */}
           <div className="bg-white rounded-2xl shadow-xl border-l-8 border-pink-400 p-8 flex flex-col hover:shadow-2xl transition group">
-            <img src="/icons/analytics.svg" alt="Real-Time Player Casino Analytics" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/analytics.svg" alt="Real-Time Player Casino Analytics" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-pink-700 mb-2">Real-Time Player Casino Analytics</h3>
             <p className="text-gray-700 mb-2"><b>Use Case:</b> An online casino website requires real-time analytics to track player behavior and display personalized promotions.</p>
             <p className="text-gray-700 mb-2"><b>Solution:</b> Octobit8 develops a cloud-based real-time analytics system for player data.</p>
@@ -419,7 +388,7 @@ export default function CloudPage() {
           </div>
           {/* Use Case 7 */}
           <div className="bg-white rounded-2xl shadow-xl border-l-8 border-yellow-400 p-8 flex flex-col hover:shadow-2xl transition group">
-            <img src="/icons/pricing.svg" alt="Serverless Strategy Infrastructure for Dynamic Pricing" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/pricing.svg" alt="Serverless Strategy Infrastructure for Dynamic Pricing" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-xl font-bold text-yellow-700 mb-2">Serverless Strategy Infrastructure for Dynamic Pricing</h3>
             <p className="text-gray-700 mb-2"><b>Use Case:</b> An e-commerce website needs a dynamic pricing system to adjust product prices based on demand, competition, and user behavior.</p>
             <p className="text-gray-700 mb-2"><b>Solution:</b> Octobit8 implements a serverless infrastructure for real-time dynamic pricing.</p>
@@ -446,39 +415,39 @@ export default function CloudPage() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex flex-col items-center mb-10">
             <div className="flex items-center gap-3 mb-2">
-              <img src="/icons/handshake.svg" alt="Benefits" className="w-10 h-10" />
+              <Image src="/icons/handshake.svg" alt="Benefits" width={40} height={40} />
               <h2 className="text-3xl font-bold text-blue-800 text-center">Benefits of Our Cloud Solutions</h2>
             </div>
             <p className="text-lg text-gray-700 text-center max-w-2xl">Experience the advantages of cloud transformation with Octobit8 as your partner.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/speed.svg" alt="Agility & Speed" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/speed.svg" alt="Agility & Speed" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Agility & Speed</h3>
               <p className="text-gray-600 text-sm">Rapidly deploy, scale, and update applications to meet changing business needs.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/cost.svg" alt="Cost Efficiency" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/cost.svg" alt="Cost Efficiency" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Cost Efficiency</h3>
               <p className="text-gray-600 text-sm">Optimize cloud spend with pay-as-you-go models and automated resource management.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/security.svg" alt="Enterprise Security" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/security.svg" alt="Enterprise Security" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Enterprise Security</h3>
               <p className="text-gray-600 text-sm">Protect your data and workloads with advanced cloud-native security controls.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/scale.svg" alt="Scalability" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/scale.svg" alt="Scalability" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Scalability</h3>
               <p className="text-gray-600 text-sm">Effortlessly scale resources up or down to match demand and growth.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/innovation.svg" alt="Innovation" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/innovation.svg" alt="Innovation" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Innovation</h3>
               <p className="text-gray-600 text-sm">Leverage the latest cloud technologies to drive business innovation and differentiation.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/support.svg" alt="Expert Support" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/support.svg" alt="Expert Support" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Expert Support</h3>
               <p className="text-gray-600 text-sm">Access certified cloud experts for guidance, troubleshooting, and optimization.</p>
             </div>
@@ -492,39 +461,39 @@ export default function CloudPage() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex flex-col items-center mb-10">
             <div className="flex items-center gap-3 mb-2">
-              <img src="/icons/trophy.svg" alt="Why Choose Octobit8" className="w-10 h-10" />
+              <Image src="/icons/trophy.svg" alt="Why Choose Octobit8" width={40} height={40} />
               <h2 className="text-3xl font-bold text-blue-800 text-center">Why Choose Octobit8 for Cloud</h2>
             </div>
             <p className="text-lg text-gray-700 text-center max-w-2xl">Our expertise, innovation, and commitment to your success make us the ideal cloud partner.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/customize.svg" alt="Tailored Cloud Strategies" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/customize.svg" alt="Tailored Cloud Strategies" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Tailored Cloud Strategies</h3>
               <p className="text-gray-600 text-sm">Solutions designed for your unique business needs, industry, and growth goals.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/expert.svg" alt="Certified Cloud Experts" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/expert.svg" alt="Certified Cloud Experts" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Certified Cloud Experts</h3>
               <p className="text-gray-600 text-sm">A team of AWS, Azure, and GCP certified professionals with deep technical know-how.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/support.svg" alt="24/7 Support" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/support.svg" alt="24/7 Support" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">24/7 Support</h3>
               <p className="text-gray-600 text-sm">Always-on support to keep your cloud workloads running smoothly and securely.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/proven.svg" alt="Proven Cloud Success" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/proven.svg" alt="Proven Cloud Success" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Proven Cloud Success</h3>
               <p className="text-gray-600 text-sm">Hundreds of successful cloud projects delivered for clients worldwide.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/innovation.svg" alt="Innovation Focused" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/innovation.svg" alt="Innovation Focused" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Innovation Focused</h3>
               <p className="text-gray-600 text-sm">We leverage the latest cloud technologies to drive efficiency and innovation.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-              <img src="/icons/partnership.svg" alt="Long-Term Partnership" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <Image src="/icons/partnership.svg" alt="Long-Term Partnership" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-semibold text-blue-700 mb-1">Long-Term Partnership</h3>
               <p className="text-gray-600 text-sm">We build lasting relationships, supporting your growth at every stage of your cloud journey.</p>
             </div>
@@ -536,7 +505,7 @@ export default function CloudPage() {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 flex justify-center items-center">
         <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white rounded-2xl shadow-xl p-10 max-w-xl w-full flex flex-col items-center">
-          <img src="/icons/cloud-contact.svg" alt="Contact" className="w-16 h-16 mb-4" />
+          <Image src="/icons/cloud-contact.svg" alt="Contact" width={64} height={64} className="w-16 h-16 mb-4" />
           <h2 className="text-2xl font-bold mb-2 text-center">Ready to Modernize Your Cloud?</h2>
           <p className="text-blue-100 mb-6 text-center">Contact us to discuss your cloud needs or request a custom solution.</p>
           <a href="/contact" className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect">Contact Us</a>

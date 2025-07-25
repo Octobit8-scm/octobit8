@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,40 +47,51 @@ export default function RootLayout({
         <header className="bg-gray-900 shadow sticky top-0 z-50">
           <nav className="container mx-auto flex items-center justify-between py-1 px-4 border-b border-gray-800 min-h-[56px]">
             {/* Logo and Title */}
-            <a href="/" className="flex items-center gap-3 group">
-              <img src="/logo.png" alt="octobit8 logo" className="w-40 h-20 object-contain" />
-            </a>
+            <Link href="/" className="flex items-center gap-3 group">
+              <Image src="/logo.png" alt="octobit8 logo" width={160} height={80} />
+            </Link>
             {/* Desktop Menu - centralized */}
             <ul className="hidden md:flex gap-6 text-gray-100 font-medium flex-1 justify-center items-center">
               {menuItems.map((item) => {
                 const isActive = typeof window !== 'undefined' && window.location.pathname === (item.href || (item.dropdown && item.dropdown[0]?.href));
-                return item.dropdown ? (
-                  <li key={item.label} className="relative group">
-                    <button className={`px-4 py-2 transition focus:outline-none flex items-center gap-1 ${isActive ? 'text-blue-400' : ''}`}> 
-                      {item.label}
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <ul className="absolute left-0 mt-2 w-48 bg-gray-900 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity z-50">
-                      {item.dropdown.map((sub) => {
-                        const isSubActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
-                        return (
-                          <li key={sub.href}>
-                            <a href={sub.href} className={`block px-4 py-2 rounded transition ${isSubActive ? 'text-blue-400' : ''}`}>{sub.label}</a>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </li>
-                ) : (
-                  <li key={item.href}>
-                    <a
-                      href={item.href}
-                      className={`px-4 py-2 transition focus:outline-none ${isActive ? 'text-blue-400' : ''}`}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                );
+                if (item.dropdown) {
+                  return (
+                    <li key={item.label} className="relative group">
+                      <button
+                        className={`px-4 py-2 transition focus:outline-none flex items-center gap-1 ${isActive ? 'text-blue-400' : ''}`}
+                        type="button"
+                      >
+                        {item.label}
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                      </button>
+                      <ul className="absolute left-0 mt-2 w-48 bg-gray-900 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity z-50">
+                        {item.dropdown.map((sub) => {
+                          const isSubActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
+                          return (
+                            <li key={sub.href}>
+                              <Link
+                                href={sub.href}
+                                className={`block px-4 py-2 rounded transition ${isSubActive ? 'text-blue-400' : ''}`}
+                              >{sub.label}</Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                  );
+                } else if (item.href) {
+                  return (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className={`px-4 py-2 transition focus:outline-none ${isActive ? 'text-blue-400' : ''}`}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                }
+                return null;
               })}
             </ul>
             {/* Mobile Hamburger */}
@@ -101,7 +114,10 @@ export default function RootLayout({
                             const isSubActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
                             return (
                               <li key={sub.href}>
-                                <a href={sub.href} className={`block px-4 py-2 rounded transition ${isSubActive ? 'text-blue-400' : ''}`}>{sub.label}</a>
+                                <Link
+                                  href={sub.href}
+                                  className={`block px-4 py-2 rounded transition ${isSubActive ? 'text-blue-400' : ''}`}
+                                >{sub.label}</Link>
                               </li>
                             );
                           })}
@@ -109,12 +125,12 @@ export default function RootLayout({
                       </li>
                     ) : (
                       <li key={item.href}>
-                        <a
+                        <Link
                           href={item.href}
                           className={`block px-4 py-2 rounded-full transition ${isActive ? 'text-blue-400' : ''}`}
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}
@@ -131,7 +147,7 @@ export default function RootLayout({
         <footer className="bg-gray-900 text-gray-100 mt-12 py-12 px-4">
           <div className="container mx-auto flex flex-col md:flex-row md:items-start md:justify-between gap-12 border-b border-gray-800 pb-8">
             <div className="flex flex-col items-center md:items-start md:w-1/4 gap-4">
-              <img src="/logo.png" alt="octobit8 logo" className="w-32 h-14 object-contain" />
+              <Image src="/logo.png" alt="octobit8 logo" width={128} height={56} />
               <p className="text-sm text-gray-300 text-center md:text-left max-w-xs">Accelerating digital transformation with DevOps and Cloud solutions for modern businesses.</p>
               <div className="flex gap-3 mt-2">
                 <a href="#" aria-label="LinkedIn" className="hover:text-blue-400 text-xl"><svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.85-1.54 3.05 0 3.62 2.01 3.62 4.62v4.69z"/></svg></a>
@@ -142,16 +158,16 @@ export default function RootLayout({
             <div className="flex flex-col gap-2 min-w-[120px]">
               <h3 className="font-semibold mb-2 text-white">Company</h3>
               <ul className="space-y-1 text-sm">
-                <li><a href="/about" className="hover:underline">About</a></li>
-                <li><a href="/careers" className="hover:underline">Careers</a></li>
-                <li><a href="/blogs" className="hover:underline">Blogs</a></li>
+                <li><Link href="/about" className="hover:underline">About</Link></li>
+                <li><Link href="/careers" className="hover:underline">Careers</Link></li>
+                <li><Link href="/blogs" className="hover:underline">Blogs</Link></li>
               </ul>
             </div>
             <div className="flex flex-col gap-2 min-w-[120px]">
               <h3 className="font-semibold mb-2 text-white">Solutions</h3>
               <ul className="space-y-1 text-sm">
-                <li><a href="/devops" className="hover:underline">DevOps</a></li>
-                <li><a href="/cloud" className="hover:underline">Cloud</a></li>
+                <li><Link href="/devops" className="hover:underline">DevOps</Link></li>
+                <li><Link href="/cloud" className="hover:underline">Cloud</Link></li>
               </ul>
             </div>
             <div className="flex flex-col gap-2 min-w-[180px]">

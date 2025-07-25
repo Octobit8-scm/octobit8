@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const solutions = [
   {
     // Icon: ci-cd.svg
     icon: (
-      <img src="/icons/ci-cd.svg" alt="CI/CD Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/ci-cd.svg" alt="CI/CD Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     ),
     title: "Automated CI/CD Pipelines",
     desc: "Automate build, test, and deploy for faster, more reliable releases. Integrate with your stack for seamless delivery.",
@@ -13,7 +14,7 @@ const solutions = [
   {
     // Icon: iac.svg
     icon: (
-      <img src="/icons/iac.svg" alt="Infrastructure as Code Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/iac.svg" alt="Infrastructure as Code Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     ),
     title: "Infrastructure as Code",
     desc: "Provision and manage infrastructure at scale using Terraform, Ansible, and more. Achieve repeatability and rapid scaling.",
@@ -22,7 +23,7 @@ const solutions = [
   {
     // Icon: cloud-migration.svg
     icon: (
-      <img src="/icons/cloud-migration.svg" alt="Cloud Migration Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/cloud-migration.svg" alt="Cloud Migration Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     ),
     title: "Cloud Migration",
     desc: "Move workloads to the cloud with minimal downtime. Optimize for cost, security, and performance.",
@@ -31,7 +32,7 @@ const solutions = [
   {
     // Icon: cloud-native.svg
     icon: (
-      <img src="/icons/cloud-native.svg" alt="Cloud-Native Apps Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/cloud-native.svg" alt="Cloud-Native Apps Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     ),
     title: "Cloud-Native Apps",
     desc: "Build resilient, scalable apps using containers, microservices, and serverless. Accelerate innovation and reduce ops overhead.",
@@ -40,7 +41,7 @@ const solutions = [
   {
     // Icon: monitoring.svg
     icon: (
-      <img src="/icons/monitoring.svg" alt="Monitoring & Optimization Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/monitoring.svg" alt="Monitoring & Optimization Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     ),
     title: "Monitoring & Optimization",
     desc: "Gain real-time visibility and optimize performance with advanced monitoring and analytics. Proactively detect and resolve issues.",
@@ -52,7 +53,7 @@ const processSteps = [
   {
     // Icon: discovery.svg
     icon: (
-      <img src="/icons/discovery.svg" alt="Discovery Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/discovery.svg" alt="Discovery Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Discovery",
     desc: "We listen to your needs and define the best strategy."
@@ -60,7 +61,7 @@ const processSteps = [
   {
     // Icon: plan.svg
     icon: (
-      <img src="/icons/plan.svg" alt="Plan Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/plan.svg" alt="Plan Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Plan",
     desc: "Our experts design a tailored solution and roadmap."
@@ -68,7 +69,7 @@ const processSteps = [
   {
     // Icon: execute.svg
     icon: (
-      <img src="/icons/execute.svg" alt="Execute Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/execute.svg" alt="Execute Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Execute",
     desc: "We build, automate, and deploy with full transparency."
@@ -76,7 +77,7 @@ const processSteps = [
   {
     // Icon: support.svg
     icon: (
-      <img src="/icons/support.svg" alt="Support Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/support.svg" alt="Support Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Support",
     desc: "Ongoing optimization and support for your success."
@@ -87,7 +88,7 @@ const benefits = [
   {
     // Icon: speed.svg
     icon: (
-      <img src="/icons/speed.svg" alt="Speed Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/speed.svg" alt="Speed Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Speed",
     desc: "Accelerate delivery and time-to-market."
@@ -95,7 +96,7 @@ const benefits = [
   {
     // Icon: security.svg
     icon: (
-      <img src="/icons/security.svg" alt="Security Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/security.svg" alt="Security Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Security",
     desc: "Built-in security and compliance at every step."
@@ -103,7 +104,7 @@ const benefits = [
   {
     // Icon: cost-savings.svg
     icon: (
-      <img src="/icons/cost-savings.svg" alt="Cost Savings Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/cost-savings.svg" alt="Cost Savings Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Cost Savings",
     desc: "Optimize spend and maximize ROI."
@@ -111,7 +112,7 @@ const benefits = [
   {
     // Icon: scalability.svg
     icon: (
-      <img src="/icons/scalability.svg" alt="Scalability Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/scalability.svg" alt="Scalability Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "Scalability",
     desc: "Scale apps and infra on demand."
@@ -119,7 +120,7 @@ const benefits = [
   {
     // Icon: support-247.svg
     icon: (
-      <img src="/icons/support-247.svg" alt="24/7 Support Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/support-247.svg" alt="24/7 Support Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     ),
     title: "24/7 Support",
     desc: "Proactive monitoring and expert help."
@@ -132,7 +133,7 @@ const clients = [
     desc: "Modernized banking platform with secure cloud migration.",
     // Icon: fintechpro.svg
     icon: (
-      <img src="/icons/fintechpro.svg" alt="FinTechPro Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/fintechpro.svg" alt="FinTechPro Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     )
   },
   {
@@ -140,7 +141,7 @@ const clients = [
     desc: "Scaled EdTech platform to serve millions of students.",
     // Icon: educloud.svg
     icon: (
-      <img src="/icons/educloud.svg" alt="EduCloud Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/educloud.svg" alt="EduCloud Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     )
   },
   {
@@ -148,7 +149,7 @@ const clients = [
     desc: "Optimized logistics with real-time cloud analytics.",
     // Icon: logitrack.svg
     icon: (
-      <img src="/icons/logitrack.svg" alt="LogiTrack Icon" className="w-10 h-10 mb-3" />
+      <Image src="/icons/logitrack.svg" alt="LogiTrack Icon" width={40} height={40} className="w-10 h-10 mb-3" />
     )
   },
 ];
@@ -158,21 +159,21 @@ const partners = [
     name: "AWS",
     // Icon: aws.svg
     icon: (
-      <img src="/icons/aws.svg" alt="AWS Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/aws.svg" alt="AWS Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     )
   },
   {
     name: "GCP",
     // Icon: gcp.svg
     icon: (
-      <img src="/icons/gcp.svg" alt="GCP Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/gcp.svg" alt="GCP Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     )
   },
   {
     name: "Azure",
     // Icon: azure.svg
     icon: (
-      <img src="/icons/azure.svg" alt="Azure Icon" className="w-8 h-8 mb-2" />
+      <Image src="/icons/azure.svg" alt="Azure Icon" width={32} height={32} className="w-8 h-8 mb-2" />
     )
   },
 ];
@@ -256,10 +257,10 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-2 drop-shadow-xl">Empower Your Cloud Journey with <span className="text-blue-700">DevOps</span> & <span className="text-blue-700">Cloud</span> Excellence</h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-xl mb-2">Next-gen automation, security, and scalability for digital leaders. Experience seamless cloud transformation with our expert team.</p>
             <ul className="space-y-3 mb-4">
-              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/speed.svg" alt="Speed" className="w-6 h-6" /> Lightning-fast Deployments</li>
-              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/security.svg" alt="Security" className="w-6 h-6" /> Zero-Trust Security</li>
-              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/cost-savings.svg" alt="Cost Savings" className="w-6 h-6" /> Smart Cost Optimization</li>
-              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/scalability.svg" alt="Scalability" className="w-6 h-6" /> Effortless Multi-Cloud Scaling</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/speed.svg" alt="Speed" width={24} height={24} /> Lightning-fast Deployments</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/security.svg" alt="Security" width={24} height={24} /> Zero-Trust Security</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/cost-savings.svg" alt="Cost Savings" width={24} height={24} /> Smart Cost Optimization</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/scalability.svg" alt="Scalability" width={24} height={24} /> Effortless Multi-Cloud Scaling</li>
             </ul>
             <a href="#contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-12 py-4 rounded-full font-semibold shadow-2xl text-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200 ring-offset-2 ring-offset-white glow-effect">Get Started</a>
           </div>
@@ -397,7 +398,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-8">
             {partners.map((p) => (
               <div key={p.name} className="bg-white rounded-xl shadow p-4 flex flex-col items-center min-w-[100px] min-h-[80px] transition-transform hover:scale-105">
-                <img src={p.icon.props.src} alt={p.name} className="w-8 h-8 mb-2 grayscale hover:grayscale-0 transition duration-300" />
+                <Image src={p.icon.props.src} alt={p.name} width={32} height={32} className="w-8 h-8 mb-2 grayscale hover:grayscale-0 transition duration-300" />
                 <span className="text-blue-700 font-bold text-sm mt-1">{p.name}</span>
               </div>
             ))}
@@ -413,12 +414,12 @@ export default function Home() {
             {blogs.map((b, i) => (
               <div key={b.title} className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-start transition-transform hover:scale-105">
                 <div className="mb-3 glow-effect transition-transform hover:scale-110">
-                  <img src={`/icons/blog-${i+1}.svg`} alt={`Blog ${i+1} Icon`} className="w-10 h-10" />
+                  <Image src={`/icons/blog-${i+1}.svg`} alt={`Blog ${i+1} Icon`} width={40} height={40} />
                 </div>
                 <span className="text-xs text-blue-700 font-semibold mb-2">{b.date}</span>
                 <h3 className="text-lg font-bold text-blue-800 mb-2 tracking-tight">{b.title}</h3>
                 <p className="text-gray-700 mb-4">{b.excerpt}</p>
-                <a href="/blogs" className="mt-auto text-blue-700 font-semibold hover:underline">Read More →</a>
+                <Link href="/blogs" className="mt-auto text-blue-700 font-semibold hover:underline">Read More →</Link>
               </div>
             ))}
           </div>

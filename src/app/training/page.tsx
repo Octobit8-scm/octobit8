@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const trainings = [
   {
     title: "DevOps with Jenkins CI",
@@ -173,7 +175,7 @@ export default function TrainingPage() {
       <section className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-center mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <img src="/icons/training.svg" alt="Training" className="w-10 h-10" />
+            <Image src="/icons/training.svg" alt="Training" width={40} height={40} />
             <h2 className="text-3xl font-bold text-blue-800 text-center">Our Training Programs</h2>
           </div>
           <p className="text-lg text-gray-700 text-center max-w-2xl">Hands-on, project-based training for DevOps and Cloud, designed for real-world impact.</p>
@@ -182,7 +184,7 @@ export default function TrainingPage() {
           {trainings.map((training, idx) => (
             <div key={training.title} className={`relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 ${idx % 2 === 0 ? 'border-blue-500' : 'border-green-500'} overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl`}>
               <div className={`flex flex-col items-center justify-center min-w-[120px] ${idx % 2 === 0 ? 'bg-gradient-to-b from-blue-600 to-blue-400' : 'bg-gradient-to-b from-green-600 to-green-400'} p-8 md:p-10`}>
-                <img src={training.icon} alt={training.title} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                <Image src={training.icon} alt={training.title} width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                 <span className="text-white font-bold text-lg tracking-wide">{training.title}</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -208,9 +210,9 @@ export default function TrainingPage() {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 flex justify-center items-center">
         <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white rounded-2xl shadow-xl p-10 max-w-xl w-full flex flex-col items-center">
-          <img src="/icons/training.svg" alt="Contact" className="w-16 h-16 mb-4" />
+          <Image src="/icons/training.svg" alt="Contact" width={64} height={64} className="w-16 h-16 mb-4" />
           <h2 className="text-2xl font-bold mb-2 text-center">Have questions or need a custom training plan?</h2>
-          <p className="text-blue-100 mb-6 text-center">Contact us to discuss your team's needs or to request a private workshop.</p>
+          <p className="text-blue-100 mb-6 text-center">Contact us to discuss your team&apos;s needs or to request a private workshop.</p>
           <a href="/contact" className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect">Contact Us</a>
         </div>
       </section>

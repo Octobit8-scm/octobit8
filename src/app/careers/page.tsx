@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function CareersPage() {
   return (
     <div className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen">
@@ -26,7 +28,7 @@ export default function CareersPage() {
       <section id="openings" className="max-w-4xl mx-auto px-4">
         <div className="flex flex-col items-center mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <img src="/icons/team.svg" alt="Team" className="w-10 h-10" />
+            <Image src="/icons/team.svg" alt="Team" width={40} height={40} />
             <h2 className="text-3xl font-bold text-blue-800 text-center">Open Positions</h2>
           </div>
           <p className="text-lg text-gray-700 text-center max-w-2xl">We’re always looking for talented people. If you don’t see a role that fits, send us your resume!</p>
@@ -34,7 +36,7 @@ export default function CareersPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
           {/* DevOps Engineer */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/devops.svg" alt="DevOps Engineer" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/devops.svg" alt="DevOps Engineer" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">DevOps Engineer</span>
             <span className="text-gray-500 mb-2 text-center">Design, automate, and optimize CI/CD pipelines and cloud infrastructure.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -42,7 +44,7 @@ export default function CareersPage() {
           </div>
           {/* Cloud Architect */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/cloud.svg" alt="Cloud Architect" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/cloud.svg" alt="Cloud Architect" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Cloud Architect</span>
             <span className="text-gray-500 mb-2 text-center">Lead the design and implementation of scalable, secure cloud solutions.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -50,7 +52,7 @@ export default function CareersPage() {
           </div>
           {/* Site Reliability Engineer (SRE) */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/monitoring.svg" alt="Site Reliability Engineer" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/monitoring.svg" alt="Site Reliability Engineer" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Site Reliability Engineer (SRE)</span>
             <span className="text-gray-500 mb-2 text-center">Ensure reliability, scalability, and performance of cloud-native systems.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -58,7 +60,7 @@ export default function CareersPage() {
           </div>
           {/* Cloud Security Engineer */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/cloud-security.svg" alt="Cloud Security Engineer" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/cloud-security.svg" alt="Cloud Security Engineer" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Cloud Security Engineer</span>
             <span className="text-gray-500 mb-2 text-center">Implement and monitor security controls for cloud environments.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -66,7 +68,7 @@ export default function CareersPage() {
           </div>
           {/* Platform Engineer */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/container.svg" alt="Platform Engineer" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/container.svg" alt="Platform Engineer" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Platform Engineer</span>
             <span className="text-gray-500 mb-2 text-center">Build and maintain internal developer platforms and automation tools.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -74,7 +76,7 @@ export default function CareersPage() {
           </div>
           {/* Cloud Consultant */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/consultant.svg" alt="Cloud Consultant" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/consultant.svg" alt="Cloud Consultant" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Cloud Consultant</span>
             <span className="text-gray-500 mb-2 text-center">Advise clients on cloud strategy, migration, and optimization.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -88,7 +90,7 @@ export default function CareersPage() {
       <section className="max-w-4xl mx-auto px-4 mb-16">
         <div className="flex flex-col items-center mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <img src="/icons/internship.svg" alt="Internship" className="w-10 h-10" />
+            <Image src="/icons/internship.svg" alt="Internship" width={40} height={40} />
             <h2 className="text-3xl font-bold text-blue-800 text-center">Internships</h2>
           </div>
           <p className="text-lg text-gray-700 text-center max-w-2xl">Kickstart your career with hands-on experience in DevOps, Cloud, and Software Engineering. Our internships offer mentorship, real projects, and a pathway to full-time roles.</p>
@@ -96,7 +98,7 @@ export default function CareersPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
           {/* DevOps Intern */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/devops.svg" alt="DevOps Intern" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/devops.svg" alt="DevOps Intern" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">DevOps Intern</span>
             <span className="text-gray-500 mb-2 text-center">Learn CI/CD, automation, and cloud tools by working with our DevOps team.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -104,7 +106,7 @@ export default function CareersPage() {
           </div>
           {/* Cloud Intern */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/cloud.svg" alt="Cloud Intern" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/cloud.svg" alt="Cloud Intern" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Cloud Intern</span>
             <span className="text-gray-500 mb-2 text-center">Gain experience in cloud platforms, infrastructure, and automation projects.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -112,7 +114,7 @@ export default function CareersPage() {
           </div>
           {/* Frontend Intern */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/frontend.svg" alt="Frontend Intern" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/frontend.svg" alt="Frontend Intern" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Frontend Intern</span>
             <span className="text-gray-500 mb-2 text-center">Work on modern web apps using React, Next.js, and Tailwind CSS.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -120,7 +122,7 @@ export default function CareersPage() {
           </div>
           {/* Backend Intern */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:shadow-2xl transition group">
-            <img src="/icons/backend.svg" alt="Backend Intern" className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
+            <Image src="/icons/backend.svg" alt="Backend Intern" width={56} height={56} className="w-14 h-14 mb-4 group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-semibold text-blue-700 mb-2">Backend Intern</span>
             <span className="text-gray-500 mb-2 text-center">Build APIs, work with databases, and automate backend processes.</span>
             <span className="text-green-600 font-semibold mb-4">Accepting Applications</span>
@@ -133,7 +135,7 @@ export default function CareersPage() {
       {/* Call to Action */}
       <section className="py-16 px-4 flex justify-center items-center">
         <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white rounded-2xl shadow-xl p-10 max-w-xl w-full flex flex-col items-center">
-          <img src="/icons/team.svg" alt="Contact" className="w-16 h-16 mb-4" />
+          <Image src="/icons/team.svg" alt="Contact" width={64} height={64} className="w-16 h-16 mb-4" />
           <h2 className="text-2xl font-bold mb-2 text-center">Didn’t find your role?</h2>
           <p className="text-blue-100 mb-6 text-center">We’re always interested in meeting talented people. Send us your resume and we’ll reach out if there’s a fit.</p>
           <a href="mailto:careers@octobit8.com" className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect">Send Your Resume</a>

@@ -1,37 +1,7 @@
 "use client";
 
-const devopsSolutions = [
-  {
-    title: "Secured Web Application Infra Setup",
-    icon: "/icons/security.svg",
-    description: "Implement robust, secure infrastructure for web applications with automated security policies and monitoring."
-  },
-  {
-    title: "Database Migration",
-    icon: "/icons/database.svg",
-    description: "Seamlessly migrate databases to the cloud or between platforms with zero downtime and data integrity."
-  },
-  {
-    title: "Authentication Services",
-    icon: "/icons/auth.svg",
-    description: "Integrate secure authentication and authorization services (OAuth, SSO, IAM) for your applications."
-  },
-  {
-    title: "Migration from Jenkins to GitLab CI",
-    icon: "/icons/gitlab.svg",
-    description: "Modernize your CI/CD by migrating from Jenkins to GitLab CI for improved automation and collaboration."
-  },
-  {
-    title: "iOS Build and Test Pipeline",
-    icon: "/icons/ios.svg",
-    description: "Automate iOS app builds and testing with scalable, cloud-based pipelines for faster releases."
-  },
-  {
-    title: "Cloud Security",
-    icon: "/icons/cloud-security.svg",
-    description: "Implement advanced cloud security controls, monitoring, and compliance for your cloud environments."
-  }
-];
+import Image from "next/image";
+import Link from "next/link";
 
 export default function DevOpsPage() {
   return (
@@ -53,7 +23,7 @@ export default function DevOpsPage() {
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">Accelerate Your IT with <span className="text-yellow-300">DevOps Excellence</span></h1>
               <p className="text-lg md:text-xl font-medium text-blue-100 mb-6 max-w-2xl">Transform your IT operations with Octobit8’s cutting-edge DevOps solutions. Deliver software faster, smarter, and more securely through seamless automation, collaboration, and innovation.</p>
             </div>
-            <a href="#consultation" className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect animate-bounce">Book a Consultation</a>
+            <Link href="#consultation" className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect animate-bounce">Book a Consultation</Link>
           </div>
           <svg className="absolute bottom-0 left-0 w-full h-24 md:h-32 opacity-30" viewBox="0 0 1440 320"><path fill="#fff" fillOpacity="1" d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,197.3C840,224,960,224,1080,197.3C1200,171,1320,117,1380,90.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         </section>
@@ -61,10 +31,10 @@ export default function DevOpsPage() {
         <div className="w-full flex justify-center mb-12"><div className="h-2 w-32 bg-gradient-to-r from-blue-400 via-blue-200 to-blue-400 rounded-full animate-pulse"></div></div>
         {/* Why Choose Octobit8 Section: card with accent bar */}
         <section className="max-w-4xl mx-auto mb-16 px-4 relative">
-          <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-0 opacity-20"><img src="/icons/octobit8.svg" alt="Octobit8 Logo" className="w-24 h-24" /></div>
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-0 opacity-20"><Image src="/icons/octobit8.svg" alt="Octobit8 Logo" width={96} height={96} /></div>
           <div className="bg-white rounded-2xl shadow-lg p-10 border-l-8 border-blue-500 flex flex-col items-center relative z-10">
-            <h2 className="text-3xl font-bold text-blue-800 text-center mb-4 flex items-center gap-2"><img src="/icons/star.svg" alt="Star" className="w-7 h-7 inline-block" />Why Choose Octobit8</h2>
-            <p className="text-lg text-gray-700 text-center">At Octobit8, we provide end-to-end DevOps services to streamline your development and operations, ensuring scalability, reliability, and efficiency. Whether you're a startup or an enterprise, our tailored solutions help you stay ahead in the digital race.</p>
+            <h2 className="text-3xl font-bold text-blue-800 text-center mb-4 flex items-center gap-2"><Image src="/icons/star.svg" alt="Star" width={28} height={28} />Why Choose Octobit8</h2>
+            <p className="text-lg text-gray-700 text-center">At Octobit8, we provide end-to-end DevOps services to streamline your development and operations, ensuring scalability, reliability, and efficiency. Whether you&apos;re a startup or an enterprise, our tailored solutions help you stay ahead in the digital race.</p>
           </div>
         </section>
         {/* SECTION DIVIDER */}
@@ -77,7 +47,7 @@ export default function DevOpsPage() {
               {/* Service 1: Version Control & Collaboration */}
               <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                  <img src="/icons/github.svg" alt="Version Control" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                  <Image src="/icons/github.svg" alt="Version Control" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                   <span className="text-white font-bold text-lg tracking-wide">Version Control</span>
                 </div>
                 <div className="flex-1 p-8 md:p-10">
@@ -107,7 +77,7 @@ export default function DevOpsPage() {
               {/* Service 3: IaC */}
               <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                  <img src="/icons/iac.svg" alt="IaC" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                  <Image src="/icons/iac.svg" alt="IaC" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                   <span className="text-white font-bold text-lg tracking-wide">IaC</span>
                 </div>
                 <div className="flex-1 p-8 md:p-10">
@@ -144,7 +114,7 @@ export default function DevOpsPage() {
               {/* Service 5: Monitoring & Logging */}
               <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                  <img src="/icons/monitoring.svg" alt="Monitoring" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                  <Image src="/icons/monitoring.svg" alt="Monitoring" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                   <span className="text-white font-bold text-lg tracking-wide">Monitoring</span>
                 </div>
                 <div className="flex-1 p-8 md:p-10">
@@ -181,7 +151,7 @@ export default function DevOpsPage() {
               {/* Service 7: Cloud & Serverless */}
               <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-yellow-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-500 to-yellow-300 p-8 md:p-10">
-                  <img src="/icons/cloud.svg" alt="Cloud" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                  <Image src="/icons/cloud.svg" alt="Cloud" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                   <span className="text-white font-bold text-lg tracking-wide">Cloud</span>
                 </div>
                 <div className="flex-1 p-8 md:p-10">
@@ -221,7 +191,7 @@ export default function DevOpsPage() {
               {/* Service 2: CI/CD */}
               <div className="relative group flex flex-col items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl border-r-8 border-indigo-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-indigo-600 to-indigo-400 p-8 md:p-10">
-                  <img src="/icons/ci-cd.svg" alt="CI/CD" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                  <Image src="/icons/ci-cd.svg" alt="CI/CD" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                   <span className="text-white font-bold text-lg tracking-wide">CI/CD</span>
                 </div>
                 <div className="flex-1 p-8 md:p-10">
@@ -258,7 +228,7 @@ export default function DevOpsPage() {
               {/* Service 4: Containerization & Orchestration */}
               <div className="relative group flex flex-col items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl border-r-8 border-cyan-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-cyan-600 to-cyan-400 p-8 md:p-10">
-                  <img src="/icons/container.svg" alt="Containerization" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                  <Image src="/icons/container.svg" alt="Containerization" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                   <span className="text-white font-bold text-lg tracking-wide">Containers</span>
                 </div>
                 <div className="flex-1 p-8 md:p-10">
@@ -295,7 +265,7 @@ export default function DevOpsPage() {
               {/* Service 6: DevSecOps & Security */}
               <div className="relative group flex flex-col items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl border-r-8 border-red-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-red-600 to-red-400 p-8 md:p-10">
-                  <img src="/icons/devsecops.svg" alt="DevSecOps" className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
+                  <Image src="/icons/devsecops.svg" alt="DevSecOps" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform" />
                   <span className="text-white font-bold text-lg tracking-wide">DevSecOps</span>
                 </div>
                 <div className="flex-1 p-8 md:p-10">
@@ -341,7 +311,7 @@ export default function DevOpsPage() {
             {/* Use Case 1: E-Commerce Platform Scaling */}
             <div className="relative group flex flex-col md:flex-row items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl mb-12 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <img src="/icons/e-commerce.svg" alt="E-Commerce" className="w-20 h-20 mb-4 drop-shadow-lg" />
+                <Image src="/icons/e-commerce.svg" alt="E-Commerce" width={80} height={80} className="w-20 h-20 mb-4 drop-shadow-lg" />
                 <span className="text-white font-bold text-lg tracking-wide">E-Commerce</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -383,7 +353,7 @@ export default function DevOpsPage() {
             {/* Use Case 2: FinTech Compliance and Security Automation */}
             <div className="relative group flex flex-col md:flex-row items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl mb-12 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-purple-600 to-purple-400 p-8 md:p-10">
-                <img src="/icons/fintech.svg" alt="FinTech" className="w-20 h-20 mb-4 drop-shadow-lg" />
+                <Image src="/icons/fintech.svg" alt="FinTech" width={80} height={80} className="w-20 h-20 mb-4 drop-shadow-lg" />
                 <span className="text-white font-bold text-lg tracking-wide">FinTech</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -427,7 +397,7 @@ export default function DevOpsPage() {
             {/* Use Case 3: Rapid SaaS Product Deployment */}
             <div className="relative group flex flex-col md:flex-row items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl mb-12 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <img src="/icons/saas.svg" alt="SaaS" className="w-20 h-20 mb-4 drop-shadow-lg" />
+                <Image src="/icons/saas.svg" alt="SaaS" width={80} height={80} className="w-20 h-20 mb-4 drop-shadow-lg" />
                 <span className="text-white font-bold text-lg tracking-wide">SaaS</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -469,7 +439,7 @@ export default function DevOpsPage() {
             {/* Use Case 4: Legacy System Modernization */}
             <div className="relative group flex flex-col md:flex-row items-stretch bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl mb-12 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-600 to-yellow-400 p-8 md:p-10">
-                <img src="/icons/legacy.svg" alt="Legacy" className="w-20 h-20 mb-4 drop-shadow-lg" />
+                <Image src="/icons/legacy.svg" alt="Legacy" width={80} height={80} className="w-20 h-20 mb-4 drop-shadow-lg" />
                 <span className="text-white font-bold text-lg tracking-wide">Legacy</span>
               </div>
               <div className="flex-1 p-8 md:p-10">
@@ -516,7 +486,7 @@ export default function DevOpsPage() {
           <div className="max-w-5xl mx-auto px-4">
             <div className="flex flex-col items-center mb-10">
               <div className="flex items-center gap-3 mb-2">
-                <img src="/icons/handshake.svg" alt="Benefits" className="w-10 h-10" />
+                <Image src="/icons/handshake.svg" alt="Benefits" width={40} height={40} />
                 <h2 className="text-3xl font-bold text-blue-800 text-center">Benefits of Partnering with Octobit8</h2>
               </div>
               <p className="text-lg text-gray-700 text-center max-w-2xl">Unlock the full potential of your IT operations with our tailored DevOps solutions. Here’s what you gain by working with us:</p>
@@ -524,37 +494,37 @@ export default function DevOpsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
               {/* Benefit 1 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/speed.svg" alt="Faster Time-to-Market" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/speed.svg" alt="Faster Time-to-Market" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Faster Time-to-Market</h3>
                 <p className="text-gray-600 text-sm">Deploy updates and features in record time with automated CI/CD pipelines and streamlined workflows.</p>
               </div>
               {/* Benefit 2 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/team.svg" alt="Enhanced Collaboration" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/team.svg" alt="Enhanced Collaboration" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Enhanced Collaboration</h3>
                 <p className="text-gray-600 text-sm">Break down silos between development and operations teams for smoother, more productive workflows.</p>
               </div>
               {/* Benefit 3 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/cost.svg" alt="Cost Optimization" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/cost.svg" alt="Cost Optimization" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Cost Optimization</h3>
                 <p className="text-gray-600 text-sm">Reduce infrastructure costs with scalable cloud and serverless solutions tailored to your needs.</p>
               </div>
               {/* Benefit 4 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/reliability.svg" alt="Improved Reliability" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/reliability.svg" alt="Improved Reliability" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Improved Reliability</h3>
                 <p className="text-gray-600 text-sm">Ensure uptime and performance with robust monitoring, orchestration, and automated recovery tools.</p>
               </div>
               {/* Benefit 5 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/security.svg" alt="Security First" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/security.svg" alt="Security First" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Security First</h3>
                 <p className="text-gray-600 text-sm">Embed security at every stage to protect your applications and data from threats and vulnerabilities.</p>
               </div>
               {/* Benefit 6 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/customize.svg" alt="Tailored Solutions" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/customize.svg" alt="Tailored Solutions" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Tailored Solutions</h3>
                 <p className="text-gray-600 text-sm">Get DevOps strategies customized to your business goals, scale, and industry requirements.</p>
               </div>
@@ -566,7 +536,7 @@ export default function DevOpsPage() {
           <div className="max-w-5xl mx-auto px-4">
             <div className="flex flex-col items-center mb-10">
               <div className="flex items-center gap-3 mb-2">
-                <img src="/icons/trophy.svg" alt="Why Octobit8 Stands Out" className="w-10 h-10" />
+                <Image src="/icons/trophy.svg" alt="Why Octobit8 Stands Out" width={40} height={40} />
                 <h2 className="text-3xl font-bold text-blue-800 text-center">Why Octobit8 Stands Out</h2>
               </div>
               <p className="text-lg text-gray-700 text-center max-w-2xl">Experience the Octobit8 difference—our unique strengths set us apart as your trusted DevOps partner.</p>
@@ -574,37 +544,37 @@ export default function DevOpsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
               {/* Feature 1 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/customize.svg" alt="Customized Solutions" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/customize.svg" alt="Customized Solutions" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Customized Solutions</h3>
                 <p className="text-gray-600 text-sm">Tailored DevOps strategies to match your business goals, scale, and industry requirements.</p>
               </div>
               {/* Feature 2 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/expert.svg" alt="Expert Team" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/expert.svg" alt="Expert Team" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Expert Team</h3>
                 <p className="text-gray-600 text-sm">Certified professionals with deep expertise in DevOps tools, cloud, and best practices.</p>
               </div>
               {/* Feature 3 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/support.svg" alt="24/7 Support" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/support.svg" alt="24/7 Support" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">24/7 Support</h3>
                 <p className="text-gray-600 text-sm">Round-the-clock assistance to keep your operations running smoothly and securely.</p>
               </div>
               {/* Feature 4 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/proven.svg" alt="Proven Success" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/proven.svg" alt="Proven Success" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Proven Success</h3>
                 <p className="text-gray-600 text-sm">Trusted by 50+ IT companies to deliver 200+ successful projects worldwide.</p>
               </div>
               {/* Feature 5 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/innovation.svg" alt="Innovation Driven" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/innovation.svg" alt="Innovation Driven" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Innovation Driven</h3>
                 <p className="text-gray-600 text-sm">We leverage the latest DevOps and cloud technologies to drive efficiency and innovation.</p>
               </div>
               {/* Feature 6 */}
               <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group">
-                <img src="/icons/partnership.svg" alt="Long-Term Partnership" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+                <Image src="/icons/partnership.svg" alt="Long-Term Partnership" width={48} height={48} className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-semibold text-blue-700 mb-1">Long-Term Partnership</h3>
                 <p className="text-gray-600 text-sm">We build lasting relationships, supporting your growth at every stage of your digital journey.</p>
               </div>
@@ -620,7 +590,7 @@ export default function DevOpsPage() {
               <div>Email: <a href="mailto:contact@octobit8.com" className="underline">contact@octobit8.com</a></div>
               <div>Phone: <a href="tel:+1800OCTOBIT" className="underline">+1-800-OCTOBIT</a></div>
             </div>
-            <a href="/contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-100 transition">Book a Free Consultation</a>
+            <Link href="/contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-100 transition">Book a Free Consultation</Link>
           </div>
         </section>
         {/* Testimonials */}
@@ -630,19 +600,19 @@ export default function DevOpsPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-2xl shadow-xl p-10 flex items-start">
                 <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <img src="/icons/avatar1.svg" alt="Avatar" className="w-6 h-6" />
+                  <Image src="/icons/avatar1.svg" alt="Avatar" width={24} height={24} />
                 </div>
                 <div>
-                  <p className="text-gray-700 mb-2">"Octobit8 transformed our release cycle, cutting deployment time by 60%!"</p>
+                  <p className="text-gray-700 mb-2">&quot;Octobit8 transformed our release cycle, cutting deployment time by 60%!&quot;</p>
                   <span className="font-bold text-blue-700">– Jane Doe, CTO</span>
                 </div>
               </div>
               <div className="bg-white rounded-2xl shadow-xl p-10 flex items-start">
                 <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <img src="/icons/avatar2.svg" alt="Avatar" className="w-6 h-6" />
+                  <Image src="/icons/avatar2.svg" alt="Avatar" width={24} height={24} />
                 </div>
                 <div>
-                  <p className="text-gray-700 mb-2">"Their expertise in Kubernetes and AWS helped us scale effortlessly."</p>
+                  <p className="text-gray-700 mb-2">&quot;Their expertise in Kubernetes and AWS helped us scale effortlessly.&quot;</p>
                   <span className="font-bold text-blue-700">– John Smith, Startup Founder</span>
                 </div>
               </div>

@@ -1,5 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
 const trainings = [
   {
@@ -157,8 +159,8 @@ export default function TrainingDetailPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <h1 className="text-3xl font-bold text-blue-800 mb-4">Training Not Found</h1>
-        <p className="text-gray-700 mb-6">Sorry, we couldn't find the training program you're looking for.</p>
-        <a href="/training" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-800 transition">Back to Training</a>
+        <p className="text-gray-700 mb-6">Sorry, we couldn&apos;t find the training program you&apos;re looking for.</p>
+        <Link href="/training" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-800 transition">Back to Training</Link>
       </div>
     );
   }
@@ -168,7 +170,7 @@ export default function TrainingDetailPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-20 md:py-28 overflow-hidden shadow-xl rounded-b-3xl mb-16">
         <div className="max-w-3xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
-          <img src={training.icon} alt={training.title} className="w-20 h-20 mb-6 drop-shadow-lg" />
+          <Image src={training.icon} alt={training.title} width={80} height={80} className="w-20 h-20 mb-6 drop-shadow-lg" />
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">{training.title}</h1>
           <p className="text-lg md:text-xl font-medium text-blue-100 mb-6 max-w-2xl">{training.description}</p>
         </div>
@@ -190,11 +192,11 @@ export default function TrainingDetailPage() {
               <div className="text-sm text-gray-500 mb-2"><span className="font-semibold">Duration:</span> {training.duration}</div>
             </div>
           </div>
-          <a href={training.link} className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect">{training.cta}</a>
+          <Link href={training.link} className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect">{training.cta}</Link>
         </div>
         {/* What You'll Learn */}
         <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 rounded-2xl shadow p-8 mb-8">
-          <h3 className="text-xl font-bold text-blue-700 mb-2">What You'll Learn</h3>
+          <h3 className="text-xl font-bold text-blue-700 mb-2">What You&apos;ll Learn</h3>
           <ul className="list-disc list-inside text-gray-700 mb-2">
             <li>End-to-end understanding of {training.title}</li>
             <li>Hands-on experience with real-world projects</li>

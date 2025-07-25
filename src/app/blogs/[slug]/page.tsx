@@ -1,5 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { useParams } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 
 const blogs = [
   { title: "Scaling GKE with Custom Metrics", slug: "scaling-gke-custom-metrics", date: "May 31, 2025", excerpt: "Autoscaling GKE using Cloud Monitoring & Pub/Sub Queue Depth.", icon: "/icons/blog-1.svg" },
@@ -16,8 +19,8 @@ export default function BlogDetailPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <h1 className="text-3xl font-bold text-blue-800 mb-4">Blog Not Found</h1>
-        <p className="text-gray-700 mb-6">Sorry, we couldn't find the blog post you're looking for.</p>
-        <a href="/blogs" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-800 transition">Back to Blogs</a>
+        <p className="text-gray-700 mb-6">Sorry, we couldn&apos;t find the blog post you&apos;re looking for.</p>
+        <Link href="/blogs" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-800 transition">Back to Blogs</Link>
       </div>
     );
   }
@@ -27,7 +30,7 @@ export default function BlogDetailPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-20 md:py-28 overflow-hidden shadow-xl rounded-b-3xl mb-16">
         <div className="max-w-3xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
-          <img src={blog.icon} alt={blog.title} className="w-20 h-20 mb-6 drop-shadow-lg" />
+          <Image src={blog.icon} alt={blog.title} width={80} height={80} className="w-20 h-20 mb-6 drop-shadow-lg" />
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">{blog.title}</h1>
           <span className="text-xs text-blue-100 font-semibold mb-2">{blog.date}</span>
           <p className="text-lg md:text-xl font-medium text-blue-100 mb-6 max-w-2xl">{blog.excerpt}</p>
@@ -40,7 +43,7 @@ export default function BlogDetailPage() {
           {blog.slug === "scaling-gke-custom-metrics" && (
             <>
               <h3 className="text-xl font-bold text-blue-700 mb-2">Scaling GKE with Custom Metrics</h3>
-              <p className="text-gray-700 mb-4">Google Kubernetes Engine (GKE) supports autoscaling based on custom metrics, allowing you to scale your workloads beyond CPU and memory. In this guide, we’ll walk through how to autoscale GKE deployments using Cloud Monitoring, Pub/Sub, and custom metrics.</p>
+              <p className="text-gray-700 mb-4">Google Kubernetes Engine (GKE) supports autoscaling based on custom metrics, allowing you to scale your workloads beyond CPU and memory. In this guide, we&apos;ll walk through how to autoscale GKE deployments using Cloud Monitoring, Pub/Sub, and custom metrics.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Step 1: Expose Custom Metrics</h4>
               <p className="text-gray-700 mb-2">Instrument your application to export custom metrics (e.g., queue depth, request latency) to Cloud Monitoring using OpenTelemetry or Prometheus exporters.</p>
               <pre className="bg-blue-50 rounded p-4 text-xs overflow-x-auto mb-4">apiVersion: autoscaling/v2
@@ -69,7 +72,8 @@ spec:
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Step 2: Create a Pub/Sub Subscription</h4>
               <p className="text-gray-700 mb-2">Set up a Pub/Sub subscription to collect queue depth or other relevant metrics. These metrics will be used to trigger scaling events.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Step 3: Configure HPA with Custom Metrics</h4>
-              <p className="text-gray-700 mb-2">Use the <code>HorizontalPodAutoscaler</code> with the <code>External</code> metric type to scale based on your custom metric. Make sure your metric is available in Cloud Monitoring and accessible by GKE.</p>
+              <p className="text-gray-700 mb-2">Use the Kubernetes HorizontalPodAutoscaler with the External metric type to scale based on your custom metric.</p>
+              <p className="text-gray-700 mb-2">Ensure your metric is available in Cloud Monitoring and accessible by GKE.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Tips & Best Practices</h4>
               <ul className="list-disc list-inside text-gray-700 mb-4">
                 <li>Test your metric pipeline to ensure timely updates.</li>
@@ -86,7 +90,7 @@ spec:
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Unlock Cashback & Credits</h4>
               <p className="text-gray-700 mb-2">Work with a managed cloud provider to access cashback programs and promotional credits from AWS, Azure, or GCP. These can offset a significant portion of your monthly bill.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Negotiate Extended Terms</h4>
-              <p className="text-gray-700 mb-2">Don’t settle for default payment terms. Ask your provider about extended terms, reserved instances, or committed use discounts for predictable workloads.</p>
+              <p className="text-gray-700 mb-2">Don&apos;t settle for default payment terms. Ask your provider about extended terms, reserved instances, or committed use discounts for predictable workloads.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Leverage Managed Support</h4>
               <p className="text-gray-700 mb-2">24/7 managed support can help you resolve incidents faster, optimize resources, and avoid costly downtime. Look for providers that include proactive monitoring and cost reviews.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Actionable Tips</h4>
@@ -96,13 +100,13 @@ spec:
                 <li>Consolidate accounts for volume discounts.</li>
                 <li>Automate shutdown of non-production environments.</li>
               </ul>
-              <p className="text-gray-700">Partnering with a managed cloud provider can unlock hidden savings and ensure you’re getting the most value from your cloud investment.</p>
+              <p className="text-gray-700">Partnering with a managed cloud provider can unlock hidden savings and ensure you&apos;re getting the most value from your cloud investment.</p>
             </>
           )}
           {blog.slug === "ai-isnt-coming-already-here" && (
             <>
-              <h3 className="text-xl font-bold text-blue-700 mb-2">AI Isn’t Coming. It’s Already Here</h3>
-              <p className="text-gray-700 mb-4">Generative AI (GenAI) is transforming industries, from content creation to customer support. Here’s what you need to know about the GenAI revolution and how to get started.</p>
+              <h3 className="text-xl font-bold text-blue-700 mb-2">AI Isn&apos;t Coming. It&apos;s Already Here</h3>
+              <p className="text-gray-700 mb-4">Generative AI (GenAI) is transforming industries, from content creation to customer support. Here&apos;s what you need to know about the GenAI revolution and how to get started.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">What is GenAI?</h4>
               <p className="text-gray-700 mb-2">GenAI refers to AI models that can generate text, images, code, and more. Tools like Google Cloud GenAI, OpenAI GPT, and others are making it easy to build intelligent applications.</p>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Real-World Use Cases</h4>
@@ -113,11 +117,11 @@ spec:
                 <li>Personalized recommendations and search</li>
               </ul>
               <h4 className="font-semibold text-blue-700 mt-4 mb-2">Join the Google Cloud GenAI Masterclass</h4>
-              <p className="text-gray-700 mb-2">Our upcoming masterclass will walk you through building GenAI solutions on Google Cloud, with hands-on labs and real-world examples. You’ll leave with practical skills and a roadmap for AI adoption.</p>
-              <p className="text-gray-700">AI isn’t the future—it’s the present. Start your GenAI journey today and unlock new possibilities for your business.</p>
+              <p className="text-gray-700 mb-2">Our upcoming masterclass will walk you through building GenAI solutions on Google Cloud, with hands-on labs and real-world examples. You&apos;ll leave with practical skills and a roadmap for AI adoption.</p>
+              <p className="text-gray-700">AI isn&apos;t the future—it&apos;s the present. Start your GenAI journey today and unlock new possibilities for your business.</p>
             </>
           )}
-          <a href="/blogs" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-800 transition mt-8">Back to Blogs</a>
+          <Link href="/blogs" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-800 transition mt-8">Back to Blogs</Link>
         </div>
       </section>
     </div>

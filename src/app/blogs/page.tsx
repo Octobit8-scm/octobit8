@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const blogs = [
   { title: "Scaling GKE with Custom Metrics", slug: "scaling-gke-custom-metrics", date: "May 31, 2025", excerpt: "Autoscaling GKE using Cloud Monitoring & Pub/Sub Queue Depth." },
   { title: "Cloud Spend: What You’re Leaving on the Table", slug: "cloud-spend-leaving-on-table", date: "May 13, 2025", excerpt: "Unlock cashback, extended terms, and 24/7 support with our Managed Cloud offering." },
@@ -21,7 +23,7 @@ export default function BlogsPage() {
           {blogs.map((b, i) => (
             <div key={b.title} className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-start transition-transform hover:scale-105">
               <div className="mb-3 glow-effect transition-transform hover:scale-110">
-                <img src={`/icons/blog-${i+1}.svg`} alt={`Blog ${i+1} Icon`} className="w-10 h-10" />
+                <Image src={`/icons/blog-${i+1}.svg`} alt={`Blog ${i+1} Icon`} width={40} height={40} />
               </div>
               <span className="text-xs text-blue-700 font-semibold mb-2">{b.date}</span>
               <h3 className="text-lg font-bold text-blue-800 mb-2 tracking-tight">{b.title}</h3>

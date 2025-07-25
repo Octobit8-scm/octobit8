@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <main className="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen py-0">
@@ -41,19 +43,19 @@ export default function AboutPage() {
         <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Leadership Team</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <img src="/icons/user.svg" alt="CEO" className="w-20 h-20 rounded-full mb-4 bg-blue-100 object-cover" />
+            <Image src="/icons/user.svg" alt="CEO" width={80} height={80} className="w-20 h-20 rounded-full mb-4 bg-blue-100 object-cover" />
             <h3 className="text-xl font-bold mb-1">Aarav Mehta</h3>
             <span className="text-blue-700 font-semibold mb-2">Chief Executive Officer</span>
-            <p className="text-gray-600 text-center">Aarav brings 20+ years of experience in IT strategy and business leadership, driving Octobit8's vision and growth.</p>
+            <p className="text-gray-600 text-center">Aarav brings 20+ years of experience in IT strategy and business leadership, driving Octobit8&apos;s vision and growth.</p>
           </div>
           <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <img src="/icons/user.svg" alt="CTO" className="w-20 h-20 rounded-full mb-4 bg-blue-100 object-cover" />
+            <Image src="/icons/user.svg" alt="CTO" width={80} height={80} className="w-20 h-20 rounded-full mb-4 bg-blue-100 object-cover" />
             <h3 className="text-xl font-bold mb-1">Priya Sharma</h3>
             <span className="text-blue-700 font-semibold mb-2">Chief Technology Officer</span>
             <p className="text-gray-600 text-center">Priya leads our technology teams, ensuring we deliver innovative, scalable, and secure solutions for every client.</p>
           </div>
           <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <img src="/icons/user.svg" alt="COO" className="w-20 h-20 rounded-full mb-4 bg-blue-100 object-cover" />
+            <Image src="/icons/user.svg" alt="COO" width={80} height={80} className="w-20 h-20 rounded-full mb-4 bg-blue-100 object-cover" />
             <h3 className="text-xl font-bold mb-1">Rahul Verma</h3>
             <span className="text-blue-700 font-semibold mb-2">Chief Operating Officer</span>
             <p className="text-gray-600 text-center">Rahul oversees operations and client delivery, ensuring excellence and efficiency across all projects.</p>
