@@ -1,5 +1,3 @@
-"use client";
-import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -150,9 +148,23 @@ const trainings = [
   }
 ];
 
-export default function TrainingDetailPage() {
-  const params = useParams();
-  const slug = params?.slug;
+export function generateStaticParams() {
+  return [
+    { slug: "jenkins-ci" },
+    { slug: "gitlab-ci" },
+    { slug: "github-actions" },
+    { slug: "azure-devops" },
+    { slug: "gcp-devops" },
+    { slug: "aws-devops" },
+    { slug: "aws-master" },
+    { slug: "azure-master" },
+    { slug: "gcp-master" }
+  ];
+}
+
+// @ts-expect-error - Next.js dynamic route params are inferred
+export default function TrainingDetailPage({ params }) {
+  const slug = params.slug;
   const training = trainings.find((t) => t.slug === slug);
 
   if (!training) {
