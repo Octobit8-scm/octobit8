@@ -14,7 +14,7 @@ default:
   image: node:18
 
 before_script:
-  - npm ci
+  - npm ci --include=dev
 
 build:
   stage: build
