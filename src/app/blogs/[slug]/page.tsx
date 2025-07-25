@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,9 +16,8 @@ export function generateStaticParams() {
   ];
 }
 
-export default function BlogDetailPage() {
-  const params = useParams();
-  const slug = params?.slug;
+export default function BlogDetailPage({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
   const blog = blogs.find((b) => b.slug === slug);
 
   if (!blog) {
