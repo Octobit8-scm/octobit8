@@ -10,6 +10,14 @@ const blogs = [
   { title: "AI Isn’t Coming. It’s Already Here", slug: "ai-isnt-coming-already-here", date: "June 3, 2025", excerpt: "Join the Google Cloud GenAI Masterclass and walk away with real AI use cases.", icon: "/icons/blog-3.svg" },
 ];
 
+export function generateStaticParams() {
+  return [
+    { slug: "scaling-gke-custom-metrics" },
+    { slug: "cloud-spend-leaving-on-table" },
+    { slug: "ai-isnt-coming-already-here" }
+  ];
+}
+
 export default function BlogDetailPage() {
   const params = useParams();
   const slug = params?.slug;
