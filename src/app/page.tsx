@@ -1,0 +1,438 @@
+import Image from "next/image";
+
+const solutions = [
+  {
+    // Icon: ci-cd.svg
+    icon: (
+      <img src="/icons/ci-cd.svg" alt="CI/CD Icon" className="w-10 h-10 mb-3" />
+    ),
+    title: "Automated CI/CD Pipelines",
+    desc: "Automate build, test, and deploy for faster, more reliable releases. Integrate with your stack for seamless delivery.",
+    detail: "Example: Reduced deployment time for a fintech client from 2 hours to 10 minutes with GitHub Actions and Docker."
+  },
+  {
+    // Icon: iac.svg
+    icon: (
+      <img src="/icons/iac.svg" alt="Infrastructure as Code Icon" className="w-10 h-10 mb-3" />
+    ),
+    title: "Infrastructure as Code",
+    desc: "Provision and manage infrastructure at scale using Terraform, Ansible, and more. Achieve repeatability and rapid scaling.",
+    detail: "Example: Enabled zero-downtime blue/green deployments for an EdTech platform using Terraform and AWS."
+  },
+  {
+    // Icon: cloud-migration.svg
+    icon: (
+      <img src="/icons/cloud-migration.svg" alt="Cloud Migration Icon" className="w-10 h-10 mb-3" />
+    ),
+    title: "Cloud Migration",
+    desc: "Move workloads to the cloud with minimal downtime. Optimize for cost, security, and performance.",
+    detail: "Example: Migrated logistics workloads to AWS, reducing infrastructure costs by 30% and improving uptime."
+  },
+  {
+    // Icon: cloud-native.svg
+    icon: (
+      <img src="/icons/cloud-native.svg" alt="Cloud-Native Apps Icon" className="w-10 h-10 mb-3" />
+    ),
+    title: "Cloud-Native Apps",
+    desc: "Build resilient, scalable apps using containers, microservices, and serverless. Accelerate innovation and reduce ops overhead.",
+    detail: "Example: Launched a serverless microservices architecture for a SaaS startup, enabling instant scaling for user spikes."
+  },
+  {
+    // Icon: monitoring.svg
+    icon: (
+      <img src="/icons/monitoring.svg" alt="Monitoring & Optimization Icon" className="w-10 h-10 mb-3" />
+    ),
+    title: "Monitoring & Optimization",
+    desc: "Gain real-time visibility and optimize performance with advanced monitoring and analytics. Proactively detect and resolve issues.",
+    detail: "Example: Implemented proactive monitoring for a retail client, reducing incident response time by 60%."
+  },
+];
+
+const processSteps = [
+  {
+    // Icon: discovery.svg
+    icon: (
+      <img src="/icons/discovery.svg" alt="Discovery Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Discovery",
+    desc: "We listen to your needs and define the best strategy."
+  },
+  {
+    // Icon: plan.svg
+    icon: (
+      <img src="/icons/plan.svg" alt="Plan Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Plan",
+    desc: "Our experts design a tailored solution and roadmap."
+  },
+  {
+    // Icon: execute.svg
+    icon: (
+      <img src="/icons/execute.svg" alt="Execute Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Execute",
+    desc: "We build, automate, and deploy with full transparency."
+  },
+  {
+    // Icon: support.svg
+    icon: (
+      <img src="/icons/support.svg" alt="Support Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Support",
+    desc: "Ongoing optimization and support for your success."
+  },
+];
+
+const benefits = [
+  {
+    // Icon: speed.svg
+    icon: (
+      <img src="/icons/speed.svg" alt="Speed Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Speed",
+    desc: "Accelerate delivery and time-to-market."
+  },
+  {
+    // Icon: security.svg
+    icon: (
+      <img src="/icons/security.svg" alt="Security Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Security",
+    desc: "Built-in security and compliance at every step."
+  },
+  {
+    // Icon: cost-savings.svg
+    icon: (
+      <img src="/icons/cost-savings.svg" alt="Cost Savings Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Cost Savings",
+    desc: "Optimize spend and maximize ROI."
+  },
+  {
+    // Icon: scalability.svg
+    icon: (
+      <img src="/icons/scalability.svg" alt="Scalability Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "Scalability",
+    desc: "Scale apps and infra on demand."
+  },
+  {
+    // Icon: support-247.svg
+    icon: (
+      <img src="/icons/support-247.svg" alt="24/7 Support Icon" className="w-8 h-8 mb-2" />
+    ),
+    title: "24/7 Support",
+    desc: "Proactive monitoring and expert help."
+  },
+];
+
+const clients = [
+  {
+    name: "FinTechPro",
+    desc: "Modernized banking platform with secure cloud migration.",
+    // Icon: fintechpro.svg
+    icon: (
+      <img src="/icons/fintechpro.svg" alt="FinTechPro Icon" className="w-10 h-10 mb-3" />
+    )
+  },
+  {
+    name: "EduCloud",
+    desc: "Scaled EdTech platform to serve millions of students.",
+    // Icon: educloud.svg
+    icon: (
+      <img src="/icons/educloud.svg" alt="EduCloud Icon" className="w-10 h-10 mb-3" />
+    )
+  },
+  {
+    name: "LogiTrack",
+    desc: "Optimized logistics with real-time cloud analytics.",
+    // Icon: logitrack.svg
+    icon: (
+      <img src="/icons/logitrack.svg" alt="LogiTrack Icon" className="w-10 h-10 mb-3" />
+    )
+  },
+];
+
+const partners = [
+  {
+    name: "AWS",
+    // Icon: aws.svg
+    icon: (
+      <img src="/icons/aws.svg" alt="AWS Icon" className="w-8 h-8 mb-2" />
+    )
+  },
+  {
+    name: "GCP",
+    // Icon: gcp.svg
+    icon: (
+      <img src="/icons/gcp.svg" alt="GCP Icon" className="w-8 h-8 mb-2" />
+    )
+  },
+  {
+    name: "Azure",
+    // Icon: azure.svg
+    icon: (
+      <img src="/icons/azure.svg" alt="Azure Icon" className="w-8 h-8 mb-2" />
+    )
+  },
+];
+
+const blogs = [
+  { title: "Scaling GKE with Custom Metrics", date: "May 31, 2025", excerpt: "Autoscaling GKE using Cloud Monitoring & Pub/Sub Queue Depth." },
+  { title: "Cloud Spend: What You’re Leaving on the Table", date: "May 13, 2025", excerpt: "Unlock cashback, extended terms, and 24/7 support with our Managed Cloud offering." },
+  { title: "AI Isn’t Coming. It’s Already Here", date: "June 3, 2025", excerpt: "Join the Google Cloud GenAI Masterclass and walk away with real AI use cases." },
+];
+
+const industryMetrics = [
+  {
+    industry: "Finance",
+    chart: (
+      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
+        <circle cx="18" cy="18" r="16" fill="#e5e7eb" />
+        <path d="M18 2 a 16 16 0 0 1 0 32" fill="none" stroke="#2563eb" strokeWidth="4" strokeDasharray="75 25" />
+        <text x="18" y="22" textAnchor="middle" className="fill-blue-700 font-bold text-lg">75%</text>
+      </svg>
+    ),
+    metrics: ["75% faster deployments", "$1M+ annual savings", "99.99% uptime"],
+  },
+  {
+    industry: "Healthcare",
+    chart: (
+      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
+        <circle cx="18" cy="18" r="16" fill="#e5e7eb" />
+        <path d="M18 2 a 16 16 0 1 1 0 32" fill="none" stroke="#059669" strokeWidth="4" strokeDasharray="90 10" />
+        <text x="18" y="22" textAnchor="middle" className="fill-green-700 font-bold text-lg">90%</text>
+      </svg>
+    ),
+    metrics: ["90% reduction in manual errors", "HIPAA compliance", "Instant patient data access"],
+  },
+  {
+    industry: "EdTech",
+    chart: (
+      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
+        <rect x="6" y="20" width="4" height="10" fill="#f59e42" />
+        <rect x="14" y="10" width="4" height="20" fill="#f59e42" />
+        <rect x="22" y="5" width="4" height="25" fill="#f59e42" />
+      </svg>
+    ),
+    metrics: ["3x user growth", "99.9% platform uptime", "Global content delivery"],
+  },
+  {
+    industry: "Logistics",
+    chart: (
+      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
+        <circle cx="18" cy="18" r="16" fill="#e5e7eb" />
+        <path d="M18 34 A 16 16 0 0 1 18 2" fill="none" stroke="#f43f5e" strokeWidth="4" strokeDasharray="60 40" />
+        <text x="18" y="22" textAnchor="middle" className="fill-rose-700 font-bold text-lg">60%</text>
+      </svg>
+    ),
+    metrics: ["60% faster order processing", "Real-time tracking", "Automated fleet management"],
+  },
+  {
+    industry: "Retail",
+    chart: (
+      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
+        <rect x="6" y="18" width="4" height="12" fill="#a21caf" />
+        <rect x="14" y="10" width="4" height="20" fill="#a21caf" />
+        <rect x="22" y="6" width="4" height="24" fill="#a21caf" />
+      </svg>
+    ),
+    metrics: ["2x sales during campaigns", "Personalized shopping", "Cloud-based inventory"],
+  },
+];
+
+export default function Home() {
+  return (
+    <div className="bg-white min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <section className="relative w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 py-28 px-4 overflow-hidden">
+        {/* Layered animated cloud SVGs */}
+        <svg className="absolute left-[-10%] top-[-8%] w-[500px] h-[220px] opacity-30 z-0 animate-float-slow" viewBox="0 0 500 220" fill="none"><ellipse cx="250" cy="110" rx="250" ry="90" fill="url(#cloudGradient1)" /><defs><linearGradient id="cloudGradient1" x1="0" y1="0" x2="500" y2="220" gradientUnits="userSpaceOnUse"><stop stopColor="#a5b4fc"/><stop offset="1" stopColor="#38bdf8"/></linearGradient></defs></svg>
+        <svg className="absolute right-[-12%] top-[10%] w-[320px] h-[120px] opacity-20 z-0 animate-float" viewBox="0 0 320 120" fill="none"><ellipse cx="160" cy="60" rx="160" ry="50" fill="url(#cloudGradient2)" /><defs><linearGradient id="cloudGradient2" x1="0" y1="0" x2="320" y2="120" gradientUnits="userSpaceOnUse"><stop stopColor="#bae6fd"/><stop offset="1" stopColor="#818cf8"/></linearGradient></defs></svg>
+        <svg className="absolute left-[10%] bottom-[-8%] w-[300px] h-[100px] opacity-20 z-0 animate-float-reverse" viewBox="0 0 300 100" fill="none"><ellipse cx="150" cy="50" rx="150" ry="40" fill="url(#cloudGradient3)" /><defs><linearGradient id="cloudGradient3" x1="0" y1="0" x2="300" y2="100" gradientUnits="userSpaceOnUse"><stop stopColor="#f0f9ff"/><stop offset="1" stopColor="#a5b4fc"/></linearGradient></defs></svg>
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+          {/* Left: Headline, subheading, benefits, CTA */}
+          <div className="flex-1 flex flex-col items-start md:items-start gap-8">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-2 drop-shadow-xl">Empower Your Cloud Journey with <span className="text-blue-700">DevOps</span> & <span className="text-blue-700">Cloud</span> Excellence</h1>
+            <p className="text-lg md:text-xl text-gray-700 max-w-xl mb-2">Next-gen automation, security, and scalability for digital leaders. Experience seamless cloud transformation with our expert team.</p>
+            <ul className="space-y-3 mb-4">
+              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/speed.svg" alt="Speed" className="w-6 h-6" /> Lightning-fast Deployments</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/security.svg" alt="Security" className="w-6 h-6" /> Zero-Trust Security</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/cost-savings.svg" alt="Cost Savings" className="w-6 h-6" /> Smart Cost Optimization</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><img src="/icons/scalability.svg" alt="Scalability" className="w-6 h-6" /> Effortless Multi-Cloud Scaling</li>
+            </ul>
+            <a href="#contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-12 py-4 rounded-full font-semibold shadow-2xl text-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200 ring-offset-2 ring-offset-white glow-effect">Get Started</a>
+          </div>
+          {/* Right: Contact Form with glassmorphism effect */}
+          <div className="flex-1 flex justify-center items-center relative mt-12 md:mt-0">
+            <div className="absolute -inset-4 md:-inset-8 rounded-3xl bg-gradient-to-br from-blue-100/60 to-blue-300/30 blur-lg z-0" />
+            <form className="relative bg-white/70 backdrop-blur-md border border-blue-100 rounded-3xl shadow-2xl p-12 w-full max-w-md flex flex-col gap-6 z-10">
+              <h2 className="text-3xl font-extrabold text-blue-800 mb-6 text-center tracking-tight">Book a Consultation Call</h2>
+              <div className="flex gap-4 flex-col sm:flex-row">
+                <div className="flex-1">
+                  <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-1">First Name</label>
+                  <input type="text" name="firstName" id="firstName" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+                </div>
+                <div className="flex-1">
+                  <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-1">Last Name</label>
+                  <input type="text" name="lastName" id="lastName" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">Work Email</label>
+                <input type="email" name="email" id="email" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+              </div>
+              <div>
+                <label htmlFor="org" className="block text-sm font-semibold text-gray-700 mb-1">Organisation Name</label>
+                <input type="text" name="org" id="org" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+              </div>
+              <div>
+                <label htmlFor="help" className="block text-sm font-semibold text-gray-700 mb-1">How can we help you?</label>
+                <textarea name="help" id="help" rows={4} required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition resize-none"></textarea>
+              </div>
+              <button type="submit" className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold rounded-xl px-8 py-4 mt-2 shadow-xl hover:scale-105 transition w-full text-lg glow-effect">Book a Consultation Call</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Our Solutions</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {solutions.map((sol) => (
+              <div key={sol.title} className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center transition-transform hover:scale-105">
+                <div className="mb-3 transition-transform hover:scale-110">
+                  <span className="glow-effect block">{sol.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-blue-800 mb-2 text-center tracking-tight font-sans font-semibold text-lg">{sol.title}</h3>
+                <p className="text-gray-700 text-center mb-4">{sol.desc}</p>
+                <a href={sol.title.toLowerCase().includes('cloud') ? '/cloud' : '/devops'} className="mt-2 inline-block border border-blue-500 text-blue-700 px-6 py-2 rounded-full font-semibold transition hover:bg-blue-50">Learn More</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DevOps & Cloud Impact by Industry */}
+      <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-100 via-white to-blue-200">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">DevOps & Cloud Impact by Industry</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {industryMetrics.map((ind) => (
+              <div key={ind.industry} className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center transition-transform hover:scale-105">
+                <div className="mb-3 transition-transform hover:scale-110 drop-shadow-xl">
+                  {ind.chart}
+                </div>
+                <h3 className="text-lg font-bold text-cyan-700 mb-2 text-center tracking-tight">{ind.industry}</h3>
+                <ul className="text-gray-700 text-center text-sm space-y-1 mt-2">
+                  {ind.metrics.map((m) => (
+                    <li key={m}>{m}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works / Process */}
+      <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">How It Works</h2>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-0 md:space-x-12 relative">
+            {/* Vertical timeline for desktop */}
+            <div className="hidden md:block absolute left-1/2 top-12 bottom-12 w-1 bg-gradient-to-b from-blue-200 to-blue-100 z-0" style={{transform: 'translateX(-50%)'}} />
+            {processSteps.map((step, idx) => (
+              <div key={step.title} className="flex flex-col items-center md:w-56 mb-8 md:mb-0 bg-white rounded-2xl shadow-xl p-8 relative z-10 transition-transform hover:scale-105">
+                <div className="mb-2 glow-effect">{step.icon}</div>
+                <h4 className="font-bold text-blue-800 mb-1 text-lg text-center tracking-tight">{step.title}</h4>
+                <p className="text-gray-700 text-center text-sm">{step.desc}</p>
+                {idx < processSteps.length - 1 && (
+                  <div className="hidden md:block w-12 h-1 bg-blue-200 my-4" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-100 via-white to-blue-200">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Business Benefits</h2>
+          <div className="grid md:grid-cols-5 gap-10 text-center">
+            {benefits.map((b) => (
+              <div key={b.title} className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center transition-transform hover:scale-105">
+                <div className="mb-2 glow-effect transition-transform hover:scale-110">{b.icon}</div>
+                <h4 className="font-bold text-blue-800 mb-1 tracking-tight">{b.title}</h4>
+                <p className="text-gray-700 text-sm">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories / Clients */}
+      <section className="w-full py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Success Stories</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {clients.map((c) => (
+              <div key={c.name} className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center transition-transform hover:scale-105">
+                <div className="mb-3 drop-shadow-xl">{c.icon}</div>
+                <h4 className="font-bold text-blue-800 mb-1 text-center text-lg tracking-tight">{c.name}</h4>
+                <p className="text-gray-700 text-center text-sm">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="w-full py-16 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Our Cloud Partners</h2>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {partners.map((p) => (
+              <div key={p.name} className="bg-white rounded-xl shadow p-4 flex flex-col items-center min-w-[100px] min-h-[80px] transition-transform hover:scale-105">
+                <img src={p.icon.props.src} alt={p.name} className="w-8 h-8 mb-2 grayscale hover:grayscale-0 transition duration-300" />
+                <span className="text-blue-700 font-bold text-sm mt-1">{p.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Highlights */}
+      <section className="w-full py-20 px-4 bg-gradient-to-br from-white via-blue-50 to-blue-100">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Latest Blogs</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {blogs.map((b, i) => (
+              <div key={b.title} className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-start transition-transform hover:scale-105">
+                <div className="mb-3 glow-effect transition-transform hover:scale-110">
+                  <img src={`/icons/blog-${i+1}.svg`} alt={`Blog ${i+1} Icon`} className="w-10 h-10" />
+                </div>
+                <span className="text-xs text-blue-700 font-semibold mb-2">{b.date}</span>
+                <h3 className="text-lg font-bold text-blue-800 mb-2 tracking-tight">{b.title}</h3>
+                <p className="text-gray-700 mb-4">{b.excerpt}</p>
+                <a href="/blogs" className="mt-auto text-blue-700 font-semibold hover:underline">Read More →</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-full py-16 px-4 bg-blue-700 text-center">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Modernize Your Business?</h2>
+          <p className="text-lg text-white mb-8">Contact our DevOps & Cloud experts to start your transformation journey today.</p>
+          <a href="/contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-100 transition">Get in Touch</a>
+        </div>
+      </section>
+    </div>
+  );
+}

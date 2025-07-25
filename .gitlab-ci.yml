@@ -1,0 +1,33 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  NEXT_PUBLIC_BASE_PATH: "/"
+  NODE_ENV: "production"
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm ci
+
+build:
+  stage: build
+  script:
+    - npm run build
+    - npm run export
+  artifacts:
+    paths:
+      - out
+      - node_modules
+
+deploy:
+  stage: deploy
+  image: node:18
+  script:
+    - npm install -g @azure/static-web-apps-cli
+    - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name Octobit8
+  only:
+    - main
