@@ -29,23 +29,29 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-16px); }
 }
+
 @keyframes float-slow {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
+
 @keyframes float-reverse {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(12px); }
 }
+
 .animate-float {
   animation: float 7s ease-in-out infinite;
 }
+
 .animate-float-slow {
   animation: float-slow 10s ease-in-out infinite;
 }
+
 .animate-float-reverse {
   animation: float-reverse 9s ease-in-out infinite;
 }
+
 .glow-effect {
   box-shadow: 0 0 24px 4px #38bdf8, 0 2px 8px 0 #0002;
 }

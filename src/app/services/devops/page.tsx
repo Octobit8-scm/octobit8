@@ -42,7 +42,7 @@ export default function DevOpsServicesPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-blue-800 mb-4">Our DevOps & Cloud Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive solutions designed to accelerate your development lifecycle, enhance operational efficiency, and optimize cloud infrastructure</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive solutions to streamline your development and deployment processes.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative group flex flex-col items-stretch bg-white rounded-3xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
