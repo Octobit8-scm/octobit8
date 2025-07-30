@@ -47,8 +47,8 @@ deploy-production:
     url: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net
   only:
     - main
-  tags:
-    - docker
+  # tags:
+  #   - docker
   dependencies:
     - build
 
