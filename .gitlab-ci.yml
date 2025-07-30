@@ -13,13 +13,12 @@ cache:
 
 build:
   stage: build
-  image: node:${NODE_VERSION}-alpine
+  image: node:18-alpine
   before_script:
     - apk add --no-cache git
     - npm ci
   script:
     - npm run build
-    - echo "Build completed successfully"
   artifacts:
     paths:
       - out/
@@ -30,15 +29,12 @@ build:
 
 deploy-production:
   stage: deploy
-  image: node:${NODE_VERSION}-alpine
+  image: node:18-alpine
   before_script:
     - apk add --no-cache git
     - npm install -g @azure/static-web-apps-cli
   script:
-    - echo "Deploying to Azure Static Web Apps Production"
     - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME
-    - echo "Production deployment completed successfully"
-    - echo "Production URL: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net"
   environment:
     name: production
     url: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net
@@ -49,15 +45,12 @@ deploy-production:
 
 deploy-staging:
   stage: deploy
-  image: node:${NODE_VERSION}-alpine
+  image: node:18-alpine
   before_script:
     - apk add --no-cache git
     - npm install -g @azure/static-web-apps-cli
   script:
-    - echo "Deploying to Azure Static Web Apps Staging"
     - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME-staging
-    - echo "Staging deployment completed successfully"
-    - echo "Staging URL: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net"
   environment:
     name: staging
     url: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net
