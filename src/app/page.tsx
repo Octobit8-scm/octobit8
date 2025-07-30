@@ -1,51 +1,44 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+
 
 const solutions = [
   {
-    // Icon: ci-cd.svg
-    icon: (
-      <Image src="/icons/ci-cd.svg" alt="CI/CD Icon" width={40} height={40} className="w-10 h-10 mb-3" />
-    ),
-    title: "Automated CI/CD Pipelines",
-    desc: "Automate build, test, and deploy for faster, more reliable releases. Integrate with your stack for seamless delivery.",
-    detail: "Example: Reduced deployment time for a fintech client from 2 hours to 10 minutes with GitHub Actions and Docker."
+    icon: <Image src="/icons/ai.svg" alt="AI & Automation" width={40} height={40} className="w-10 h-10 mb-3" />,
+    title: "AI & Automation",
+    desc: "Automate processes, gain insights, and drive innovation with AI, ML, and RPA.",
+    href: "/services/ai-development"
   },
   {
-    // Icon: iac.svg
-    icon: (
-      <Image src="/icons/iac.svg" alt="Infrastructure as Code Icon" width={40} height={40} className="w-10 h-10 mb-3" />
-    ),
-    title: "Infrastructure as Code",
-    desc: "Provision and manage infrastructure at scale using Terraform, Ansible, and more. Achieve repeatability and rapid scaling.",
-    detail: "Example: Enabled zero-downtime blue/green deployments for an EdTech platform using Terraform and AWS."
+    icon: <Image src="/icons/cloud-migration.svg" alt="Cloud Modernization" width={40} height={40} className="w-10 h-10 mb-3" />,
+    title: "Cloud Modernization",
+    desc: "Migrate, optimize, and scale on secure, agile cloud platforms.",
+    href: "/services/cloud"
   },
   {
-    // Icon: cloud-migration.svg
-    icon: (
-      <Image src="/icons/cloud-migration.svg" alt="Cloud Migration Icon" width={40} height={40} className="w-10 h-10 mb-3" />
-    ),
-    title: "Cloud Migration",
-    desc: "Move workloads to the cloud with minimal downtime. Optimize for cost, security, and performance.",
-    detail: "Example: Migrated logistics workloads to AWS, reducing infrastructure costs by 30% and improving uptime."
+    icon: <Image src="/icons/analytics.svg" alt="Data & Analytics" width={40} height={40} className="w-10 h-10 mb-3" />,
+    title: "Data & Analytics",
+    desc: "Unlock business value with advanced analytics, BI, and data engineering.",
+    href: "/services/data-analytics"
   },
   {
-    // Icon: cloud-native.svg
-    icon: (
-      <Image src="/icons/cloud-native.svg" alt="Cloud-Native Apps Icon" width={40} height={40} className="w-10 h-10 mb-3" />
-    ),
-    title: "Cloud-Native Apps",
-    desc: "Build resilient, scalable apps using containers, microservices, and serverless. Accelerate innovation and reduce ops overhead.",
-    detail: "Example: Launched a serverless microservices architecture for a SaaS startup, enabling instant scaling for user spikes."
+    icon: <Image src="/icons/frontend.svg" alt="Web & Mobile" width={40} height={40} className="w-10 h-10 mb-3" />,
+    title: "Web & Mobile Apps",
+    desc: "Deliver seamless digital experiences across web and mobile platforms.",
+    href: "/services/website-development"
   },
   {
-    // Icon: monitoring.svg
-    icon: (
-      <Image src="/icons/monitoring.svg" alt="Monitoring & Optimization Icon" width={40} height={40} className="w-10 h-10 mb-3" />
-    ),
-    title: "Monitoring & Optimization",
-    desc: "Gain real-time visibility and optimize performance with advanced monitoring and analytics. Proactively detect and resolve issues.",
-    detail: "Example: Implemented proactive monitoring for a retail client, reducing incident response time by 60%."
+    icon: <Image src="/icons/dev.svg" alt="Custom Software" width={40} height={40} className="w-10 h-10 mb-3" />,
+    title: "Custom Software",
+    desc: "Build tailored solutions for unique business needs and workflows.",
+    href: "/services/custom-software-development"
+  },
+  {
+    icon: <Image src="/icons/recruit.svg" alt="IT Staffing & Consulting" width={40} height={40} className="w-10 h-10 mb-3" />,
+    title: "IT Staffing & Consulting",
+    desc: "Access top talent and expert guidance for your transformation journey.",
+    href: "/services/it-staffing"
   },
 ];
 
@@ -178,71 +171,13 @@ const partners = [
   },
 ];
 
-const blogs = [
-  { title: "Scaling GKE with Custom Metrics", date: "May 31, 2025", excerpt: "Autoscaling GKE using Cloud Monitoring & Pub/Sub Queue Depth." },
-  { title: "Cloud Spend: What You’re Leaving on the Table", date: "May 13, 2025", excerpt: "Unlock cashback, extended terms, and 24/7 support with our Managed Cloud offering." },
-  { title: "AI Isn’t Coming. It’s Already Here", date: "June 3, 2025", excerpt: "Join the Google Cloud GenAI Masterclass and walk away with real AI use cases." },
-];
 
-const industryMetrics = [
-  {
-    industry: "Finance",
-    chart: (
-      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
-        <circle cx="18" cy="18" r="16" fill="#e5e7eb" />
-        <path d="M18 2 a 16 16 0 0 1 0 32" fill="none" stroke="#2563eb" strokeWidth="4" strokeDasharray="75 25" />
-        <text x="18" y="22" textAnchor="middle" className="fill-blue-700 font-bold text-lg">75%</text>
-      </svg>
-    ),
-    metrics: ["75% faster deployments", "$1M+ annual savings", "99.99% uptime"],
-  },
-  {
-    industry: "Healthcare",
-    chart: (
-      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
-        <circle cx="18" cy="18" r="16" fill="#e5e7eb" />
-        <path d="M18 2 a 16 16 0 1 1 0 32" fill="none" stroke="#059669" strokeWidth="4" strokeDasharray="90 10" />
-        <text x="18" y="22" textAnchor="middle" className="fill-green-700 font-bold text-lg">90%</text>
-      </svg>
-    ),
-    metrics: ["90% reduction in manual errors", "HIPAA compliance", "Instant patient data access"],
-  },
-  {
-    industry: "EdTech",
-    chart: (
-      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
-        <rect x="6" y="20" width="4" height="10" fill="#f59e42" />
-        <rect x="14" y="10" width="4" height="20" fill="#f59e42" />
-        <rect x="22" y="5" width="4" height="25" fill="#f59e42" />
-      </svg>
-    ),
-    metrics: ["3x user growth", "99.9% platform uptime", "Global content delivery"],
-  },
-  {
-    industry: "Logistics",
-    chart: (
-      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
-        <circle cx="18" cy="18" r="16" fill="#e5e7eb" />
-        <path d="M18 34 A 16 16 0 0 1 18 2" fill="none" stroke="#f43f5e" strokeWidth="4" strokeDasharray="60 40" />
-        <text x="18" y="22" textAnchor="middle" className="fill-rose-700 font-bold text-lg">60%</text>
-      </svg>
-    ),
-    metrics: ["60% faster order processing", "Real-time tracking", "Automated fleet management"],
-  },
-  {
-    industry: "Retail",
-    chart: (
-      <svg viewBox="0 0 36 36" className="w-16 h-16 mx-auto">
-        <rect x="6" y="18" width="4" height="12" fill="#a21caf" />
-        <rect x="14" y="10" width="4" height="20" fill="#a21caf" />
-        <rect x="22" y="6" width="4" height="24" fill="#a21caf" />
-      </svg>
-    ),
-    metrics: ["2x sales during campaigns", "Personalized shopping", "Cloud-based inventory"],
-  },
-];
+
+
 
 export default function Home() {
+
+
   return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Hero Section */}
@@ -253,14 +188,18 @@ export default function Home() {
         <svg className="absolute left-[10%] bottom-[-8%] w-[300px] h-[100px] opacity-20 z-0 animate-float-reverse" viewBox="0 0 300 100" fill="none"><ellipse cx="150" cy="50" rx="150" ry="40" fill="url(#cloudGradient3)" /><defs><linearGradient id="cloudGradient3" x1="0" y1="0" x2="300" y2="100" gradientUnits="userSpaceOnUse"><stop stopColor="#f0f9ff"/><stop offset="1" stopColor="#a5b4fc"/></linearGradient></defs></svg>
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
           {/* Left: Headline, subheading, benefits, CTA */}
-          <div className="flex-1 flex flex-col items-start md:items-start gap-8">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-2 drop-shadow-xl">Empower Your Cloud Journey with <span className="text-blue-700">DevOps</span> & <span className="text-blue-700">Cloud</span> Excellence</h1>
-            <p className="text-lg md:text-xl text-gray-700 max-w-xl mb-2">Next-gen automation, security, and scalability for digital leaders. Experience seamless cloud transformation with our expert team.</p>
+          <div className="flex-1 flex flex-col items-center md:items-center gap-8">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-2 drop-shadow-xl text-center">
+              Accelerate Your <span className="text-blue-700">Digital Transformation</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 max-w-xl mb-2 text-center">
+              Unlock innovation, agility, and growth with Octobit8. We deliver end-to-end digital transformation—cloud, AI, analytics, web, mobile, automation, and more.
+            </p>
             <ul className="space-y-3 mb-4">
-              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/speed.svg" alt="Speed" width={24} height={24} /> Lightning-fast Deployments</li>
-              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/security.svg" alt="Security" width={24} height={24} /> Zero-Trust Security</li>
-              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/cost-savings.svg" alt="Cost Savings" width={24} height={24} /> Smart Cost Optimization</li>
-              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/scalability.svg" alt="Scalability" width={24} height={24} /> Effortless Multi-Cloud Scaling</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/speed.svg" alt="Speed" width={24} height={24} /> Rapid Digital Innovation</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/ai.svg" alt="AI" width={24} height={24} /> AI & Data-Driven Decisions</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/cloud-migration.svg" alt="Cloud" width={24} height={24} /> Cloud & Modern Platforms</li>
+              <li className="flex items-center gap-3 text-gray-800 text-base"><Image src="/icons/mobile.svg" alt="Mobile" width={24} height={24} /> Seamless User Experiences</li>
             </ul>
             <a href="#contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-12 py-4 rounded-full font-semibold shadow-2xl text-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200 ring-offset-2 ring-offset-white glow-effect">Get Started</a>
           </div>
@@ -300,7 +239,13 @@ export default function Home() {
       {/* Solutions Section */}
       <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Our Solutions</h2>
+          <div className="flex flex-col items-center mb-10">
+            <div className="flex items-center gap-3 mb-2">
+              <Image src="/icons/solutions.svg" alt="Solutions" width={40} height={40} />
+              <h2 className="text-3xl font-bold text-blue-800 text-center">Digital Transformation Solutions</h2>
+            </div>
+            <p className="text-lg text-gray-700 text-center max-w-2xl">Comprehensive digital transformation services to accelerate your business growth.</p>
+          </div>
           <div className="grid md:grid-cols-3 gap-10">
             {solutions.map((sol) => (
               <div key={sol.title} className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center transition-transform hover:scale-105">
@@ -309,29 +254,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-blue-800 mb-2 text-center tracking-tight font-sans font-semibold text-lg">{sol.title}</h3>
                 <p className="text-gray-700 text-center mb-4">{sol.desc}</p>
-                <a href={sol.title.toLowerCase().includes('cloud') ? '/cloud' : '/devops'} className="mt-2 inline-block border border-blue-500 text-blue-700 px-6 py-2 rounded-full font-semibold transition hover:bg-blue-50">Learn More</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DevOps & Cloud Impact by Industry */}
-      <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-100 via-white to-blue-200">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">DevOps & Cloud Impact by Industry</h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            {industryMetrics.map((ind) => (
-              <div key={ind.industry} className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center transition-transform hover:scale-105">
-                <div className="mb-3 transition-transform hover:scale-110 drop-shadow-xl">
-                  {ind.chart}
-                </div>
-                <h3 className="text-lg font-bold text-cyan-700 mb-2 text-center tracking-tight">{ind.industry}</h3>
-                <ul className="text-gray-700 text-center text-sm space-y-1 mt-2">
-                  {ind.metrics.map((m) => (
-                    <li key={m}>{m}</li>
-                  ))}
-                </ul>
+                <a href={sol.href} className="mt-2 inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-6 py-2 rounded-full font-semibold transition hover:scale-105">Learn More</a>
               </div>
             ))}
           </div>
@@ -341,7 +264,13 @@ export default function Home() {
       {/* How It Works / Process */}
       <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">How It Works</h2>
+          <div className="flex flex-col items-center mb-10">
+            <div className="flex items-center gap-3 mb-2">
+              <Image src="/icons/process.svg" alt="Process" width={40} height={40} />
+              <h2 className="text-3xl font-bold text-blue-800 text-center">How It Works</h2>
+            </div>
+            <p className="text-lg text-gray-700 text-center max-w-2xl">Our proven 4-step process ensures successful digital transformation delivery.</p>
+          </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-0 md:space-x-12 relative">
             {/* Vertical timeline for desktop */}
             <div className="hidden md:block absolute left-1/2 top-12 bottom-12 w-1 bg-gradient-to-b from-blue-200 to-blue-100 z-0" style={{transform: 'translateX(-50%)'}} />
@@ -362,10 +291,16 @@ export default function Home() {
       {/* Benefits */}
       <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-100 via-white to-blue-200">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Business Benefits</h2>
+          <div className="flex flex-col items-center mb-10">
+            <div className="flex items-center gap-3 mb-2">
+              <Image src="/icons/benefits.svg" alt="Benefits" width={40} height={40} />
+              <h2 className="text-3xl font-bold text-blue-800 text-center">Business Benefits</h2>
+            </div>
+            <p className="text-lg text-gray-700 text-center max-w-2xl">Experience measurable improvements in efficiency, security, and growth.</p>
+          </div>
           <div className="grid md:grid-cols-5 gap-10 text-center">
             {benefits.map((b) => (
-              <div key={b.title} className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center transition-transform hover:scale-105">
+              <div key={b.title} className="rounded-2xl shadow-xl p-8 flex flex-col items-center transition-transform hover:scale-105">
                 <div className="mb-2 glow-effect transition-transform hover:scale-110">{b.icon}</div>
                 <h4 className="font-bold text-blue-800 mb-1 tracking-tight">{b.title}</h4>
                 <p className="text-gray-700 text-sm">{b.desc}</p>
@@ -378,10 +313,16 @@ export default function Home() {
       {/* Success Stories / Clients */}
       <section className="w-full py-20 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Success Stories</h2>
+          <div className="flex flex-col items-center mb-10">
+            <div className="flex items-center gap-3 mb-2">
+              <Image src="/icons/success.svg" alt="Success" width={40} height={40} />
+              <h2 className="text-3xl font-bold text-blue-800 text-center">Success Stories</h2>
+            </div>
+            <p className="text-lg text-gray-700 text-center max-w-2xl">Real results from real clients across diverse industries.</p>
+          </div>
           <div className="grid md:grid-cols-3 gap-10">
             {clients.map((c) => (
-              <div key={c.name} className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center transition-transform hover:scale-105">
+              <div key={c.name} className="rounded-2xl shadow-xl p-10 flex flex-col items-center transition-transform hover:scale-105">
                 <div className="mb-3 drop-shadow-xl">{c.icon}</div>
                 <h4 className="font-bold text-blue-800 mb-1 text-center text-lg tracking-tight">{c.name}</h4>
                 <p className="text-gray-700 text-center text-sm">{c.desc}</p>
@@ -394,7 +335,13 @@ export default function Home() {
       {/* Partners */}
       <section className="w-full py-16 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Our Cloud Partners</h2>
+          <div className="flex flex-col items-center mb-10">
+            <div className="flex items-center gap-3 mb-2">
+              <Image src="/icons/partners.svg" alt="Partners" width={40} height={40} />
+              <h2 className="text-3xl font-bold text-blue-800 text-center">Our Cloud Partners</h2>
+            </div>
+            <p className="text-lg text-gray-700 text-center max-w-2xl">Certified experts across leading cloud platforms.</p>
+          </div>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {partners.map((p) => (
               <div key={p.name} className="bg-white rounded-xl shadow p-4 flex flex-col items-center min-w-[100px] min-h-[80px] transition-transform hover:scale-105">
@@ -406,32 +353,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blog Highlights */}
-      <section className="w-full py-20 px-4 bg-gradient-to-br from-white via-blue-50 to-blue-100">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Latest Blogs</h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            {blogs.map((b, i) => (
-              <div key={b.title} className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-start transition-transform hover:scale-105">
-                <div className="mb-3 glow-effect transition-transform hover:scale-110">
-                  <Image src={`/icons/blog-${i+1}.svg`} alt={`Blog ${i+1} Icon`} width={40} height={40} />
-                </div>
-                <span className="text-xs text-blue-700 font-semibold mb-2">{b.date}</span>
-                <h3 className="text-lg font-bold text-blue-800 mb-2 tracking-tight">{b.title}</h3>
-                <p className="text-gray-700 mb-4">{b.excerpt}</p>
-                <Link href="/blogs" className="mt-auto text-blue-700 font-semibold hover:underline">Read More →</Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="w-full py-16 px-4 bg-blue-700 text-center">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Modernize Your Business?</h2>
-          <p className="text-lg text-white mb-8">Contact our DevOps & Cloud experts to start your transformation journey today.</p>
-          <a href="/contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-100 transition">Get in Touch</a>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center gap-3 mb-4">
+              <Image src="/icons/cta.svg" alt="Get Started" width={48} height={48} className="w-12 h-12" />
+              <h2 className="text-3xl font-bold text-white">Ready for Digital Transformation?</h2>
+            </div>
+            <p className="text-lg text-white mb-8">Contact our experts to start your digital transformation journey today.</p>
+            <a href="/contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-100 transition">Get in Touch</a>
+          </div>
         </div>
       </section>
     </div>

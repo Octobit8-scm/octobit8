@@ -6,21 +6,17 @@ export default function CareersPage() {
   return (
     <div className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-20 md:py-28 overflow-hidden shadow-xl rounded-b-3xl mb-16">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <svg className="absolute left-0 top-0 w-1/2 h-40 md:h-64 animate-float-slow" viewBox="0 0 400 160"><ellipse cx="200" cy="80" rx="200" ry="60" fill="#60a5fa" fillOpacity="0.18" /></svg>
-          <svg className="absolute right-0 top-10 w-1/3 h-32 animate-float" viewBox="0 0 300 128"><ellipse cx="150" cy="64" rx="150" ry="40" fill="#fbbf24" fillOpacity="0.10" /></svg>
-          <svg className="absolute left-1/4 bottom-0 w-1/2 h-24 animate-float-reverse" viewBox="0 0 400 96"><ellipse cx="200" cy="48" rx="200" ry="30" fill="#fff" fillOpacity="0.08" /></svg>
+      <section className="relative w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 py-28 px-4 overflow-hidden">
+        {/* Layered animated cloud SVGs */}
+        <svg className="absolute left-[-10%] top-[-8%] w-[500px] h-[220px] opacity-30 z-0 animate-float-slow" viewBox="0 0 500 220" fill="none"><ellipse cx="250" cy="110" rx="250" ry="90" fill="url(#cloudGradient1)" /><defs><linearGradient id="cloudGradient1" x1="0" y1="0" x2="500" y2="220" gradientUnits="userSpaceOnUse"><stop stopColor="#a5b4fc"/><stop offset="1" stopColor="#38bdf8"/></linearGradient></defs></svg>
+        <svg className="absolute right-[-12%] top-[10%] w-[320px] h-[120px] opacity-20 z-0 animate-float" viewBox="0 0 320 120" fill="none"><ellipse cx="160" cy="60" rx="160" ry="50" fill="url(#cloudGradient2)" /><defs><linearGradient id="cloudGradient2" x1="0" y1="0" x2="320" y2="120" gradientUnits="userSpaceOnUse"><stop stopColor="#bae6fd"/><stop offset="1" stopColor="#818cf8"/></linearGradient></defs></svg>
+        <svg className="absolute left-[10%] bottom-[-8%] w-[300px] h-[100px] opacity-20 z-0 animate-float-reverse" viewBox="0 0 300 100" fill="none"><ellipse cx="150" cy="50" rx="150" ry="40" fill="url(#cloudGradient3)" /><defs><linearGradient id="cloudGradient3" x1="0" y1="0" x2="300" y2="100" gradientUnits="userSpaceOnUse"><stop stopColor="#f0f9ff"/><stop offset="1" stopColor="#a5b4fc"/></linearGradient></defs></svg>
+        <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
+            <span className="inline-block bg-blue-600 text-white font-semibold px-4 py-1 rounded-full text-sm tracking-widest mb-4 animate-pulse">Careers</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg text-gray-900">Careers at <span className="text-blue-700">Octobit8</span></h1>
+            <p className="text-lg md:text-xl font-medium text-gray-700 mb-6 max-w-2xl">Join our team of passionate professionals and help shape the future of IT consulting and services. We are always looking for talented individuals to join us!</p>
+          <a href="#openings" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg glow-effect animate-bounce">View Openings</a>
         </div>
-        <div className="max-w-5xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
-          <div className="mb-6 flex flex-col items-center">
-            <span className="inline-block bg-white/20 text-blue-100 font-semibold px-4 py-1 rounded-full text-sm tracking-widest mb-4 border border-blue-200 animate-pulse">Careers</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">Careers at <span className="text-yellow-300">Octobit8</span></h1>
-            <p className="text-lg md:text-xl font-medium text-blue-100 mb-6 max-w-2xl">Join our team of passionate professionals and help shape the future of IT consulting and services. We are always looking for talented individuals to join us!</p>
-          </div>
-          <a href="#openings" className="inline-block bg-yellow-300 text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-lg glow-effect animate-bounce">View Openings</a>
-        </div>
-        <svg className="absolute bottom-0 left-0 w-full h-24 md:h-32 opacity-30" viewBox="0 0 1440 320"><path fill="#fff" fillOpacity="1" d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,197.3C840,224,960,224,1080,197.3C1200,171,1320,117,1380,90.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
       </section>
       {/* SECTION DIVIDER */}
       <div className="w-full flex justify-center mb-12"><div className="h-2 w-32 bg-gradient-to-r from-blue-400 via-blue-200 to-blue-400 rounded-full animate-pulse"></div></div>

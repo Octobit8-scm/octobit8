@@ -27,14 +27,38 @@ export default function RootLayout({
   const menuItems = [
     { href: "/about", label: "About" },
     {
-      label: "Solutions",
+      label: "Services",
       dropdown: [
-        { href: "/devops", label: "DevOps" },
-        { href: "/cloud", label: "Cloud" },
+        { href: "/services/website-development", label: "Website Development" },
+        { href: "/services/it-staffing", label: "IT Staffing" },
+        { href: "/services/mobile-app-development", label: "Mobile App Development" },
+        { href: "/services/custom-software-development", label: "Custom Software Development" },
       ],
     },
-    { href: "/training", label: "Training" },
-    { href: "/blogs", label: "Blogs" },
+
+    {
+      label: "Industries",
+      dropdown: [
+        { href: "/industries/healthcare", label: "Healthcare" },
+        { href: "/industries/edtech", label: "EdTech" },
+        { href: "/industries/travel", label: "Travel" },
+        { href: "/industries/hospitality", label: "Hospitality" },
+        { href: "/industries/logistics", label: "Logistics" },
+        { href: "/industries/retail", label: "Retail" },
+        { href: "/industries/real-estate", label: "Real Estate" },
+        { href: "/industries/banking-finance", label: "Banking & Finance" },
+      ],
+    },
+    {
+      label: "Solutions",
+      dropdown: [
+        { href: "/services/devops", label: "DevOps & Cloud" },
+        { href: "/services/data-analytics", label: "Data Analytics" },
+        { href: "/services/ai-development", label: "AI Agent Development" },
+      ],
+    },
+
+
     { href: "/careers", label: "Careers" },
   ];
 
@@ -45,7 +69,7 @@ export default function RootLayout({
       >
         {/* Header with Navigation */}
         <header className="bg-gray-900 shadow sticky top-0 z-50">
-          <nav className="container mx-auto flex items-center justify-between py-1 px-4 border-b border-gray-800 min-h-[56px]">
+          <nav className="container mx-auto flex items-center justify-between py-3 px-4 border-b border-gray-800 min-h-[72px]">
             {/* Logo and Title */}
             <Link href="/" className="flex items-center gap-3 group">
               <Image src="/logo.png" alt="octobit8 logo" width={160} height={80} />
@@ -64,7 +88,7 @@ export default function RootLayout({
                         {item.label}
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                       </button>
-                      <ul className="absolute left-0 mt-2 w-48 bg-gray-900 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity z-50">
+                      <ul className="absolute left-0 mt-3 w-48 bg-gray-900 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity z-50 border border-gray-700">
                         {item.dropdown.map((sub) => {
                           const isSubActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
                           return (
@@ -102,7 +126,7 @@ export default function RootLayout({
                 <span className="block w-6 h-0.5 bg-gray-100 rounded"></span>
                 <span className="block w-6 h-0.5 bg-gray-100 rounded"></span>
               </label>
-              <div className="absolute top-16 left-0 w-full bg-gray-900 shadow-lg z-50 hidden peer-checked:block animate-fade-in">
+              <div className="absolute top-20 left-0 w-full bg-gray-900 shadow-lg z-50 hidden peer-checked:block animate-fade-in">
                 <ul className="flex flex-col gap-2 py-4 px-6 text-gray-100 font-medium">
                   {menuItems.map((item) => {
                     const isActive = typeof window !== 'undefined' && window.location.pathname === (item.href || (item.dropdown && item.dropdown[0]?.href));
@@ -141,7 +165,7 @@ export default function RootLayout({
         </header>
         {/* Main Content */}
         <main className="flex-1 w-full">
-          {children}
+        {children}
         </main>
         {/* Footer */}
         <footer className="bg-gray-900 text-gray-100 mt-12 py-12 px-4">
@@ -160,14 +184,13 @@ export default function RootLayout({
               <ul className="space-y-1 text-sm">
                 <li><Link href="/about" className="hover:underline">About</Link></li>
                 <li><Link href="/careers" className="hover:underline">Careers</Link></li>
-                <li><Link href="/blogs" className="hover:underline">Blogs</Link></li>
+
               </ul>
             </div>
             <div className="flex flex-col gap-2 min-w-[120px]">
-              <h3 className="font-semibold mb-2 text-white">Solutions</h3>
+              <h3 className="font-semibold mb-2 text-white">Services</h3>
               <ul className="space-y-1 text-sm">
-                <li><Link href="/devops" className="hover:underline">DevOps</Link></li>
-                <li><Link href="/cloud" className="hover:underline">Cloud</Link></li>
+                <li><Link href="/services/devops" className="hover:underline">DevOps & Cloud</Link></li>
               </ul>
             </div>
             <div className="flex flex-col gap-2 min-w-[180px]">
