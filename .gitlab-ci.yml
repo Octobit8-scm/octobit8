@@ -29,12 +29,12 @@ build:
 
 deploy-production:
   stage: deploy
-  image: node:18-alpine
+  image: mcr.microsoft.com/azure-cli:latest
   before_script:
-    - apk add --no-cache git
-    - npm install -g @azure/static-web-apps-cli
+    - az --version
+    - az login --service-principal --username $AZURE_CLIENT_ID --password $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
   script:
-    - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME
+    - az staticwebapp create --name $AZURE_STATIC_WEB_APP_NAME --resource-group $AZURE_RESOURCE_GROUP --source . --location $AZURE_LOCATION --branch $CI_COMMIT_REF_NAME --app-location "/" --output-location "out" --token $AZURE_STATIC_WEB_APPS_API_TOKEN --login-with-github-token $GITHUB_TOKEN
   environment:
     name: production
     url: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net
@@ -45,12 +45,12 @@ deploy-production:
 
 deploy-staging:
   stage: deploy
-  image: node:18-alpine
+  image: mcr.microsoft.com/azure-cli:latest
   before_script:
-    - apk add --no-cache git
-    - npm install -g @azure/static-web-apps-cli
+    - az --version
+    - az login --service-principal --username $AZURE_CLIENT_ID --password $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
   script:
-    - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME-staging
+    - az staticwebapp create --name $AZURE_STATIC_WEB_APP_NAME-staging --resource-group $AZURE_RESOURCE_GROUP --source . --location $AZURE_LOCATION --branch $CI_COMMIT_REF_NAME --app-location "/" --output-location "out" --token $AZURE_STATIC_WEB_APPS_API_TOKEN --login-with-github-token $GITHUB_TOKEN
   environment:
     name: staging
     url: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net
