@@ -28,8 +28,8 @@ build:
   only:
     - main
     - develop
-  tags:
-    - docker
+  # tags:
+  #   - docker
 
 # Deploy to Azure Static Web Apps Production
 deploy-production:
