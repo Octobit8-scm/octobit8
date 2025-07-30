@@ -34,13 +34,13 @@ build:
 # Deploy to Azure Static Web Apps Production
 deploy-production:
   stage: deploy
-  image: mcr.microsoft.com/azure-cli:latest
+  image: node:${NODE_VERSION}-alpine
   before_script:
-    - az --version
-    - az login --service-principal --username $AZURE_CLIENT_ID --password $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
+    - apk add --no-cache git
+    - npm install -g @azure/static-web-apps-cli
   script:
     - echo "Deploying to Azure Static Web Apps Production..."
-    - az staticwebapp create --name $AZURE_STATIC_WEB_APP_NAME --resource-group $AZURE_RESOURCE_GROUP --source . --location $AZURE_LOCATION --branch $CI_COMMIT_REF_NAME --app-location "/" --output-location "out" --token $AZURE_STATIC_WEB_APPS_TOKEN --login-with-github-token $GITHUB_TOKEN
+    - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME
     - echo "Production deployment completed successfully"
   environment:
     name: production
@@ -55,20 +55,20 @@ deploy-production:
 # Deploy to Azure Static Web Apps Staging (for develop branch)
 deploy-staging:
   stage: deploy
-  image: mcr.microsoft.com/azure-cli:latest
+  image: node:${NODE_VERSION}-alpine
   before_script:
-    - az --version
-    - az login --service-principal --username $AZURE_CLIENT_ID --password $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
+    - apk add --no-cache git
+    - npm install -g @azure/static-web-apps-cli
   script:
     - echo "Deploying to Azure Static Web Apps Staging..."
-    - az staticwebapp create --name $AZURE_STATIC_WEB_APP_NAME-staging --resource-group $AZURE_RESOURCE_GROUP --source . --location $AZURE_LOCATION --branch $CI_COMMIT_REF_NAME --app-location "/" --output-location "out" --token $AZURE_STATIC_WEB_APPS_TOKEN --login-with-github-token $GITHUB_TOKEN
+    - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME-staging
     - echo "Staging deployment completed successfully"
   environment:
     name: staging
     url: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net
   only:
     - develop
-  tags:
-    - docker
+  # tags:
+  #   - docker
   dependencies:
     - build
