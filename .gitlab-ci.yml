@@ -5,7 +5,7 @@ stages:
 variables:
   NODE_VERSION: "18"
   OUTPUT_DIR: "out"
-
+  AZURE_STATIC_WEB_APP_NAME: "octobit8"
 # Cache node modules for faster builds
 cache:
   paths:
