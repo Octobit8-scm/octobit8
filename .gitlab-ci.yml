@@ -6,6 +6,7 @@ variables:
   NODE_VERSION: "18"
   OUTPUT_DIR: "out"
   AZURE_STATIC_WEB_APP_NAME: "octobit8"
+
 # Cache node modules for faster builds
 cache:
   paths:
@@ -42,9 +43,9 @@ deploy-production:
     - echo "Deploying to Azure Static Web Apps Production..."
     - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME
     - echo "Production deployment completed successfully"
-    - echo "🚀 Application deployed successfully!"
-    - echo "📱 Production URL: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net"
-    - echo "🔗 View your app at: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net"
+    - echo "Application deployed successfully!"
+    - echo "Production URL: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net"
+    - echo "View your app at: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net"
   environment:
     name: production
     url: https://$AZURE_STATIC_WEB_APP_NAME.azurestaticapps.net
@@ -66,9 +67,9 @@ deploy-staging:
     - echo "Deploying to Azure Static Web Apps Staging..."
     - swa deploy ./out --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --app-name $AZURE_STATIC_WEB_APP_NAME-staging
     - echo "Staging deployment completed successfully"
-    - echo "🚀 Staging application deployed successfully!"
-    - echo "📱 Staging URL: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net"
-    - echo "🔗 View your staging app at: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net"
+    - echo "Staging application deployed successfully!"
+    - echo "Staging URL: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net"
+    - echo "View your staging app at: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net"
   environment:
     name: staging
     url: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net
