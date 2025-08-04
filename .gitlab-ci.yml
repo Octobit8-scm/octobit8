@@ -7,7 +7,7 @@ variables:
   OUTPUT_DIR: "out"
   AZURE_STATIC_WEB_APP_NAME: "octobit8"
   AZURE_RESOURCE_GROUP: "octobit8-rg"
-  AZURE_LOCATION: "eastus"
+  AZURE_LOCATION: "eastus2"
 
 cache:
   paths:
