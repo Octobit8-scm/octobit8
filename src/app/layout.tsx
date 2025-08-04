@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import ClarityAnalytics from "./components/ClarityAnalytics";
+import { analyticsConfig } from "./config/analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +58,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        {analyticsConfig.clarity.enabled && (
+          <ClarityAnalytics projectId={analyticsConfig.clarity.projectId} />
+        )}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 min-h-screen flex flex-col`}
       >
