@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 import ClarityAnalytics from "./components/ClarityAnalytics";
 import { analyticsConfig } from "./config/analytics";
 
@@ -71,9 +72,11 @@ export default function RootLayout({
           <nav className="container mx-auto flex items-center justify-between py-3 px-4 border-b border-gray-800 min-h-[72px]">
             {/* Logo and Title */}
             <Link href="/" className="flex items-center gap-3 group">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="octobit8 logo" 
+                width={48}
+                height={48}
                 className="h-12 w-auto object-contain"
               />
             </Link>
@@ -175,9 +178,11 @@ export default function RootLayout({
           <div className="container mx-auto flex flex-col md:flex-row md:items-start md:justify-between gap-12 border-b border-gray-800 pb-8">
             <div className="flex flex-col items-center md:items-start md:w-1/4 gap-4">
               <div className="flex items-center gap-2">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="octobit8 logo" 
+                  width={40}
+                  height={40}
                   className="h-10 w-auto object-contain"
                 />
               </div>

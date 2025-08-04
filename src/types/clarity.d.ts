@@ -3,7 +3,7 @@ declare global {
   interface Window {
     clarity?: (
       command: string,
-      ...args: any[]
+      ...args: unknown[]
     ) => void;
   }
 }
