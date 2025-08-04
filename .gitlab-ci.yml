@@ -33,7 +33,8 @@ deploy-production:
   stage: deploy
   image: node:18-alpine
   before_script:
-    - npm install -g @azure/static-web-apps-cli
+    - apk add --no-cache curl
+    - npm install -g @azure/static-web-apps-cli@latest
   script:
     - swa deploy ./out --env production --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN
   environment:
@@ -50,7 +51,7 @@ deploy-staging:
   before_script:
     - npm install -g @azure/static-web-apps-cli
   script:
-    - swa deploy ./out --env staging --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN
+    - swa deploy ./out --env staging --deployment-token $AZURE_STATIC_WEB_APPS_API_TOKEN --verbose
   environment:
     name: staging
     url: https://$AZURE_STATIC_WEB_APP_NAME-staging.azurestaticapps.net
