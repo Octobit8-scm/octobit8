@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function RealEstateSolutionsPage() {
   return (
@@ -26,100 +27,200 @@ export default function RealEstateSolutionsPage() {
         </div>
       </section>
 
-      {/* DevOps Solutions for Real Estate */}
+
+
+      {/* AI-Powered Property Management */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <Image src="/icons/ci-cd.svg" alt="CI/CD" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Property Platform Updates</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Continuous Deployment</h3>
-                <p className="text-gray-700 mb-4">Automated deployment pipelines for property management systems, ensuring new features and listings reach clients instantly.</p>
-              </div>
-            </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <Image src="/icons/automation.svg" alt="Automation" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Client Communication</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Automated Workflows</h3>
-                <p className="text-gray-700 mb-4">Automated client communication, lead management, and property viewing scheduling for streamlined real estate operations.</p>
-              </div>
-            </div>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI-Powered Property Management</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent property management systems that leverage artificial intelligence to optimize operations, enhance client experiences, and maximize property value.</p>
           </div>
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-yellow-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-500 to-yellow-300 p-8 md:p-10">
-                <Image src="/icons/monitoring.svg" alt="Monitoring" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Property Performance</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Market Monitoring</h3>
-                <p className="text-gray-700 mb-4">Real-time monitoring of property performance, market trends, and client engagement for data-driven real estate decisions.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Smart Property Analytics</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Market Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered property valuation</li>
+                    <li>• Market trend analysis</li>
+                    <li>• Price prediction algorithms</li>
+                    <li>• Neighborhood analysis</li>
+                    <li>• Investment opportunity identification</li>
+                    <li>• Risk assessment models</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Property Performance</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Rental yield optimization</li>
+                    <li>• Occupancy rate prediction</li>
+                    <li>• Maintenance cost forecasting</li>
+                    <li>• Property appreciation tracking</li>
+                    <li>• ROI calculation automation</li>
+                    <li>• Portfolio performance analysis</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                <Image src="/icons/security.svg" alt="Security" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Transaction Security</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Data Protection</h3>
-                <p className="text-gray-700 mb-4">Comprehensive security measures for sensitive property data, client information, and transaction records in real estate.</p>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Client Experience Enhancement</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Personalized Services</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered property matching</li>
+                    <li>• Personalized recommendations</li>
+                    <li>• Client preference learning</li>
+                    <li>• Smart search optimization</li>
+                    <li>• Virtual property tours</li>
+                    <li>• Automated client communication</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Transaction Automation</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated document processing</li>
+                    <li>• Smart contract generation</li>
+                    <li>• Payment processing automation</li>
+                    <li>• Title search automation</li>
+                    <li>• Escrow management</li>
+                    <li>• Compliance checking</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cloud Solutions for Real Estate */}
-      <section className="py-20 bg-gradient-to-br from-blue-100 via-white to-blue-200">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <Image src="/icons/cloud.svg" alt="Cloud" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Property Management Cloud</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Scalable Property Systems</h3>
-                <p className="text-gray-700 mb-4">Cloud-based property management platforms for listing management, client portals, and transaction tracking.</p>
+      {/* AI Agent Solutions for Real Estate */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Real Estate</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced AI agents designed to automate real estate operations, enhance client services, and optimize property management processes.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Virtual Real Estate Assistants</h3>
+              <div className="space-y-4">
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-purple-700 mb-2">AI Property Guides</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Intelligent property search</li>
+                    <li>• Neighborhood information</li>
+                    <li>• School district analysis</li>
+                    <li>• Transportation accessibility</li>
+                    <li>• Local amenities mapping</li>
+                    <li>• Investment potential assessment</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Client Support AI</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• 24/7 property inquiries</li>
+                    <li>• Viewing appointment scheduling</li>
+                    <li>• Mortgage calculator assistance</li>
+                    <li>• Property comparison tools</li>
+                    <li>• Market update notifications</li>
+                    <li>• Document assistance</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <Image src="/icons/ai.svg" alt="AI" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Market Intelligence</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">AI-Powered Insights</h3>
-                <p className="text-gray-700 mb-4">Cloud AI services for property valuation, market analysis, and predictive insights for real estate professionals.</p>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-orange-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Real Estate Operations AI</h3>
+              <div className="space-y-4">
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-orange-700 mb-2">Lead Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated lead scoring</li>
+                    <li>• Lead qualification automation</li>
+                    <li>• Follow-up scheduling</li>
+                    <li>• Client nurturing campaigns</li>
+                    <li>• Conversion prediction</li>
+                    <li>• Pipeline optimization</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Property Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Maintenance scheduling</li>
+                    <li>• Tenant screening automation</li>
+                    <li>• Rent collection optimization</li>
+                    <li>• Property inspection coordination</li>
+                    <li>• Vendor management</li>
+                    <li>• Energy efficiency monitoring</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-yellow-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-500 to-yellow-300 p-8 md:p-10">
-                <Image src="/icons/integration.svg" alt="Integration" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Multi-Platform Integration</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Seamless Connectivity</h3>
-                <p className="text-gray-700 mb-4">Integration with MLS systems, property databases, payment gateways, and third-party real estate services.</p>
+        </div>
+      </section>
+
+      {/* Advanced Market Intelligence */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Advanced Market Intelligence</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive market analysis solutions that provide deep insights into property trends, investment opportunities, and market dynamics.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-teal-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Market Analytics</h3>
+              <div className="space-y-4">
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-teal-700 mb-2">Trend Analysis</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Price trend forecasting</li>
+                    <li>• Market cycle analysis</li>
+                    <li>• Supply-demand dynamics</li>
+                    <li>• Seasonal pattern recognition</li>
+                    <li>• Economic impact assessment</li>
+                    <li>• Regional market comparison</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Investment Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• ROI prediction models</li>
+                    <li>• Risk assessment algorithms</li>
+                    <li>• Portfolio optimization</li>
+                    <li>• Tax benefit analysis</li>
+                    <li>• Financing optimization</li>
+                    <li>• Exit strategy planning</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                <Image src="/icons/analytics.svg" alt="Analytics" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Real Estate Analytics</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Market Insights</h3>
-                <p className="text-gray-700 mb-4">Advanced analytics for property performance, client behavior, market trends, and revenue optimization.</p>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-pink-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Predictive Intelligence</h3>
+              <div className="space-y-4">
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-pink-700 mb-2">Property Valuation</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated appraisal systems</li>
+                    <li>• Comparative market analysis</li>
+                    <li>• Value appreciation prediction</li>
+                    <li>• Renovation impact assessment</li>
+                    <li>• Market value tracking</li>
+                    <li>• Investment potential scoring</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Market Forecasting</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Market bubble detection</li>
+                    <li>• Growth area identification</li>
+                    <li>• Gentrification prediction</li>
+                    <li>• Infrastructure impact analysis</li>
+                    <li>• Demographic trend analysis</li>
+                    <li>• Policy impact assessment</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -137,6 +238,9 @@ export default function RealEstateSolutionsPage() {
               <li>Secure transaction handling</li>
               <li>Market intelligence insights</li>
               <li>Scalable real estate platforms</li>
+              <li>AI-powered property matching</li>
+              <li>Predictive market analysis</li>
+              <li>Automated transaction processing</li>
             </ul>
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
@@ -147,8 +251,30 @@ export default function RealEstateSolutionsPage() {
               <li>Client relationship management</li>
               <li>Transaction management systems</li>
               <li>Real estate analytics platforms</li>
+              <li>AI-powered property assistants</li>
+              <li>Predictive market intelligence</li>
+              <li>Virtual property tours</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Real Estate Business?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join the digital transformation revolution in real estate with our comprehensive AI-powered solutions.
+            </p>
+          </div>
+          <ContactForm 
+            title="Get Real Estate Solution Quote"
+            subtitle="Tell us about your real estate business and requirements."
+            defaultPosition="Real Estate Solutions"
+            emailSubject="Real Estate Solutions Inquiry"
+            placeholder="Describe your real estate business, current challenges, and specific requirements for our real estate solutions..."
+          />
         </div>
       </section>
     </div>

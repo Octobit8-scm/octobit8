@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function DevOpsServicesPage() {
   return (
@@ -539,14 +540,20 @@ export default function DevOpsServicesPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Contact Form Section */}
       <section className="max-w-5xl mx-auto px-4 mb-20">
-        <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-3xl shadow-2xl p-12 text-center text-white">
-          <h2 className="text-4xl font-bold mb-6">Partner with Octobit8</h2>
-          <p className="text-xl mb-8 leading-relaxed">Unlock the full potential of your development pipeline and cloud infrastructure. Explore our resources for setup guides, best practices, and case studies, or contact us today to start your DevOps & Cloud journey.</p>
-          <Link href="/contact" className="inline-block bg-white text-blue-600 font-bold px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300 text-lg">
-            Start Your DevOps & Cloud Journey
-          </Link>
+        <div className="bg-white rounded-3xl shadow-2xl p-12">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Partner with Octobit8</h2>
+            <p className="text-xl text-gray-700">Unlock the full potential of your development pipeline and cloud infrastructure. Get a customized DevOps & Cloud solution for your business.</p>
+          </div>
+          <ContactForm 
+            title="Get DevOps & Cloud Solution Quote"
+            subtitle="Tell us about your DevOps and cloud requirements."
+            defaultPosition="DevOps & Cloud Services"
+            emailSubject="DevOps & Cloud Services Inquiry"
+            placeholder="Describe your current infrastructure, DevOps challenges, and specific requirements for our DevOps and cloud solutions..."
+          />
         </div>
       </section>
     </div>

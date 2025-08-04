@@ -32,33 +32,26 @@ export default function RootLayout({
         { href: "/services/it-staffing", label: "IT Staffing" },
         { href: "/services/mobile-app-development", label: "Mobile App Development" },
         { href: "/services/custom-software-development", label: "Custom Software Development" },
-      ],
-    },
-
-    {
-      label: "Industries",
-      dropdown: [
-        { href: "/industries/healthcare", label: "Healthcare" },
-        { href: "/industries/edtech", label: "EdTech" },
-        { href: "/industries/travel", label: "Travel" },
-        { href: "/industries/hospitality", label: "Hospitality" },
-        { href: "/industries/logistics", label: "Logistics" },
-        { href: "/industries/retail", label: "Retail" },
-        { href: "/industries/real-estate", label: "Real Estate" },
-        { href: "/industries/banking-finance", label: "Banking & Finance" },
-      ],
-    },
-    {
-      label: "Solutions",
-      dropdown: [
         { href: "/services/devops", label: "DevOps & Cloud" },
         { href: "/services/data-analytics", label: "Data Analytics" },
         { href: "/services/ai-development", label: "AI Agent Development" },
       ],
     },
-
-
+    {
+      label: "Solutions",
+      dropdown: [
+        { href: "/solutions/healthcare", label: "Healthcare" },
+        { href: "/solutions/edtech", label: "EdTech" },
+        { href: "/solutions/travel", label: "Travel" },
+        { href: "/solutions/hospitality", label: "Hospitality" },
+        { href: "/solutions/logistics", label: "Logistics" },
+        { href: "/solutions/retail", label: "Retail" },
+        { href: "/solutions/real-estate", label: "Real Estate" },
+        { href: "/solutions/banking-finance", label: "Banking & Finance" },
+      ],
+    },
     { href: "/careers", label: "Careers" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -201,11 +194,12 @@ export default function RootLayout({
             <div className="flex flex-col gap-2 min-w-[160px]">
               <h3 className="font-semibold mb-2 text-white">Services</h3>
               <ul className="space-y-1 text-sm">
-                <li><Link href="/services/devops" className="hover:underline transition-colors">DevOps & Cloud</Link></li>
                 <li><Link href="/services/website-development" className="hover:underline transition-colors">Website Development</Link></li>
                 <li><Link href="/services/mobile-app-development" className="hover:underline transition-colors">Mobile App Development</Link></li>
                 <li><Link href="/services/custom-software-development" className="hover:underline transition-colors">Custom Software</Link></li>
+                <li><Link href="/services/devops" className="hover:underline transition-colors">DevOps & Cloud</Link></li>
                 <li><Link href="/services/data-analytics" className="hover:underline transition-colors">Data Analytics</Link></li>
+                <li><Link href="/services/ai-development" className="hover:underline transition-colors">AI Agent Development</Link></li>
                 <li><Link href="/services/it-staffing" className="hover:underline transition-colors">IT Staffing</Link></li>
               </ul>
             </div>
@@ -213,11 +207,13 @@ export default function RootLayout({
               <h3 className="font-semibold mb-2 text-white">Solutions</h3>
               <ul className="space-y-1 text-sm">
                 <li><Link href="/solutions/healthcare" className="hover:underline transition-colors">Healthcare</Link></li>
-                <li><Link href="/solutions/fintech" className="hover:underline transition-colors">FinTech</Link></li>
                 <li><Link href="/solutions/edtech" className="hover:underline transition-colors">EdTech</Link></li>
-                <li><Link href="/solutions/ecommerce" className="hover:underline transition-colors">E-commerce</Link></li>
+                <li><Link href="/solutions/travel" className="hover:underline transition-colors">Travel</Link></li>
+                <li><Link href="/solutions/hospitality" className="hover:underline transition-colors">Hospitality</Link></li>
                 <li><Link href="/solutions/logistics" className="hover:underline transition-colors">Logistics</Link></li>
                 <li><Link href="/solutions/retail" className="hover:underline transition-colors">Retail</Link></li>
+                <li><Link href="/solutions/real-estate" className="hover:underline transition-colors">Real Estate</Link></li>
+                <li><Link href="/solutions/banking-finance" className="hover:underline transition-colors">Banking & Finance</Link></li>
               </ul>
             </div>
             <div className="flex flex-col gap-2 min-w-[200px]">

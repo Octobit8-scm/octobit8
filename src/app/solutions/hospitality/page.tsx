@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function HospitalitySolutionsPage() {
   return (
@@ -126,6 +127,270 @@ export default function HospitalitySolutionsPage() {
         </div>
       </section>
 
+      {/* AI-Enabled Hotel Management Applications */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI-Enabled Hotel Management Applications</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent hotel management systems that leverage artificial intelligence to optimize operations, enhance guest experiences, and maximize revenue.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Smart Property Management</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">AI-Powered PMS</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Intelligent room allocation and optimization</li>
+                    <li>• Predictive maintenance scheduling</li>
+                    <li>• Automated inventory management</li>
+                    <li>• Smart energy consumption monitoring</li>
+                    <li>• Real-time occupancy analytics</li>
+                    <li>• Automated housekeeping coordination</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Revenue Optimization</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Dynamic pricing algorithms</li>
+                    <li>• Demand forecasting and prediction</li>
+                    <li>• Competitor rate monitoring</li>
+                    <li>• Personalized pricing strategies</li>
+                    <li>• Revenue maximization analytics</li>
+                    <li>• Automated rate adjustments</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Guest Experience Enhancement</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Personalized Services</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered guest preference learning</li>
+                    <li>• Personalized room recommendations</li>
+                    <li>• Smart amenity suggestions</li>
+                    <li>• Automated guest communication</li>
+                    <li>• Intelligent concierge services</li>
+                    <li>• Predictive guest needs analysis</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Operational Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Staff workload optimization</li>
+                    <li>• Service quality monitoring</li>
+                    <li>• Guest satisfaction prediction</li>
+                    <li>• Automated issue resolution</li>
+                    <li>• Performance analytics</li>
+                    <li>• Quality assurance automation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI-Enabled Restaurant Management Applications */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI-Enabled Restaurant Management Applications</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent restaurant management systems that optimize operations, enhance customer experiences, and streamline food service operations.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Smart Kitchen Operations</h3>
+              <div className="space-y-4">
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-purple-700 mb-2">Kitchen Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered inventory management</li>
+                    <li>• Predictive ingredient ordering</li>
+                    <li>• Smart recipe optimization</li>
+                    <li>• Automated food cost analysis</li>
+                    <li>• Waste reduction algorithms</li>
+                    <li>• Quality control automation</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Order Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Intelligent order routing</li>
+                    <li>• Real-time kitchen coordination</li>
+                    <li>• Automated order prioritization</li>
+                    <li>• Smart table management</li>
+                    <li>• Wait time prediction</li>
+                    <li>• Capacity optimization</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-orange-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Customer Experience & Analytics</h3>
+              <div className="space-y-4">
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-orange-700 mb-2">Customer Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered customer preference learning</li>
+                    <li>• Personalized menu recommendations</li>
+                    <li>• Smart loyalty program management</li>
+                    <li>• Automated customer feedback analysis</li>
+                    <li>• Sentiment analysis for reviews</li>
+                    <li>• Predictive customer behavior</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Business Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Sales performance prediction</li>
+                    <li>• Menu optimization analytics</li>
+                    <li>• Revenue trend analysis</li>
+                    <li>• Staff performance monitoring</li>
+                    <li>• Operational efficiency metrics</li>
+                    <li>• Competitive analysis</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agent Solutions for Hotels */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Hotels</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced AI agents designed to enhance hotel operations, improve guest services, and automate hospitality processes.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-red-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Virtual Hotel Concierge</h3>
+              <div className="space-y-4">
+                <div className="bg-red-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-700 mb-2">Guest Service AI</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• 24/7 virtual concierge services</li>
+                    <li>• Natural language guest queries</li>
+                    <li>• Multi-language support</li>
+                    <li>• Automated room service ordering</li>
+                    <li>• Smart amenity requests</li>
+                    <li>• Context-aware guest assistance</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Intelligent Guest Support</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated check-in/check-out</li>
+                    <li>• Smart room key management</li>
+                    <li>• Voice-activated room controls</li>
+                    <li>• Automated billing assistance</li>
+                    <li>• Guest preference learning</li>
+                    <li>• Proactive service recommendations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-teal-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Operational AI Agents</h3>
+              <div className="space-y-4">
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-teal-700 mb-2">Staff Assistance</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated task assignment</li>
+                    <li>• Smart scheduling optimization</li>
+                    <li>• Performance monitoring</li>
+                    <li>• Training recommendation systems</li>
+                    <li>• Quality assurance automation</li>
+                    <li>• Incident response coordination</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Predictive Operations</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Occupancy prediction</li>
+                    <li>• Maintenance scheduling</li>
+                    <li>• Energy consumption optimization</li>
+                    <li>• Supply chain automation</li>
+                    <li>• Revenue forecasting</li>
+                    <li>• Risk assessment and alerts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agent Solutions for Restaurants */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Restaurants</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent AI agents designed to streamline restaurant operations, enhance customer service, and optimize food service management.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-pink-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Virtual Restaurant Assistant</h3>
+              <div className="space-y-4">
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-pink-700 mb-2">Customer Service AI</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated order taking</li>
+                    <li>• Menu recommendation engine</li>
+                    <li>• Dietary restriction handling</li>
+                    <li>• Multi-language order support</li>
+                    <li>• Voice-activated ordering</li>
+                    <li>• Smart upselling suggestions</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Table Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Intelligent table allocation</li>
+                    <li>• Wait time prediction</li>
+                    <li>• Reservation optimization</li>
+                    <li>• Capacity planning</li>
+                    <li>• Guest flow management</li>
+                    <li>• Automated seating arrangements</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-yellow-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Kitchen & Operations AI</h3>
+              <div className="space-y-4">
+                <div className="bg-yellow-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-yellow-700 mb-2">Kitchen Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated inventory tracking</li>
+                    <li>• Smart ingredient ordering</li>
+                    <li>• Recipe optimization</li>
+                    <li>• Food safety monitoring</li>
+                    <li>• Quality control automation</li>
+                    <li>• Waste reduction algorithms</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Business Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Sales trend analysis</li>
+                    <li>• Menu performance optimization</li>
+                    <li>• Staff productivity monitoring</li>
+                    <li>• Cost analysis automation</li>
+                    <li>• Revenue prediction</li>
+                    <li>• Competitive pricing analysis</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits & Use Cases */}
       <section className="max-w-6xl mx-auto px-4 mb-16">
         <div className="grid md:grid-cols-2 gap-12">
@@ -137,6 +402,9 @@ export default function HospitalitySolutionsPage() {
               <li>Operational efficiency</li>
               <li>Revenue optimization</li>
               <li>Scalable infrastructure</li>
+              <li>AI-powered personalization</li>
+              <li>Automated service delivery</li>
+              <li>Predictive business insights</li>
             </ul>
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
@@ -147,8 +415,30 @@ export default function HospitalitySolutionsPage() {
               <li>Guest service applications</li>
               <li>Revenue management systems</li>
               <li>Hospitality analytics platforms</li>
+              <li>AI-powered hotel concierge</li>
+              <li>Restaurant management systems</li>
+              <li>Kitchen automation solutions</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Hospitality Business?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join the digital transformation revolution in hospitality with our comprehensive AI-powered solutions.
+            </p>
+          </div>
+          <ContactForm 
+            title="Get Hospitality Solution Quote"
+            subtitle="Tell us about your hospitality business and requirements."
+            defaultPosition="Hospitality Solutions"
+            emailSubject="Hospitality Solutions Inquiry"
+            placeholder="Describe your hospitality business, current challenges, and specific requirements for our hospitality solutions..."
+          />
         </div>
       </section>
     </div>

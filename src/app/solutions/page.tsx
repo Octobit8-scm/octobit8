@@ -1,49 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-const featuredSolutions = [
-  {
-    title: "AWS Infrastructure for Healthcare Data Platform",
-    icon: "/icons/aws.svg",
-    description: "Design and deploy HIPAA-compliant AWS infrastructure for secure, scalable healthcare data platforms."
-  },
-  {
-    title: "Secured Web Application Infra Setup",
-    icon: "/icons/security.svg",
-    description: "Implement robust, secure infrastructure for web applications with automated security policies and monitoring."
-  },
-  {
-    title: "Database Migration",
-    icon: "/icons/database.svg",
-    description: "Seamlessly migrate databases to the cloud or between platforms with zero downtime and data integrity."
-  },
-  {
-    title: "Authentication Services",
-    icon: "/icons/auth.svg",
-    description: "Integrate secure authentication and authorization services (OAuth, SSO, IAM) for your applications."
-  },
-  {
-    title: "Migration from Jenkins to GitLab CI",
-    icon: "/icons/gitlab.svg",
-    description: "Modernize your CI/CD by migrating from Jenkins to GitLab CI for improved automation and collaboration."
-  },
-  {
-    title: "iOS Build and Test Pipeline",
-    icon: "/icons/ios.svg",
-    description: "Automate iOS app builds and testing with scalable, cloud-based pipelines for faster releases."
-  },
-  {
-    title: "AWS Migration",
-    icon: "/icons/aws-migration.svg",
-    description: "Plan and execute seamless migration of workloads to AWS, ensuring performance and cost optimization."
-  },
-  {
-    title: "Cloud Security",
-    icon: "/icons/cloud-security.svg",
-    description: "Implement advanced cloud security controls, monitoring, and compliance for your cloud environments."
-  }
-];
+import ContactForm from "../components/ContactForm";
 
 const industries = [
   {
@@ -123,48 +81,54 @@ export default function SolutionsPage() {
     <main className="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen py-0">
       {/* Hero Section */}
       <section className="container mx-auto py-16 px-4 text-center">
-        <h1 className="text-5xl font-extrabold text-blue-800 mb-4">DevOps & Cloud Solutions</h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">Unlock the power of modern IT with our specialized DevOps and Cloud solutions, tailored for your industry.</p>
+        <h1 className="text-5xl font-extrabold text-blue-800 mb-4">Industry-Specific Solutions</h1>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">Tailored technology solutions designed specifically for your industry&apos;s unique challenges and requirements.</p>
       </section>
-      {/* Featured Solutions */}
+      
+      {/* Industry Solutions Grid */}
       <section className="container mx-auto py-8 px-4">
-        <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Featured Solutions</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Our Industry Solutions</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredSolutions.map((sol) => (
-            <div key={sol.title} className="bg-white rounded-xl shadow p-8 flex flex-col items-center hover:shadow-lg transition">
-              <Image src={sol.icon} alt={sol.title} width={56} height={56} className="w-14 h-14 mb-4" />
-              <h3 className="text-xl font-bold text-blue-700 mb-2 text-center">{sol.title}</h3>
-              <p className="text-gray-600 text-center">{sol.description}</p>
+          {industries.map((industry) => (
+            <div key={industry.name} className="bg-white rounded-xl shadow p-8 flex flex-col items-center hover:shadow-lg transition">
+              <Image src={industry.icon} alt={industry.name} width={64} height={64} className="w-16 h-16 mb-4" />
+              <h2 className="text-2xl font-bold text-blue-700 mb-2">{industry.name}</h2>
+              <div className="w-full mb-4">
+                <h3 className="text-lg font-semibold text-blue-600 mb-1">Key Solutions</h3>
+                <ul className="list-disc list-inside text-gray-600 text-sm mb-2">
+                  {industry.devops.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <h3 className="text-lg font-semibold text-blue-600 mb-1 mt-4">Technology Focus</h3>
+                <ul className="list-disc list-inside text-gray-600 text-sm">
+                  {industry.cloud.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
       </section>
-      {/* Industry Solutions Cards */}
-      <section className="container mx-auto py-8 px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {industries.map((industry) => (
-          <div key={industry.name} className="bg-white rounded-xl shadow p-8 flex flex-col items-center hover:shadow-lg transition">
-            <Image src={industry.icon} alt={industry.name} width={64} height={64} className="w-16 h-16 mb-4" />
-            <h2 className="text-2xl font-bold text-blue-700 mb-2">{industry.name}</h2>
-            <div className="w-full mb-4">
-              <h3 className="text-lg font-semibold text-blue-600 mb-1">DevOps Solutions</h3>
-              <ul className="list-disc list-inside text-gray-600 text-sm mb-2">
-                {industry.devops.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <h3 className="text-lg font-semibold text-blue-600 mb-1 mt-4">Cloud Solutions</h3>
-              <ul className="list-disc list-inside text-gray-600 text-sm">
-                {industry.cloud.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
+      
+      {/* Contact Form Section */}
+      <section className="container mx-auto py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready for Your Industry Solution?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get a customized solution tailored specifically for your industry&apos;s unique challenges and requirements.
+            </p>
           </div>
-        ))}
-      </section>
-      {/* Call to Action */}
-      <section className="container mx-auto py-12 px-4 text-center">
-        <a href="/contact" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-800 transition">Discuss Your Needs</a>
+          <ContactForm 
+            title="Get Industry Solution Quote"
+            subtitle="Tell us about your industry and specific requirements."
+            defaultPosition="Industry Solutions"
+            emailSubject="Industry Solutions Inquiry"
+            placeholder="Describe your industry, current challenges, and specific requirements for our industry solutions..."
+          />
+        </div>
       </section>
     </main>
   );

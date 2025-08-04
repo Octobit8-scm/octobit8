@@ -1,5 +1,7 @@
 "use client";
 
+import ContactForm from "../components/ContactForm";
+
 export default function AboutPage() {
   return (
     <main className="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen py-0">
@@ -213,14 +215,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="container mx-auto py-12 px-4 text-center">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl shadow-lg p-8 text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-6">Join the hundreds of organizations that trust Octobit8 to drive their digital transformation journey.</p>
-          <a href="/contact" className="inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">
-            Get Started Today
-          </a>
+      {/* Contact Form Section */}
+      <section className="container mx-auto py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join the hundreds of organizations that trust Octobit8 to drive their digital transformation journey.
+            </p>
+          </div>
+          <ContactForm 
+            title="Get Started with Octobit8"
+            subtitle="Tell us about your business and transformation goals."
+            defaultPosition="General Inquiry"
+            emailSubject="Business Transformation Inquiry"
+            placeholder="Describe your business, current challenges, and transformation goals..."
+          />
         </div>
       </section>
     </main>

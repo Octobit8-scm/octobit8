@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function RetailSolutionsPage() {
   return (
@@ -26,100 +27,200 @@ export default function RetailSolutionsPage() {
         </div>
       </section>
 
-      {/* DevOps Solutions for Retail */}
+
+
+      {/* AI-Powered Retail Management */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <Image src="/icons/ci-cd.svg" alt="CI/CD" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Continuous Deployment</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Rapid E-commerce Updates</h3>
-                <p className="text-gray-700 mb-4">Automated deployment pipelines for e-commerce platforms, ensuring new products, pricing, and features reach customers instantly.</p>
-              </div>
-            </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <Image src="/icons/automation.svg" alt="Automation" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">POS System Automation</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Automated Testing</h3>
-                <p className="text-gray-700 mb-4">Automated testing for point-of-sale systems, ensuring reliability during high-traffic shopping events and peak sales periods.</p>
-              </div>
-            </div>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI-Powered Retail Management</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent retail management systems that leverage artificial intelligence to optimize operations, enhance customer experiences, and maximize sales performance.</p>
           </div>
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-yellow-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-500 to-yellow-300 p-8 md:p-10">
-                <Image src="/icons/monitoring.svg" alt="Monitoring" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Sales Event Monitoring</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Performance Tracking</h3>
-                <p className="text-gray-700 mb-4">Comprehensive monitoring and alerting for retail systems during sales events, ensuring optimal performance and customer experience.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Smart Inventory Management</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Predictive Inventory</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered demand forecasting</li>
+                    <li>• Automated reorder optimization</li>
+                    <li>• Seasonal trend analysis</li>
+                    <li>• Stock level prediction</li>
+                    <li>• Supplier performance tracking</li>
+                    <li>• Waste reduction algorithms</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Omnichannel Sync</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Real-time inventory synchronization</li>
+                    <li>• Cross-channel availability</li>
+                    <li>• Automated stock allocation</li>
+                    <li>• Store-to-online integration</li>
+                    <li>• Dynamic pricing optimization</li>
+                    <li>• Location-based inventory</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                <Image src="/icons/security.svg" alt="Security" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Payment Security</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Secure Transactions</h3>
-                <p className="text-gray-700 mb-4">Comprehensive security measures for payment processing, customer data protection, and PCI DSS compliance in retail.</p>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Customer Experience Enhancement</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Personalized Shopping</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered product recommendations</li>
+                    <li>• Customer behavior analysis</li>
+                    <li>• Personalized marketing campaigns</li>
+                    <li>• Smart search optimization</li>
+                    <li>• Cross-selling algorithms</li>
+                    <li>• Customer lifetime value prediction</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Smart Customer Service</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered chatbots</li>
+                    <li>• Automated order processing</li>
+                    <li>• Real-time customer support</li>
+                    <li>• Proactive issue resolution</li>
+                    <li>• Multi-language support</li>
+                    <li>• Voice-activated shopping</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cloud Solutions for Retail */}
-      <section className="py-20 bg-gradient-to-br from-blue-100 via-white to-blue-200">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <Image src="/icons/cloud.svg" alt="Cloud" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Cloud-Native E-commerce</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Scalable Platforms</h3>
-                <p className="text-gray-700 mb-4">Cloud-native e-commerce platforms designed for high scalability, handling traffic spikes during sales events and seasonal peaks.</p>
+      {/* AI Agent Solutions for Retail */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Retail</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced AI agents designed to automate retail operations, enhance customer service, and optimize sales processes.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Virtual Shopping Assistants</h3>
+              <div className="space-y-4">
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-purple-700 mb-2">AI Shopping Guides</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Intelligent product discovery</li>
+                    <li>• Size and fit recommendations</li>
+                    <li>• Style matching algorithms</li>
+                    <li>• Virtual try-on experiences</li>
+                    <li>• Personalized styling advice</li>
+                    <li>• Trend analysis and suggestions</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Customer Support AI</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• 24/7 automated support</li>
+                    <li>• Order status tracking</li>
+                    <li>• Return and exchange assistance</li>
+                    <li>• Product information queries</li>
+                    <li>• Payment processing help</li>
+                    <li>• Loyalty program management</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <Image src="/icons/ai.svg" alt="AI" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Personalized Shopping</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">AI-Powered Retail</h3>
-                <p className="text-gray-700 mb-4">Cloud AI services for personalized shopping experiences, recommendation engines, and customer behavior analysis.</p>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-orange-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Retail Operations AI</h3>
+              <div className="space-y-4">
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-orange-700 mb-2">Sales Optimization</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Dynamic pricing strategies</li>
+                    <li>• Promotional campaign optimization</li>
+                    <li>• Sales forecasting and planning</li>
+                    <li>• Customer segmentation</li>
+                    <li>• Revenue maximization</li>
+                    <li>• Competitive analysis</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Store Operations</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Staff scheduling optimization</li>
+                    <li>• Store layout optimization</li>
+                    <li>• Performance monitoring</li>
+                    <li>• Quality control automation</li>
+                    <li>• Loss prevention systems</li>
+                    <li>• Energy consumption optimization</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-yellow-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-500 to-yellow-300 p-8 md:p-10">
-                <Image src="/icons/inventory.svg" alt="Inventory" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Inventory Management</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Cloud-Based Inventory</h3>
-                <p className="text-gray-700 mb-4">Real-time inventory management in the cloud for accurate stock tracking, automated reordering, and omnichannel inventory sync.</p>
+        </div>
+      </section>
+
+      {/* Advanced Analytics & Insights */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Advanced Analytics & Insights</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive analytics solutions that provide deep insights into customer behavior, sales performance, and market trends.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-teal-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Customer Intelligence</h3>
+              <div className="space-y-4">
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-teal-700 mb-2">Behavioral Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Customer journey mapping</li>
+                    <li>• Purchase pattern analysis</li>
+                    <li>• Browsing behavior tracking</li>
+                    <li>• Customer satisfaction metrics</li>
+                    <li>• Churn prediction models</li>
+                    <li>• Lifetime value calculation</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Market Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Competitor price monitoring</li>
+                    <li>• Market trend analysis</li>
+                    <li>• Product performance tracking</li>
+                    <li>• Seasonal demand patterns</li>
+                    <li>• Geographic sales analysis</li>
+                    <li>• Category performance insights</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                <Image src="/icons/analytics.svg" alt="Analytics" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Retail Analytics</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Sales Insights</h3>
-                <p className="text-gray-700 mb-4">Advanced analytics for sales performance, customer behavior, inventory optimization, and revenue forecasting.</p>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-pink-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Business Intelligence</h3>
+              <div className="space-y-4">
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-pink-700 mb-2">Performance Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Sales performance metrics</li>
+                    <li>• Revenue trend analysis</li>
+                    <li>• Profit margin optimization</li>
+                    <li>• Store performance comparison</li>
+                    <li>• Employee productivity tracking</li>
+                    <li>• Operational efficiency metrics</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Predictive Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Sales forecasting models</li>
+                    <li>• Demand prediction algorithms</li>
+                    <li>• Inventory optimization</li>
+                    <li>• Cash flow forecasting</li>
+                    <li>• Risk assessment</li>
+                    <li>• Growth opportunity identification</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -137,6 +238,9 @@ export default function RetailSolutionsPage() {
               <li>Real-time inventory management</li>
               <li>Enhanced customer engagement</li>
               <li>Scalable e-commerce infrastructure</li>
+              <li>AI-powered personalization</li>
+              <li>Predictive inventory management</li>
+              <li>Automated customer service</li>
             </ul>
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
@@ -147,8 +251,30 @@ export default function RetailSolutionsPage() {
               <li>Inventory management systems</li>
               <li>Retail analytics platforms</li>
               <li>Omnichannel retail solutions</li>
+              <li>AI-powered shopping assistants</li>
+              <li>Predictive retail analytics</li>
+              <li>Virtual shopping experiences</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Retail Business?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join the digital transformation revolution in retail with our comprehensive AI-powered solutions.
+            </p>
+          </div>
+          <ContactForm 
+            title="Get Retail Solution Quote"
+            subtitle="Tell us about your retail business and requirements."
+            defaultPosition="Retail Solutions"
+            emailSubject="Retail Solutions Inquiry"
+            placeholder="Describe your retail business, current challenges, and specific requirements for our retail solutions..."
+          />
         </div>
       </section>
     </div>

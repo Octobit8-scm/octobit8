@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function BankingFinanceSolutionsPage() {
   return (
@@ -24,104 +25,205 @@ export default function BankingFinanceSolutionsPage() {
           <p className="text-lg text-gray-700 text-center">Financial institutions face unique challenges: strict regulatory requirements, sensitive financial data, real-time transaction processing, and zero-tolerance for downtime. Our solutions are built with these critical requirements in mind.</p>
         </div>
       </section>
-      {/* DevOps Solutions for Banking & Finance */}
+
+      {/* AI-Powered Financial Management */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <Image src="/icons/security.svg" alt="Security" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Regulatory Compliance</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">SOX & PCI DSS Compliance</h3>
-                <p className="text-gray-700 mb-4">Automated compliance monitoring, audit trails, and security controls for SOX, PCI DSS, and other financial regulations.</p>
-              </div>
-            </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <Image src="/icons/ci-cd.svg" alt="CI/CD" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Zero-Downtime Deployments</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Continuous Availability</h3>
-                <p className="text-gray-700 mb-4">Blue-green deployments, rolling updates, and automated rollback capabilities to ensure 24/7 financial services availability.</p>
-              </div>
-            </div>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI-Powered Financial Management</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent financial management systems that leverage artificial intelligence to optimize operations, enhance security, and maximize financial performance.</p>
           </div>
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-yellow-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-500 to-yellow-300 p-8 md:p-10">
-                <Image src="/icons/monitoring.svg" alt="Monitoring" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Real-time Monitoring</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Transaction Monitoring</h3>
-                <p className="text-gray-700 mb-4">Real-time monitoring of financial transactions, fraud detection, and automated alerting for critical banking operations.</p>
-              </div>
-            </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                <Image src="/icons/automation.svg" alt="Automation" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Process Automation</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Financial Workflows</h3>
-                <p className="text-gray-700 mb-4">Automate loan processing, risk assessment, compliance reporting, and other critical financial workflows.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Cloud Solutions for Banking & Finance */}
-      <section className="py-20 bg-gradient-to-br from-blue-100 via-white to-blue-200">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-blue-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-blue-600 to-blue-400 p-8 md:p-10">
-                <Image src="/icons/cloud.svg" alt="Cloud" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Secure Cloud Banking</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Digital Banking Platforms</h3>
-                <p className="text-gray-700 mb-4">Secure cloud infrastructure for online banking, mobile apps, and digital payment systems with encryption and compliance.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Smart Risk Management</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Credit Risk Assessment</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered credit scoring</li>
+                    <li>• Real-time risk evaluation</li>
+                    <li>• Predictive default modeling</li>
+                    <li>• Portfolio risk analysis</li>
+                    <li>• Dynamic risk adjustment</li>
+                    <li>• Automated underwriting</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Fraud Detection</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Real-time fraud monitoring</li>
+                    <li>• Behavioral pattern analysis</li>
+                    <li>• Anomaly detection algorithms</li>
+                    <li>• Transaction risk scoring</li>
+                    <li>• Automated fraud alerts</li>
+                    <li>• Machine learning models</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-green-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-green-600 to-green-400 p-8 md:p-10">
-                <Image src="/icons/analytics.svg" alt="Analytics" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Risk Analytics</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">AI-Powered Risk Management</h3>
-                <p className="text-gray-700 mb-4">Advanced analytics and AI for credit risk assessment, fraud detection, and portfolio management in the cloud.</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-12">
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-yellow-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-yellow-500 to-yellow-300 p-8 md:p-10">
-                <Image src="/icons/integration.svg" alt="Integration" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Core Banking Integration</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">System Connectivity</h3>
-                <p className="text-gray-700 mb-4">Seamless integration with core banking systems, payment gateways, and financial APIs in the cloud.</p>
-              </div>
-            </div>
-            <div className="relative group flex flex-col items-stretch bg-white rounded-2xl shadow-xl border-l-8 border-pink-500 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex flex-col items-center justify-center min-w-[120px] bg-gradient-to-b from-pink-600 to-pink-400 p-8 md:p-10">
-                <Image src="/icons/legacy.svg" alt="Legacy" width={64} height={64} className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="text-white font-bold text-lg tracking-wide">Legacy Modernization</span>
-              </div>
-              <div className="flex-1 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">Digital Transformation</h3>
-                <p className="text-gray-700 mb-4">Modernize legacy banking systems and migrate to cloud-native architectures while maintaining compliance.</p>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Financial Intelligence</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Investment Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Portfolio optimization algorithms</li>
+                    <li>• Market trend analysis</li>
+                    <li>• Asset allocation strategies</li>
+                    <li>• Performance prediction models</li>
+                    <li>• Risk-adjusted returns</li>
+                    <li>• Automated rebalancing</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Regulatory Compliance</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated compliance monitoring</li>
+                    <li>• Regulatory reporting automation</li>
+                    <li>• Audit trail management</li>
+                    <li>• KYC/AML automation</li>
+                    <li>• Real-time compliance alerts</li>
+                    <li>• Policy enforcement</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* AI Agent Solutions for Banking & Finance */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Banking & Finance</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced AI agents designed to automate financial operations, enhance customer service, and optimize banking processes.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Virtual Financial Advisors</h3>
+              <div className="space-y-4">
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-purple-700 mb-2">AI Financial Planning</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Personalized financial advice</li>
+                    <li>• Investment recommendations</li>
+                    <li>• Retirement planning assistance</li>
+                    <li>• Budget optimization</li>
+                    <li>• Goal-based planning</li>
+                    <li>• Tax optimization strategies</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Customer Service AI</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• 24/7 banking assistance</li>
+                    <li>• Account balance inquiries</li>
+                    <li>• Transaction history access</li>
+                    <li>• Payment processing help</li>
+                    <li>• Loan application assistance</li>
+                    <li>• Multi-language support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-orange-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Banking Operations AI</h3>
+              <div className="space-y-4">
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-orange-700 mb-2">Loan Processing</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated loan applications</li>
+                    <li>• Document verification</li>
+                    <li>• Credit assessment automation</li>
+                    <li>• Approval workflow optimization</li>
+                    <li>• Loan servicing automation</li>
+                    <li>• Payment processing</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Trading & Investment</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Algorithmic trading systems</li>
+                    <li>• Market analysis automation</li>
+                    <li>• Portfolio rebalancing</li>
+                    <li>• Risk management automation</li>
+                    <li>• Performance monitoring</li>
+                    <li>• Automated reporting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Financial Analytics */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Advanced Financial Analytics</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive analytics solutions that provide deep insights into financial performance, market trends, and customer behavior.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-teal-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Customer Intelligence</h3>
+              <div className="space-y-4">
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-teal-700 mb-2">Behavioral Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Customer spending patterns</li>
+                    <li>• Banking behavior analysis</li>
+                    <li>• Product usage tracking</li>
+                    <li>• Customer lifetime value</li>
+                    <li>• Churn prediction models</li>
+                    <li>• Cross-selling opportunities</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Market Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Market trend analysis</li>
+                    <li>• Economic indicator tracking</li>
+                    <li>• Competitive analysis</li>
+                    <li>• Interest rate impact</li>
+                    <li>• Currency fluctuation monitoring</li>
+                    <li>• Regulatory impact assessment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-pink-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Predictive Intelligence</h3>
+              <div className="space-y-4">
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-pink-700 mb-2">Financial Forecasting</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Revenue prediction models</li>
+                    <li>• Cash flow forecasting</li>
+                    <li>• Profit margin analysis</li>
+                    <li>• Capital requirement planning</li>
+                    <li>• Investment return prediction</li>
+                    <li>• Economic scenario modeling</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Risk Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Credit risk prediction</li>
+                    <li>• Market risk assessment</li>
+                    <li>• Operational risk monitoring</li>
+                    <li>• Liquidity risk analysis</li>
+                    <li>• Stress testing automation</li>
+                    <li>• Capital adequacy modeling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits & Use Cases */}
       <section className="max-w-6xl mx-auto px-4 mb-16">
         <div className="grid md:grid-cols-2 gap-12">
@@ -133,6 +235,9 @@ export default function BankingFinanceSolutionsPage() {
               <li>24/7 availability and reliability</li>
               <li>Reduced operational costs</li>
               <li>Scalable infrastructure</li>
+              <li>AI-powered risk management</li>
+              <li>Automated compliance monitoring</li>
+              <li>Predictive financial analytics</li>
             </ul>
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
@@ -143,8 +248,30 @@ export default function BankingFinanceSolutionsPage() {
               <li>Risk management solutions</li>
               <li>Compliance reporting tools</li>
               <li>Investment management platforms</li>
+              <li>AI-powered financial advisors</li>
+              <li>Automated trading systems</li>
+              <li>Fraud detection platforms</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Financial Business?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join the digital transformation revolution in banking and finance with our comprehensive AI-powered solutions.
+            </p>
+          </div>
+          <ContactForm 
+            title="Get Banking & Finance Solution Quote"
+            subtitle="Tell us about your financial services business and requirements."
+            defaultPosition="Banking & Finance Solutions"
+            emailSubject="Banking & Finance Solutions Inquiry"
+            placeholder="Describe your financial services business, current challenges, and specific requirements for our banking and finance solutions..."
+          />
         </div>
       </section>
     </div>

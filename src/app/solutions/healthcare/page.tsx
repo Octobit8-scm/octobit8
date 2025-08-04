@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function HealthcareSolutionsPage() {
   return (
@@ -25,19 +26,19 @@ export default function HealthcareSolutionsPage() {
         </div>
       </section>
 
-      {/* Pharmacy Management Solutions */}
+      {/* Desktop Applications for Pharmacy Management */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-800 mb-4">Pharmacy Management Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive pharmacy management systems for retail pharmacies, hospital pharmacies, and pharmaceutical chains.</p>
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Desktop Applications for Pharmacy Management</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive desktop-based pharmacy management systems for retail pharmacies, hospital pharmacies, and pharmaceutical chains.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Desktop Solutions</h3>
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Desktop Pharmacy Software</h3>
               <div className="space-y-4">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-700 mb-2">Pharmacy Management Software</h4>
+                  <h4 className="font-semibold text-blue-700 mb-2">Pharmacy Management System</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Inventory management and stock control</li>
                     <li>• Prescription processing and dispensing</li>
@@ -59,26 +60,98 @@ export default function HealthcareSolutionsPage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Cloud-Based Solutions</h3>
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Advanced Desktop Features</h3>
               <div className="space-y-4">
                 <div className="bg-green-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-green-700 mb-2">Cloud Pharmacy Platform</h4>
+                  <h4 className="font-semibold text-green-700 mb-2">Pharmacy Analytics & Reporting</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• Web-based pharmacy management</li>
-                    <li>• Real-time inventory synchronization</li>
-                    <li>• Multi-branch pharmacy networks</li>
-                    <li>• Mobile app for pharmacists</li>
-                    <li>• Automated prescription refills</li>
-                    <li>• Integration with healthcare systems</li>
+                    <li>• Sales and revenue analytics</li>
+                    <li>• Inventory turnover reports</li>
+                    <li>• Prescription trend analysis</li>
+                    <li>• Customer behavior insights</li>
+                    <li>• Regulatory compliance reports</li>
+                    <li>• Financial performance tracking</li>
                   </ul>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-700 mb-2">E-Prescription System</h4>
+                  <h4 className="font-semibold text-blue-700 mb-2">Pharmacy Automation Integration</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• Digital prescription processing</li>
-                    <li>• Electronic health record integration</li>
-                    <li>• Prescription tracking and alerts</li>
-                    <li>• Automated refill reminders</li>
+                    <li>• Automated dispensing systems</li>
+                    <li>• Barcode scanning integration</li>
+                    <li>• Label printing automation</li>
+                    <li>• Drug storage monitoring</li>
+                    <li>• Temperature control systems</li>
+                    <li>• Security and access control</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cloud-Based Pharmacy Solutions */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Cloud-Based Pharmacy Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Modern cloud-based pharmacy management platforms for enhanced accessibility and collaboration.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Cloud Pharmacy Platform</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Advanced Web-Based Pharmacy Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered prescription analysis and drug interaction checking</li>
+                    <li>• Real-time inventory synchronization across multiple locations</li>
+                    <li>• Multi-branch pharmacy network management</li>
+                    <li>• Mobile app for pharmacists with offline capabilities</li>
+                    <li>• Automated prescription refills with smart reminders</li>
+                    <li>• Integration with healthcare systems and EHR</li>
+                    <li>• Predictive analytics for inventory management</li>
+                    <li>• Automated drug safety monitoring and alerts</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Advanced E-Prescription System</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered digital prescription processing and validation</li>
+                    <li>• Electronic health record integration with real-time updates</li>
+                    <li>• Advanced prescription tracking with smart alerts</li>
+                    <li>• Automated refill reminders with patient engagement</li>
+                    <li>• Drug interaction checking with AI analysis</li>
+                    <li>• Prescription fraud detection and prevention</li>
+                    <li>• Integration with controlled substance monitoring systems</li>
+                    <li>• Automated prescription analytics and reporting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Advanced Cloud Features</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Pharmacy Network Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Multi-location pharmacy chains</li>
+                    <li>• Centralized inventory control</li>
+                    <li>• Cross-location prescription transfers</li>
+                    <li>• Unified customer database</li>
+                    <li>• Centralized reporting and analytics</li>
+                    <li>• Standardized workflows</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Mobile Pharmacy Solutions</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Mobile prescription processing</li>
+                    <li>• Inventory management on-the-go</li>
+                    <li>• Customer service mobile apps</li>
+                    <li>• Real-time notifications</li>
+                    <li>• Offline capability with sync</li>
+                    <li>• GPS-based pharmacy locator</li>
                   </ul>
                 </div>
               </div>
@@ -125,24 +198,29 @@ export default function HealthcareSolutionsPage() {
               <h3 className="text-2xl font-bold text-blue-700 mb-4">Cloud Hospital Platform</h3>
               <div className="space-y-4">
                 <div className="bg-indigo-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-indigo-700 mb-2">Cloud-Based HIS</h4>
+                  <h4 className="font-semibold text-indigo-700 mb-2">Advanced Cloud-Based HIS</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• Web-based hospital management</li>
-                    <li>• Multi-location hospital networks</li>
-                    <li>• Real-time data synchronization</li>
-                    <li>• Mobile apps for staff</li>
-                    <li>• Telemedicine integration</li>
-                    <li>• Advanced analytics and reporting</li>
+                    <li>• AI-powered hospital management and workflow optimization</li>
+                    <li>• Multi-location hospital network with centralized control</li>
+                    <li>• Real-time data synchronization across all departments</li>
+                    <li>• Mobile apps for staff with offline capabilities</li>
+                    <li>• Advanced telemedicine integration with AI assistance</li>
+                    <li>• Predictive analytics for patient outcomes and resource management</li>
+                    <li>• Automated clinical decision support systems</li>
+                    <li>• Integration with IoT medical devices and wearables</li>
                   </ul>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-green-700 mb-2">Patient Portal</h4>
+                  <h4 className="font-semibold text-green-700 mb-2">Advanced Patient Portal</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• Online appointment booking</li>
-                    <li>• Medical record access</li>
-                    <li>• Prescription refill requests</li>
-                    <li>• Secure messaging with providers</li>
-                    <li>• Payment and billing management</li>
+                    <li>• AI-powered online appointment booking with smart scheduling</li>
+                    <li>• Comprehensive medical record access with educational content</li>
+                    <li>• Automated prescription refill requests with smart reminders</li>
+                    <li>• Secure messaging with providers and care team</li>
+                    <li>• Advanced payment and billing management with analytics</li>
+                    <li>• Integration with wearable health devices</li>
+                    <li>• Personalized health recommendations and alerts</li>
+                    <li>• Telemedicine consultation scheduling and video calls</li>
                   </ul>
                 </div>
               </div>
@@ -175,14 +253,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Cardiology Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Cardiology Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Remote cardiac monitoring</li>
-                  <li>• Telecardiology consultations</li>
-                  <li>• Cloud-based ECG storage</li>
-                  <li>• Mobile cardiac data access</li>
-                  <li>• Integration with cardiac devices</li>
-                  <li>• Real-time cardiac alerts</li>
+                  <li>• AI-powered ECG analysis and interpretation</li>
+                  <li>• Real-time cardiac monitoring with IoT devices</li>
+                  <li>• Predictive analytics for cardiac risk assessment</li>
+                  <li>• Cloud-based cardiac imaging (Echo, MRI, CT)</li>
+                  <li>• Automated cardiac report generation</li>
+                  <li>• Integration with wearable cardiac monitors</li>
+                  <li>• Telecardiology with video consultations</li>
+                  <li>• Cardiac data analytics and trend analysis</li>
                 </ul>
               </div>
             </div>
@@ -204,14 +284,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-green-50 rounded-lg p-4">
-                <h4 className="font-semibold text-green-700 mb-2">Cloud Dental Platform</h4>
+                <h4 className="font-semibold text-green-700 mb-2">Advanced Cloud Dental Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Web-based dental practice management</li>
-                  <li>• Online appointment booking</li>
-                  <li>• Patient portal for dental records</li>
-                  <li>• Multi-location dental practice</li>
-                  <li>• Mobile dental imaging access</li>
-                  <li>• Automated appointment reminders</li>
+                  <li>• AI-powered dental image analysis and diagnosis</li>
+                  <li>• 3D dental scanning and modeling</li>
+                  <li>• Cloud-based dental imaging (X-rays, CBCT, intraoral)</li>
+                  <li>• Automated treatment planning with AI</li>
+                  <li>• Real-time collaboration between dental specialists</li>
+                  <li>• Integration with dental lab systems</li>
+                  <li>• Tele-dentistry with virtual consultations</li>
+                  <li>• Predictive analytics for dental health trends</li>
                 </ul>
               </div>
             </div>
@@ -233,14 +315,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Ophthalmology Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Ophthalmology Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Remote eye consultation platform</li>
-                  <li>• Cloud-based image storage</li>
-                  <li>• Teleophthalmology services</li>
-                  <li>• Mobile eye examination tools</li>
-                  <li>• Integration with ophthalmic devices</li>
-                  <li>• Automated vision screening</li>
+                  <li>• AI-powered retinal image analysis and diagnosis</li>
+                  <li>• Cloud-based OCT and fundus imaging</li>
+                  <li>• Automated diabetic retinopathy screening</li>
+                  <li>• Real-time glaucoma progression monitoring</li>
+                  <li>• Teleophthalmology with AI-assisted diagnosis</li>
+                  <li>• Integration with retinal cameras and OCT devices</li>
+                  <li>• Predictive analytics for eye disease progression</li>
+                  <li>• Automated vision field analysis and reporting</li>
                 </ul>
               </div>
             </div>
@@ -262,14 +346,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Orthopedic Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Orthopedic Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Remote orthopedic consultations</li>
-                  <li>• Cloud-based imaging storage</li>
-                  <li>• Tele-rehabilitation services</li>
-                  <li>• Mobile orthopedic assessment</li>
-                  <li>• Integration with wearable devices</li>
-                  <li>• Automated follow-up scheduling</li>
+                  <li>• AI-powered orthopedic image analysis (X-rays, MRI, CT)</li>
+                  <li>• 3D surgical planning and modeling</li>
+                  <li>• Cloud-based orthopedic imaging and PACS</li>
+                  <li>• Real-time motion analysis and gait assessment</li>
+                  <li>• Tele-rehabilitation with IoT motion sensors</li>
+                  <li>• Integration with robotic surgical systems</li>
+                  <li>• Predictive analytics for surgical outcomes</li>
+                  <li>• Automated orthopedic report generation</li>
                 </ul>
               </div>
             </div>
@@ -291,14 +377,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Pediatric Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Pediatric Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Tele-pediatrics consultations</li>
-                  <li>• Parent portal for child records</li>
-                  <li>• Vaccination reminder system</li>
-                  <li>• Growth chart tracking</li>
-                  <li>• Mobile pediatric assessments</li>
-                  <li>• Integration with school health records</li>
+                  <li>• AI-powered pediatric growth and development tracking</li>
+                  <li>• Automated vaccination scheduling and reminders</li>
+                  <li>• Cloud-based pediatric imaging and records</li>
+                  <li>• Tele-pediatrics with video consultations</li>
+                  <li>• Integration with wearable health monitors for children</li>
+                  <li>• Predictive analytics for developmental milestones</li>
+                  <li>• Parent engagement portal with educational content</li>
+                  <li>• Automated pediatric health risk assessment</li>
                 </ul>
               </div>
             </div>
@@ -320,14 +408,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Gastroenterology Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Gastroenterology Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Remote GI consultations</li>
-                  <li>• Cloud-based endoscopy images</li>
-                  <li>• Tele-gastroenterology services</li>
-                  <li>• Mobile GI assessment tools</li>
-                  <li>• Integration with GI devices</li>
-                  <li>• Automated follow-up scheduling</li>
+                  <li>• AI-powered endoscopy image analysis and diagnosis</li>
+                  <li>• Cloud-based endoscopy video storage and analysis</li>
+                  <li>• Automated polyp detection and classification</li>
+                  <li>• Real-time GI procedure monitoring</li>
+                  <li>• Tele-gastroenterology with AI-assisted diagnosis</li>
+                  <li>• Integration with capsule endoscopy systems</li>
+                  <li>• Predictive analytics for GI disease progression</li>
+                  <li>• Automated GI report generation with AI insights</li>
                 </ul>
               </div>
             </div>
@@ -349,14 +439,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Gynecology Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Gynecology Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Tele-gynecology consultations</li>
-                  <li>• Cloud-based ultrasound storage</li>
-                  <li>• Remote women&apos;s health monitoring</li>
-                  <li>• Mobile gynecological assessments</li>
-                  <li>• Integration with fertility devices</li>
-                  <li>• Automated appointment reminders</li>
+                  <li>• AI-powered ultrasound image analysis and diagnosis</li>
+                  <li>• Cloud-based gynecological imaging and PACS</li>
+                  <li>• Automated fetal development tracking</li>
+                  <li>• Real-time pregnancy monitoring with IoT devices</li>
+                  <li>• Tele-gynecology with AI-assisted diagnosis</li>
+                  <li>• Integration with fertility tracking devices</li>
+                  <li>• Predictive analytics for pregnancy outcomes</li>
+                  <li>• Automated gynecological report generation</li>
                 </ul>
               </div>
             </div>
@@ -378,14 +470,16 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Neurology Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Neurology Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Tele-neurology consultations</li>
-                  <li>• Cloud-based neurological imaging</li>
-                  <li>• Remote neurological monitoring</li>
-                  <li>• Mobile neurological assessments</li>
-                  <li>• Integration with neuro devices</li>
-                  <li>• Automated seizure detection</li>
+                  <li>• AI-powered neurological image analysis (MRI, CT, PET)</li>
+                  <li>• Cloud-based neurological imaging and PACS</li>
+                  <li>• Real-time EEG monitoring and analysis</li>
+                  <li>• Automated seizure detection and prediction</li>
+                  <li>• Tele-neurology with AI-assisted diagnosis</li>
+                  <li>• Integration with deep brain stimulation devices</li>
+                  <li>• Predictive analytics for neurological disorders</li>
+                  <li>• Automated neurological report generation</li>
                 </ul>
               </div>
             </div>
@@ -407,15 +501,91 @@ export default function HealthcareSolutionsPage() {
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-700 mb-2">Cloud Diagnostics Platform</h4>
+                <h4 className="font-semibold text-blue-700 mb-2">Advanced Cloud Diagnostics Platform</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
-                  <li>• Cloud-based diagnostic imaging</li>
-                  <li>• Remote diagnostic consultations</li>
-                  <li>• Mobile diagnostic reporting</li>
-                  <li>• Multi-center diagnostic networks</li>
-                  <li>• Integration with diagnostic devices</li>
-                  <li>• Automated result notifications</li>
+                  <li>• AI-powered diagnostic image analysis and interpretation</li>
+                  <li>• Cloud-based diagnostic imaging and PACS</li>
+                  <li>• Automated pathology slide analysis</li>
+                  <li>• Real-time laboratory result processing</li>
+                  <li>• Multi-center diagnostic network integration</li>
+                  <li>• Integration with diagnostic devices and analyzers</li>
+                  <li>• Predictive analytics for diagnostic accuracy</li>
+                  <li>• Automated diagnostic report generation with AI insights</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agent Solutions for Healthcare */}
+      <section className="py-20 bg-gradient-to-br from-blue-100 via-white to-blue-200">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Healthcare</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent AI agents designed to enhance healthcare delivery, improve patient outcomes, and streamline medical operations.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">AI-Powered Healthcare Management</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Intelligent Patient Care Agents</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered patient triage and symptom assessment</li>
+                    <li>• Automated appointment scheduling with smart optimization</li>
+                    <li>• Intelligent medication reminders and adherence tracking</li>
+                    <li>• Real-time patient monitoring and alert systems</li>
+                    <li>• Automated medical record analysis and insights</li>
+                    <li>• Predictive analytics for patient risk assessment</li>
+                    <li>• AI-driven treatment recommendation systems</li>
+                    <li>• Automated follow-up care coordination</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Clinical Decision Support Agents</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered diagnostic assistance and validation</li>
+                    <li>• Automated medical image analysis and interpretation</li>
+                    <li>• Intelligent drug interaction checking and alerts</li>
+                    <li>• Real-time clinical guideline recommendations</li>
+                    <li>• Automated medical coding and billing assistance</li>
+                    <li>• Predictive analytics for disease progression</li>
+                    <li>• AI-driven treatment protocol optimization</li>
+                    <li>• Automated clinical documentation assistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">AI Agent Solutions for Healthcare</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Administrative AI Agents</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated insurance verification and claims processing</li>
+                    <li>• Intelligent resource allocation and scheduling</li>
+                    <li>• AI-powered inventory management and procurement</li>
+                    <li>• Automated compliance monitoring and reporting</li>
+                    <li>• Real-time financial analytics and forecasting</li>
+                    <li>• Intelligent vendor management and procurement</li>
+                    <li>• Automated quality assurance and audit preparation</li>
+                    <li>• AI-driven performance optimization</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Advanced Analytics & Insights</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered population health analytics</li>
+                    <li>• Predictive modeling for disease outbreaks</li>
+                    <li>• Real-time healthcare quality metrics</li>
+                    <li>• Automated performance benchmarking</li>
+                    <li>• Intelligent cost optimization analysis</li>
+                    <li>• AI-driven patient satisfaction insights</li>
+                    <li>• Automated regulatory compliance tracking</li>
+                    <li>• Predictive maintenance for medical equipment</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -467,16 +637,22 @@ export default function HealthcareSolutionsPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Contact Form Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl shadow-lg p-8 text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Healthcare Practice?</h2>
-            <p className="text-xl mb-6">Get a customized healthcare solution that fits your specific needs and compliance requirements.</p>
-            <Link href="/contact" className="inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">
-              Get Started Today
-            </Link>
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Healthcare Practice?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get a customized healthcare solution that fits your specific needs and compliance requirements.
+            </p>
           </div>
+          <ContactForm 
+            title="Get Healthcare Solution Quote"
+            subtitle="Tell us about your healthcare organization and requirements."
+            defaultPosition="Healthcare Solutions"
+            emailSubject="Healthcare Solutions Inquiry"
+            placeholder="Describe your healthcare organization, current challenges, and specific requirements for our healthcare solutions..."
+          />
         </div>
       </section>
     </div>

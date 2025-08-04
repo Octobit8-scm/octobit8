@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function TravelSolutionsPage() {
   return (
@@ -126,6 +127,231 @@ export default function TravelSolutionsPage() {
         </div>
       </section>
 
+      {/* AI-Powered Travel Applications */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI-Powered Travel Applications</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent travel applications that leverage artificial intelligence to provide personalized experiences, smart recommendations, and automated travel planning.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Smart Travel Planning</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">AI Travel Assistant</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Personalized travel recommendations</li>
+                    <li>• Smart itinerary planning</li>
+                    <li>• Budget optimization suggestions</li>
+                    <li>• Weather-based travel alerts</li>
+                    <li>• Real-time travel updates</li>
+                    <li>• Multi-language support</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Predictive Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Price prediction and alerts</li>
+                    <li>• Demand forecasting</li>
+                    <li>• Route optimization</li>
+                    <li>• Travel pattern analysis</li>
+                    <li>• Seasonal trend predictions</li>
+                    <li>• Risk assessment for trips</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Intelligent Booking Systems</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">AI-Powered Search</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Natural language search queries</li>
+                    <li>• Context-aware recommendations</li>
+                    <li>• Multi-criteria optimization</li>
+                    <li>• Smart filtering and sorting</li>
+                    <li>• Voice-activated booking</li>
+                    <li>• Image-based destination search</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Dynamic Pricing</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Real-time price optimization</li>
+                    <li>• Competitor price monitoring</li>
+                    <li>• Demand-based pricing</li>
+                    <li>• Personalized pricing offers</li>
+                    <li>• Revenue maximization</li>
+                    <li>• Automated price updates</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Travel Agency Management Applications */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Travel Agency Management Applications</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive management systems designed specifically for travel agencies to streamline operations, manage bookings, and enhance customer service.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Booking Management</h3>
+              <div className="space-y-4">
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-purple-700 mb-2">Reservation System</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Flight booking management</li>
+                    <li>• Hotel reservation tracking</li>
+                    <li>• Car rental coordination</li>
+                    <li>• Tour package bookings</li>
+                    <li>• Group travel management</li>
+                    <li>• Booking confirmation system</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Customer Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Customer profile management</li>
+                    <li>• Travel history tracking</li>
+                    <li>• Preference and loyalty programs</li>
+                    <li>• Communication logs</li>
+                    <li>• Customer feedback system</li>
+                    <li>• Automated follow-ups</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Operations Management</h3>
+              <div className="space-y-4">
+                <div className="bg-indigo-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-indigo-700 mb-2">Staff Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Agent performance tracking</li>
+                    <li>• Commission calculation</li>
+                    <li>• Workload distribution</li>
+                    <li>• Training and certification</li>
+                    <li>• Shift scheduling</li>
+                    <li>• Performance analytics</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Financial Management</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Revenue tracking and reporting</li>
+                    <li>• Commission management</li>
+                    <li>• Expense tracking</li>
+                    <li>• Profit margin analysis</li>
+                    <li>• Tax calculation and reporting</li>
+                    <li>• Financial forecasting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-orange-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Business Intelligence</h3>
+              <div className="space-y-4">
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-orange-700 mb-2">Analytics & Reporting</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Sales performance analytics</li>
+                    <li>• Market trend analysis</li>
+                    <li>• Customer behavior insights</li>
+                    <li>• Competitive analysis</li>
+                    <li>• Automated reporting</li>
+                    <li>• Real-time dashboards</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Marketing Tools</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Campaign management</li>
+                    <li>• Email marketing automation</li>
+                    <li>• Social media integration</li>
+                    <li>• Lead generation tracking</li>
+                    <li>• Promotional offer management</li>
+                    <li>• ROI measurement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agent Solutions for Travel Industry */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Travel Industry</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced AI agents and intelligent automation solutions designed to enhance travel experiences and streamline industry operations.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-red-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Virtual Travel Assistants</h3>
+              <div className="space-y-4">
+                <div className="bg-red-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-red-700 mb-2">Conversational AI</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• 24/7 customer support chatbots</li>
+                    <li>• Natural language booking assistance</li>
+                    <li>• Multi-language travel support</li>
+                    <li>• Voice-activated travel queries</li>
+                    <li>• Context-aware conversations</li>
+                    <li>• Emotion recognition for better service</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Intelligent Recommendations</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Personalized travel suggestions</li>
+                    <li>• AI-powered destination matching</li>
+                    <li>• Smart itinerary optimization</li>
+                    <li>• Budget-aware recommendations</li>
+                    <li>• Seasonal travel insights</li>
+                    <li>• Group travel coordination</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-teal-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Automated Travel Operations</h3>
+              <div className="space-y-4">
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-teal-700 mb-2">Process Automation</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated booking confirmations</li>
+                    <li>• Smart document processing</li>
+                    <li>• Travel insurance automation</li>
+                    <li>• Visa and documentation assistance</li>
+                    <li>• Automated travel alerts</li>
+                    <li>• Smart itinerary generation</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Predictive Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Flight delay predictions</li>
+                    <li>• Weather impact analysis</li>
+                    <li>• Travel risk assessment</li>
+                    <li>• Demand forecasting</li>
+                    <li>• Price trend predictions</li>
+                    <li>• Capacity optimization</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits & Use Cases */}
       <section className="max-w-6xl mx-auto px-4 mb-16">
         <div className="grid md:grid-cols-2 gap-12">
@@ -137,6 +363,9 @@ export default function TravelSolutionsPage() {
               <li>Real-time booking and pricing updates</li>
               <li>Secure payment processing</li>
               <li>Mobile-optimized experiences</li>
+              <li>AI-powered personalization</li>
+              <li>Automated travel assistance</li>
+              <li>Intelligent business insights</li>
             </ul>
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
@@ -147,8 +376,30 @@ export default function TravelSolutionsPage() {
               <li>Hotel reservation systems</li>
               <li>Tour and activity booking</li>
               <li>Travel management platforms</li>
+              <li>AI-powered travel assistants</li>
+              <li>Travel agency management systems</li>
+              <li>Intelligent booking engines</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Travel Business?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join the digital transformation revolution in travel with our comprehensive AI-powered solutions.
+            </p>
+          </div>
+          <ContactForm 
+            title="Get Travel Solution Quote"
+            subtitle="Tell us about your travel business and requirements."
+            defaultPosition="Travel Solutions"
+            emailSubject="Travel Solutions Inquiry"
+            placeholder="Describe your travel business, current challenges, and specific requirements for our travel solutions..."
+          />
         </div>
       </section>
     </div>

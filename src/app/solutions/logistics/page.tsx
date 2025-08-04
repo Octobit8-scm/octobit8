@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function LogisticsSolutionsPage() {
   return (
@@ -126,6 +127,204 @@ export default function LogisticsSolutionsPage() {
         </div>
       </section>
 
+      {/* AI-Powered Fleet Management */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI-Powered Fleet Management</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Intelligent fleet management systems that leverage artificial intelligence to optimize vehicle operations, reduce costs, and enhance driver safety.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Intelligent Vehicle Operations</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Predictive Maintenance</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered engine health monitoring</li>
+                    <li>• Predictive maintenance scheduling</li>
+                    <li>• Real-time vehicle diagnostics</li>
+                    <li>• Automated service alerts</li>
+                    <li>• Fuel efficiency optimization</li>
+                    <li>• Tire wear prediction</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Driver Safety & Performance</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Driver behavior analysis</li>
+                    <li>• Fatigue detection systems</li>
+                    <li>• Real-time safety alerts</li>
+                    <li>• Performance scoring algorithms</li>
+                    <li>• Training recommendation systems</li>
+                    <li>• Risk assessment automation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Smart Fleet Optimization</h3>
+              <div className="space-y-4">
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Route Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered route optimization</li>
+                    <li>• Real-time traffic analysis</li>
+                    <li>• Dynamic route adjustments</li>
+                    <li>• Weather impact prediction</li>
+                    <li>• Fuel-efficient routing</li>
+                    <li>• Multi-stop optimization</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Fleet Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Vehicle utilization optimization</li>
+                    <li>• Cost analysis and forecasting</li>
+                    <li>• Performance benchmarking</li>
+                    <li>• Capacity planning algorithms</li>
+                    <li>• ROI optimization</li>
+                    <li>• Asset lifecycle management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agent Solutions for Logistics */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">AI Agent Solutions for Logistics</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced AI agents designed to automate logistics operations, enhance decision-making, and optimize supply chain processes.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Intelligent Supply Chain Agents</h3>
+              <div className="space-y-4">
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-purple-700 mb-2">Demand Forecasting</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• AI-powered demand prediction</li>
+                    <li>• Seasonal trend analysis</li>
+                    <li>• Market demand forecasting</li>
+                    <li>• Inventory optimization</li>
+                    <li>• Supply chain risk assessment</li>
+                    <li>• Automated reorder triggers</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Warehouse Automation</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Intelligent inventory management</li>
+                    <li>• Automated picking optimization</li>
+                    <li>• Smart storage allocation</li>
+                    <li>• Quality control automation</li>
+                    <li>• Space utilization optimization</li>
+                    <li>• Automated sorting systems</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-orange-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Operational AI Agents</h3>
+              <div className="space-y-4">
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-orange-700 mb-2">Customer Service AI</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated order processing</li>
+                    <li>• Real-time delivery updates</li>
+                    <li>• Intelligent customer support</li>
+                    <li>• Proactive issue resolution</li>
+                    <li>• Multi-language support</li>
+                    <li>• Personalized notifications</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Decision Support</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Real-time operational insights</li>
+                    <li>• Automated decision making</li>
+                    <li>• Performance optimization</li>
+                    <li>• Cost reduction strategies</li>
+                    <li>• Resource allocation optimization</li>
+                    <li>• Risk mitigation automation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Tracking Applications */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Advanced Tracking Applications</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive tracking solutions that provide real-time visibility, intelligent monitoring, and predictive analytics for logistics operations.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-teal-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Real-Time Asset Tracking</h3>
+              <div className="space-y-4">
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-teal-700 mb-2">GPS & IoT Integration</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Real-time GPS tracking</li>
+                    <li>• IoT sensor integration</li>
+                    <li>• Temperature monitoring</li>
+                    <li>• Humidity and condition tracking</li>
+                    <li>• Shock and vibration detection</li>
+                    <li>• Battery life optimization</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-700 mb-2">Smart Notifications</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Automated status updates</li>
+                    <li>• Geofencing alerts</li>
+                    <li>• Delivery confirmation</li>
+                    <li>• Exception handling</li>
+                    <li>• ETA predictions</li>
+                    <li>• Route deviation alerts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-pink-500">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Intelligent Monitoring & Analytics</h3>
+              <div className="space-y-4">
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-pink-700 mb-2">Performance Analytics</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Delivery performance metrics</li>
+                    <li>• Route efficiency analysis</li>
+                    <li>• Driver productivity tracking</li>
+                    <li>• Fuel consumption monitoring</li>
+                    <li>• Maintenance cost analysis</li>
+                    <li>• Customer satisfaction metrics</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-700 mb-2">Predictive Intelligence</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Delivery time prediction</li>
+                    <li>• Traffic pattern analysis</li>
+                    <li>• Weather impact forecasting</li>
+                    <li>• Demand prediction</li>
+                    <li>• Capacity planning</li>
+                    <li>• Risk assessment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits & Use Cases */}
       <section className="max-w-6xl mx-auto px-4 mb-16">
         <div className="grid md:grid-cols-2 gap-12">
@@ -137,6 +336,9 @@ export default function LogisticsSolutionsPage() {
               <li>Reduced operational costs</li>
               <li>Improved delivery efficiency</li>
               <li>Scalable infrastructure</li>
+              <li>AI-powered optimization</li>
+              <li>Predictive maintenance</li>
+              <li>Enhanced driver safety</li>
             </ul>
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
@@ -147,8 +349,30 @@ export default function LogisticsSolutionsPage() {
               <li>Warehouse management systems</li>
               <li>Supply chain tracking</li>
               <li>Logistics analytics platforms</li>
+              <li>AI-powered fleet optimization</li>
+              <li>Intelligent tracking applications</li>
+              <li>Automated supply chain agents</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Transform Your Logistics Operations?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join the digital transformation revolution in logistics with our comprehensive AI-powered solutions.
+            </p>
+          </div>
+          <ContactForm 
+            title="Get Logistics Solution Quote"
+            subtitle="Tell us about your logistics business and requirements."
+            defaultPosition="Logistics Solutions"
+            emailSubject="Logistics Solutions Inquiry"
+            placeholder="Describe your logistics business, current challenges, and specific requirements for our logistics solutions..."
+          />
         </div>
       </section>
     </div>

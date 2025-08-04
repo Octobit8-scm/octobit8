@@ -1,3 +1,8 @@
+"use client";
+
+import ContactForm from "../components/ContactForm";
+import ConsultationBookingForm from "../components/ConsultationBookingForm";
+
 export default function ContactPage() {
   return (
     <div className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen">
@@ -69,6 +74,136 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Book a Consultation Call */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Book a Consultation Call</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">Schedule a free consultation call with our experts to discuss your project requirements and explore how we can help you achieve your goals.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Free Discovery Call */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-blue-700 mb-3">Free Discovery Call</h3>
+              <p className="text-gray-700 mb-4">30-minute call to understand your requirements and discuss potential solutions.</p>
+              <ul className="text-gray-600 text-sm space-y-2 mb-6">
+                <li>• Project requirements discussion</li>
+                <li>• Technology recommendations</li>
+                <li>• Timeline and budget overview</li>
+                <li>• Next steps planning</li>
+              </ul>
+              <a href="mailto:contact@octobit8.com?subject=Book%20Free%20Discovery%20Call&body=Hi,%20I%20would%20like%20to%20schedule%20a%20free%20discovery%20call%20to%20discuss%20my%20project%20requirements." className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:bg-green-700 transition text-sm">
+                Book Free Call
+              </a>
+            </div>
+
+            {/* Technical Consultation */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-blue-700 mb-3">Technical Consultation</h3>
+              <p className="text-gray-700 mb-4">60-minute deep-dive technical discussion with our senior engineers.</p>
+              <ul className="text-gray-600 text-sm space-y-2 mb-6">
+                <li>• Architecture review</li>
+                <li>• Technology stack analysis</li>
+                <li>• Performance optimization</li>
+                <li>• Security assessment</li>
+              </ul>
+              <a href="mailto:contact@octobit8.com?subject=Book%20Technical%20Consultation&body=Hi,%20I%20would%20like%20to%20schedule%20a%20technical%20consultation%20to%20discuss%20my%20project%20architecture%20and%20technology%20requirements." className="inline-block bg-blue-600 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition text-sm">
+                Book Technical Call
+              </a>
+            </div>
+
+            {/* Strategy Session */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-blue-700 mb-3">Strategy Session</h3>
+              <p className="text-gray-700 mb-4">90-minute comprehensive business and technology strategy session.</p>
+              <ul className="text-gray-600 text-sm space-y-2 mb-6">
+                <li>• Business transformation roadmap</li>
+                <li>• Digital strategy planning</li>
+                <li>• ROI analysis and projections</li>
+                <li>• Implementation timeline</li>
+              </ul>
+              <a href="mailto:contact@octobit8.com?subject=Book%20Strategy%20Session&body=Hi,%20I%20would%20like%20to%20schedule%20a%20strategy%20session%20to%20discuss%20my%20business%20transformation%20and%20digital%20strategy." className="inline-block bg-purple-600 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:bg-purple-700 transition text-sm">
+                Book Strategy Call
+              </a>
+            </div>
+          </div>
+
+          {/* Consultation Benefits */}
+          <div className="mt-16 bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Book a Consultation?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Save Time</h4>
+                <p className="text-blue-100 text-sm">Get expert insights quickly without lengthy research</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Expert Guidance</h4>
+                <p className="text-blue-100 text-sm">Learn from experienced professionals</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Risk Mitigation</h4>
+                <p className="text-blue-100 text-sm">Avoid costly mistakes with proper planning</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-white mb-2">Custom Solutions</h4>
+                <p className="text-blue-100 text-sm">Get tailored recommendations for your needs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation Booking Form */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Schedule Your Consultation</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Fill out the form below to book your consultation call. We&apos;ll get back to you within 24 hours to confirm your appointment.</p>
+          </div>
+          <ConsultationBookingForm 
+            title="Book Your Consultation Call"
+            subtitle="Schedule a consultation with our experts to discuss your project requirements"
+            emailTo="contact@octobit8.com"
+          />
+        </div>
+      </section>
+
       {/* Contact Form */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -76,130 +211,14 @@ export default function ContactPage() {
             <h2 className="text-4xl font-bold text-blue-800 mb-4">Send Us a Message</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Tell us about your project and we&apos;ll get back to you with a customized solution.</p>
           </div>
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                  Company Name
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your company name"
-                />
-              </div>
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                  Service of Interest *
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">Select a service</option>
-                  <option value="devops">DevOps & Cloud</option>
-                  <option value="website-development">Website Development</option>
-                  <option value="mobile-app-development">Mobile App Development</option>
-                  <option value="custom-software-development">Custom Software Development</option>
-                  <option value="data-analytics">Data Analytics</option>
-                  <option value="ai-development">AI Agent Development</option>
-                  <option value="it-staffing">IT Staffing</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Project Details *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project, requirements, and goals..."
-                ></textarea>
-              </div>
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="newsletter"
-                  name="newsletter"
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                />
-                <label htmlFor="newsletter" className="ml-2 block text-sm text-gray-700">
-                  Subscribe to our newsletter for updates and insights
-                </label>
-              </div>
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition text-lg"
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
+          <ContactForm 
+            title="Get Started with Octobit8"
+            subtitle="Fill out the form below and we'll get back to you within 24 hours."
+            defaultPosition="General Inquiry"
+            emailSubject="Website Contact Form"
+            emailTo="contact@octobit8.com"
+            placeholder="Tell us about your project requirements, timeline, and any specific needs..."
+          />
         </div>
       </section>
 
