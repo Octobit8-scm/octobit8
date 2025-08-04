@@ -195,4 +195,4 @@ After deployment:
 5. Configure custom domain (optional)
 6. Monitor performance and analytics
 
-Your Octobit8 website is ready for Azure deployment! 🚀
+Your Octobit8 website is ready for Azure deployment!
