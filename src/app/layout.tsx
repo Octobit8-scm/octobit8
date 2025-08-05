@@ -38,13 +38,9 @@ export const metadata: Metadata = {
     description: "Leading IT outsourcing and custom software development company specializing in DevOps, cloud solutions, AI development, and digital transformation services.",
   },
   icons: {
-    icon: [
-      { url: "/favicon.png", sizes: "any", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    apple: [
-      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
   },
   manifest: "/site.webmanifest",
 };
@@ -88,6 +84,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         {analyticsConfig.clarity.enabled && (
           <ClarityAnalytics projectId={analyticsConfig.clarity.projectId} />
         )}
