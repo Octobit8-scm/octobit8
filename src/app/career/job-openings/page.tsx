@@ -73,7 +73,7 @@ export default function JobOpeningsPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Be part of a dynamic team that's transforming businesses through innovative technology solutions
+            Be part of a dynamic team that&apos;s transforming businesses through innovative technology solutions
           </p>
         </div>
       </section>
@@ -192,9 +192,9 @@ export default function JobOpeningsPage() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Don't See the Right Role?</h2>
+          <h2 className="text-3xl font-bold mb-4">Don&apos;t See the Right Role?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+            We&apos;re always looking for talented individuals. Send us your resume and we&apos;ll keep you in mind for future opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:careers@octobit8.com" className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">

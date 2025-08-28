@@ -391,7 +391,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-indigo-800 mb-3">AI & Machine Learning</h3>
-              <p className="text-gray-700 text-sm mb-4">Explore the latest developments in artificial intelligence and how they're transforming industries.</p>
+              <p className="text-gray-700 text-sm mb-4">Explore the latest developments in artificial intelligence and how they&apos;re transforming industries.</p>
               <a href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-800 transition">Read More →</a>
             </div>
             <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-transform hover:scale-105">

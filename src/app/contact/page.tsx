@@ -215,7 +215,7 @@ export default function ContactPage() {
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Get Started with Octobit8</h3>
-            <p className="text-gray-700 text-center mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <p className="text-gray-700 text-center mb-6">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
             <div className="text-center">
               <a href="mailto:contact@octobit8.com" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Email Us</a>
             </div>

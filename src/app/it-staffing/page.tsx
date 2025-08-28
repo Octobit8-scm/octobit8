@@ -36,7 +36,7 @@ export default function ITStaffingPage() {
               Our Staffing Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive staffing solutions tailored to meet your organization's unique talent requirements and project needs.
+              Comprehensive staffing solutions tailored to meet your organization&apos;s unique talent requirements and project needs.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export default function ITStaffingPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Executive Search</h3>
               <p className="text-gray-600 mb-4">
-                Find senior-level executives and leadership talent to drive your organization's strategic initiatives.
+                Find senior-level executives and leadership talent to drive your organization&apos;s strategic initiatives.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>• C-level positions</li>
@@ -295,7 +295,7 @@ export default function ITStaffingPage() {
             Ready to Build Your Dream Team?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Let's discuss your staffing needs and find the perfect talent to drive your organization's success.
+            Let&apos;s discuss your staffing needs and find the perfect talent to drive your organization&apos;s success.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">

@@ -309,9 +309,9 @@ export default function DevOpsCloudPage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your DevOps?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Let's discuss how our DevOps and cloud services can accelerate your development, improve quality, and reduce operational costs.
-          </p>
+                      <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Let&apos;s discuss how our DevOps and cloud services can accelerate your development, improve quality, and reduce operational costs.
+            </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Schedule Consultation

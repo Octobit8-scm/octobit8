@@ -286,9 +286,9 @@ export default function AIDevelopmentPage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Let's discuss how our AI development services can help you achieve your business goals and stay ahead of the competition.
-          </p>
+                      <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Let&apos;s discuss how our AI development services can help you achieve your business goals and stay ahead of the competition.
+            </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Schedule Consultation

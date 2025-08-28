@@ -325,7 +325,7 @@ export default function BlogPage() {
             Have a Story to Share?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            We're always looking for industry experts and thought leaders to contribute valuable insights to our community.
+            We&apos;re always looking for industry experts and thought leaders to contribute valuable insights to our community.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">

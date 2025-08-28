@@ -265,7 +265,7 @@ export default function CareerGrowthPage() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "Started as a junior developer and through Octobit8's mentorship program, I've grown into a senior role. The company's commitment to employee development is exceptional."
+                &ldquo;Started as a junior developer and through Octobit8&apos;s mentorship program, I&apos;ve grown into a senior role. The company&apos;s commitment to employee development is exceptional.&rdquo;
               </p>
             </div>
 
@@ -280,7 +280,7 @@ export default function CareerGrowthPage() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "The technical excellence program helped me become a subject matter expert in AI. Now I'm leading a team and mentoring others."
+                &ldquo;The technical excellence program helped me become a subject matter expert in AI. Now I&apos;m leading a team and mentoring others.&rdquo;
               </p>
             </div>
           </div>

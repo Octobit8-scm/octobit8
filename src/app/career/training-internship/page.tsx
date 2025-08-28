@@ -295,7 +295,7 @@ export default function TrainingInternshipPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-green-800 p-6 rounded-xl">
               <p className="text-green-100 mb-4">
-                "The AI training program at Octobit8 gave me the skills and confidence to land a role as a Machine Learning Engineer at a top tech company."
+                &ldquo;The AI training program at Octobit8 gave me the skills and confidence to land a role as a Machine Learning Engineer at a top tech company.&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
@@ -310,7 +310,7 @@ export default function TrainingInternshipPage() {
 
             <div className="bg-green-800 p-6 rounded-xl">
               <p className="text-green-100 mb-4">
-                "Through the DevOps internship, I gained hands-on experience with cloud technologies and secured a full-time position as a DevOps Engineer."
+                &ldquo;Through the DevOps internship, I gained hands-on experience with cloud technologies and secured a full-time position as a DevOps Engineer.&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
@@ -325,7 +325,7 @@ export default function TrainingInternshipPage() {
 
             <div className="bg-green-800 p-6 rounded-xl">
               <p className="text-green-100 mb-4">
-                "The web development training helped me transition from a non-tech background to a successful Frontend Developer role."
+                &ldquo;The web development training helped me transition from a non-tech background to a successful Frontend Developer role.&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
