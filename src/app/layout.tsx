@@ -349,10 +349,6 @@ export default function RootLayout({
                 
                 <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span>ISO 27001 Certified</span>
-                  </div>
-                  <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                     <span>150+ Projects Delivered</span>
                   </div>
