@@ -1,0 +1,25 @@
+{
+  "name": "Octobit8 - DevOps, Cloud & AI Solutions",
+  "short_name": "Octobit8",
+  "description": "Leading IT outsourcing and custom software development company specializing in DevOps, cloud solutions, AI development, and digital transformation services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#1f2937",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+} 
