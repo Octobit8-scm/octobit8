@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "../../components/ContactForm";
+
 
 export default function LogisticsSolutionsPage() {
   return (
@@ -366,13 +366,13 @@ export default function LogisticsSolutionsPage() {
               Join the digital transformation revolution in logistics with our comprehensive AI-powered solutions.
             </p>
           </div>
-          <ContactForm 
-            title="Get Logistics Solution Quote"
-            subtitle="Tell us about your logistics business and requirements."
-            defaultPosition="Logistics Solutions"
-            emailSubject="Logistics Solutions Inquiry"
-            placeholder="Describe your logistics business, current challenges, and specific requirements for our logistics solutions..."
-          />
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Ready to Get Started?</h3>
+            <p className="text-gray-700 text-center mb-6">Contact us to discuss your logistics digital transformation needs.</p>
+            <div className="text-center">
+              <Link href="/contact" className="text-blue-600 font-semibold hover:text-blue-800 transition">Contact Us</Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

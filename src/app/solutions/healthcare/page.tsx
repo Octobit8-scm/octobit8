@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ContactForm from "../../components/ContactForm";
+
 
 export default function HealthcareSolutionsPage() {
   return (
@@ -646,13 +646,13 @@ export default function HealthcareSolutionsPage() {
               Get a customized healthcare solution that fits your specific needs and compliance requirements.
             </p>
           </div>
-          <ContactForm 
-            title="Get Healthcare Solution Quote"
-            subtitle="Tell us about your healthcare organization and requirements."
-            defaultPosition="Healthcare Solutions"
-            emailSubject="Healthcare Solutions Inquiry"
-            placeholder="Describe your healthcare organization, current challenges, and specific requirements for our healthcare solutions..."
-          />
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Ready to Get Started?</h3>
+            <p className="text-gray-700 text-center mb-6">Contact us to discuss your healthcare digital transformation needs.</p>
+            <div className="text-center">
+              <Link href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Contact Us</Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

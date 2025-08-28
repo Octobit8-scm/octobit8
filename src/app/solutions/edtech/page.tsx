@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "../../components/ContactForm";
+
 
 export default function EdTechSolutionsPage() {
   return (
@@ -589,13 +589,13 @@ export default function EdTechSolutionsPage() {
               Join the digital transformation revolution in education with our comprehensive EdTech solutions.
             </p>
           </div>
-          <ContactForm 
-            title="Get EdTech Solution Quote"
-            subtitle="Tell us about your educational institution and requirements."
-            defaultPosition="EdTech Solutions"
-            emailSubject="EdTech Solutions Inquiry"
-            placeholder="Describe your educational institution, current challenges, and specific requirements for our EdTech solutions..."
-          />
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Ready to Get Started?</h3>
+            <p className="text-gray-700 text-center mb-6">Contact us to discuss your EdTech digital transformation needs.</p>
+            <div className="text-center">
+              <Link href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Contact Us</Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

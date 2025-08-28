@@ -1,7 +1,7 @@
 "use client";
 
-import ContactForm from "../components/ContactForm";
-import ConsultationBookingForm from "../components/ConsultationBookingForm";
+
+
 
 export default function ContactPage() {
   return (
@@ -196,11 +196,13 @@ export default function ContactPage() {
             <h2 className="text-4xl font-bold text-blue-800 mb-4">Schedule Your Consultation</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Fill out the form below to book your consultation call. We&apos;ll get back to you within 24 hours to confirm your appointment.</p>
           </div>
-          <ConsultationBookingForm 
-            title="Book Your Consultation Call"
-            subtitle="Schedule a consultation with our experts to discuss your project requirements"
-            emailTo="contact@octobit8.com"
-          />
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Book Your Consultation Call</h3>
+            <p className="text-gray-700 text-center mb-6">Schedule a consultation with our experts to discuss your project requirements.</p>
+            <div className="text-center">
+              <a href="mailto:contact@octobit8.com" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Email Us</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -211,14 +213,13 @@ export default function ContactPage() {
             <h2 className="text-4xl font-bold text-blue-800 mb-4">Send Us a Message</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Tell us about your project and we&apos;ll get back to you with a customized solution.</p>
           </div>
-          <ContactForm 
-            title="Get Started with Octobit8"
-            subtitle="Fill out the form below and we'll get back to you within 24 hours."
-            defaultPosition="General Inquiry"
-            emailSubject="Website Contact Form"
-            emailTo="contact@octobit8.com"
-            placeholder="Tell us about your project requirements, timeline, and any specific needs..."
-          />
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Get Started with Octobit8</h3>
+            <p className="text-gray-700 text-center mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <div className="text-center">
+              <a href="mailto:contact@octobit8.com" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Email Us</a>
+            </div>
+          </div>
         </div>
       </section>
 

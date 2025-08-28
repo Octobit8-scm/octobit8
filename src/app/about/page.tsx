@@ -1,6 +1,6 @@
 "use client";
 
-import ContactForm from "../components/ContactForm";
+
 
 export default function AboutPage() {
   return (
@@ -224,13 +224,13 @@ export default function AboutPage() {
               Join the hundreds of organizations that trust Octobit8 to drive their digital transformation journey.
             </p>
           </div>
-          <ContactForm 
-            title="Get Started with Octobit8"
-            subtitle="Tell us about your business and transformation goals."
-            defaultPosition="General Inquiry"
-            emailSubject="Business Transformation Inquiry"
-            placeholder="Describe your business, current challenges, and transformation goals..."
-          />
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Ready to Get Started?</h3>
+            <p className="text-gray-700 text-center mb-6">Contact us to discuss your business transformation needs.</p>
+            <div className="text-center">
+              <Link href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Contact Us</Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

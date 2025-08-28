@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "../../components/ContactForm";
+
 
 export default function RetailSolutionsPage() {
   return (
@@ -268,13 +268,13 @@ export default function RetailSolutionsPage() {
               Join the digital transformation revolution in retail with our comprehensive AI-powered solutions.
             </p>
           </div>
-          <ContactForm 
-            title="Get Retail Solution Quote"
-            subtitle="Tell us about your retail business and requirements."
-            defaultPosition="Retail Solutions"
-            emailSubject="Retail Solutions Inquiry"
-            placeholder="Describe your retail business, current challenges, and specific requirements for our retail solutions..."
-          />
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Ready to Get Started?</h3>
+            <p className="text-gray-700 text-center mb-6">Contact us to discuss your retail digital transformation needs.</p>
+            <div className="text-center">
+              <Link href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Contact Us</Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
