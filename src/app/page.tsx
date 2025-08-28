@@ -97,7 +97,7 @@ export default function Home() {
               Unlock innovation, agility, and growth with Octobit8. We deliver comprehensive solutions—AI development, DevOps & cloud, IT staffing, industry solutions, and career development.
             </p>
 
-            <a href="#contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-12 py-4 rounded-full font-semibold shadow-2xl text-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200 ring-offset-2 ring-offset-white glow-effect">Get Started</a>
+            <a href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-12 py-4 rounded-full font-semibold shadow-2xl text-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200 ring-offset-2 ring-offset-white glow-effect">Get Started</a>
           </div>
           {/* Right: CTA Section */}
           <div className="flex-1 flex justify-center items-center relative mt-12 md:mt-0">
