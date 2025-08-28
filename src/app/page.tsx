@@ -99,35 +99,17 @@ export default function Home() {
 
             <a href="#contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-12 py-4 rounded-full font-semibold shadow-2xl text-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200 ring-offset-2 ring-offset-white glow-effect">Get Started</a>
           </div>
-          {/* Right: Contact Form with glassmorphism effect */}
+          {/* Right: CTA Section */}
           <div className="flex-1 flex justify-center items-center relative mt-12 md:mt-0">
             <div className="absolute -inset-4 md:-inset-8 rounded-3xl bg-gradient-to-br from-blue-100/60 to-blue-300/30 blur-lg z-0" />
-            <form className="relative bg-white/70 backdrop-blur-md border border-blue-100 rounded-3xl shadow-2xl p-12 w-full max-w-md flex flex-col gap-6 z-10">
-              <h2 className="text-3xl font-extrabold text-blue-800 mb-6 text-center tracking-tight">Book a Consultation Call</h2>
-              <div className="flex gap-4 flex-col sm:flex-row">
-                <div className="flex-1">
-                  <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-1">First Name</label>
-                  <input type="text" name="firstName" id="firstName" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
-                </div>
-                <div className="flex-1">
-                  <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-1">Last Name</label>
-                  <input type="text" name="lastName" id="lastName" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
-                </div>
+            <div className="relative bg-white/70 backdrop-blur-md border border-blue-100 rounded-3xl shadow-2xl p-12 w-full max-w-md flex flex-col gap-6 z-10 text-center">
+              <h2 className="text-3xl font-extrabold text-blue-800 mb-6 tracking-tight">Ready to Get Started?</h2>
+              <p className="text-gray-700 text-lg mb-6">Let&apos;s discuss how we can help transform your business with our innovative solutions.</p>
+              <div className="space-y-4">
+                <a href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold rounded-xl px-8 py-4 shadow-xl hover:scale-105 transition w-full text-lg glow-effect">Contact Us</a>
+                <a href="/solutions" className="inline-block bg-white text-blue-600 font-bold rounded-xl px-8 py-4 border-2 border-blue-200 hover:bg-blue-50 transition w-full text-lg">Explore Solutions</a>
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">Work Email</label>
-                <input type="email" name="email" id="email" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
-              </div>
-              <div>
-                <label htmlFor="org" className="block text-sm font-semibold text-gray-700 mb-1">Organisation Name</label>
-                <input type="text" name="org" id="org" required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
-              </div>
-              <div>
-                <label htmlFor="help" className="block text-sm font-semibold text-gray-700 mb-1">How can we help you?</label>
-                <textarea name="help" id="help" rows={4} required className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition resize-none"></textarea>
-              </div>
-              <button type="submit" className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold rounded-xl px-8 py-4 mt-2 shadow-xl hover:scale-105 transition w-full text-lg glow-effect">Book a Consultation Call</button>
-            </form>
+            </div>
           </div>
         </div>
       </section>
