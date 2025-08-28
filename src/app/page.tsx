@@ -108,17 +108,17 @@ export default function Home() {
               <div className="space-y-4">
                 <a href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold rounded-xl px-8 py-4 shadow-xl hover:scale-105 transition w-full text-lg glow-effect">Contact Us</a>
                 <a href="/solutions" className="inline-block bg-white text-blue-600 font-bold rounded-xl px-8 py-4 border-2 border-blue-200 hover:bg-blue-50 transition w-full text-lg">Explore Solutions</a>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
 
              {/* Industry Solutions Section */}
-       <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
-         <div className="container mx-auto">
-           <div className="flex flex-col items-center mb-10">
-             <div className="flex items-center gap-3 mb-2">
+      <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="container mx-auto">
+          <div className="flex flex-col items-center mb-10">
+            <div className="flex items-center gap-3 mb-2">
                <h2 className="text-3xl font-bold text-blue-800 text-center">Industry Solutions</h2>
              </div>
              <p className="text-lg text-gray-700 text-center max-w-2xl">Tailored digital solutions designed specifically for your industry needs and challenges.</p>
@@ -253,17 +253,17 @@ export default function Home() {
                  <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                  </svg>
-               </div>
+            </div>
                <h3 className="text-xl font-bold text-teal-800 mb-3 text-center">Infrastructure as Code</h3>
                <p className="text-gray-700 text-center text-sm mb-4">Terraform, CloudFormation, and automated infrastructure management.</p>
                <a href="/devops-cloud" className="text-teal-600 font-semibold hover:text-teal-800 transition">Learn More →</a>
-             </div>
-           </div>
+          </div>
+              </div>
            <div className="text-center mt-8">
              <a href="/devops-cloud" className="inline-block bg-gradient-to-r from-cyan-600 via-blue-500 to-teal-400 text-white px-8 py-3 rounded-full font-semibold transition hover:scale-105">Explore DevOps</a>
-           </div>
-         </div>
-       </section>
+          </div>
+        </div>
+      </section>
 
 
 
@@ -417,7 +417,7 @@ export default function Home() {
               <div key={p.name} className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center transition-transform hover:scale-105">
                 <h4 className="font-bold text-blue-800 text-center tracking-tight">{p.name}</h4>
               </div>
-              ))}
+            ))}
           </div>
         </div>
       </section>

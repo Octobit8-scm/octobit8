@@ -187,17 +187,42 @@ export default function RootLayout({
         {children}
         </main>
         {/* Footer */}
-        <footer className="bg-gray-900 text-gray-100 mt-12 py-12 px-4">
-          <div className="container mx-auto flex flex-col md:flex-row md:items-start md:justify-between gap-12 border-b border-gray-800 pb-8">
-            <div className="flex flex-col items-center md:items-start md:w-1/4 gap-4">
-              <div className="flex items-center gap-2">
-                <Image 
-                  src="/logo.svg" 
-                  alt="octobit8 logo" 
-                  width={40}
-                  height={40}
-                  className="h-10 w-auto object-contain"
-                />
+        <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 mt-12 py-16 px-4">
+          <div className="container mx-auto">
+            {/* Main Footer Content */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              {/* Company Info */}
+              <div className="lg:col-span-1">
+                <div className="flex items-center gap-3 mb-6">
+                  <Image
+                    src="/logo.png"
+                    alt="Octobit8 logo"
+                    width={48}
+                    height={48}
+                    className="h-12 w-auto object-contain"
+                  />
+                  <span className="text-xl font-bold text-white">Octobit8</span>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-xs">
+                  Empowering businesses through innovative AI development, DevOps & cloud solutions, and comprehensive digital transformation services since 2021.
+                </p>
+                <div className="flex gap-4">
+                  <a href="#" aria-label="LinkedIn" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 group">
+                    <svg className="w-5 h-5 text-gray-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.85-1.54 3.05 0 3.62 2.01 3.62 4.62v4.69z"/>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Twitter" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition-all duration-300 group">
+                    <svg className="w-5 h-5 text-gray-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 4.56c-.89.39-1.84.65-2.84.77a4.93 4.93 0 002.16-2.72c-.95.56-2.01.97-3.13 1.19a4.92 4.92 0 00-8.39 4.48c-4.09-.2-7.72-2.17-10.15-5.15a4.93 4.93 0 001.52 6.57c-.8-.02-1.56-.25-2.22-.62v.06a4.93 4.93 0 003.95 4.83c-.39.11-.8.17-1.22.17-.3 0-.59-.03-.87-.08a4.93 4.93 0 004.6 3.42A9.87 9.87 0 010 21.54a13.94 13.94 0 007.56 2.22c9.05 0 14-7.5 14-14v-.64c.96-.7 1.8-1.56 2.46-2.54z"/>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="GitHub" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-600 transition-all duration-300 group">
+                    <svg className="w-5 h-5 text-gray-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
 
               {/* Core Services */}
@@ -208,15 +233,15 @@ export default function RootLayout({
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                     AI Development
                   </Link></li>
-                  <li><Link href="/devops-cloud" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center gap-2">
+                  <li><Link href="/devops-cloud" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2">
                     <span className="w-2 h-2 bg-cyan-500 rounded-full"></span>
                     DevOps & Cloud
                   </Link></li>
-                  <li><Link href="/it-staffing" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center gap-2">
+                  <li><Link href="/it-staffing" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                     IT Staffing
                   </Link></li>
-                  <li><Link href="/solutions" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center gap-2">
+                  <li><Link href="/solutions" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
                     Industry Solutions
                   </Link></li>
@@ -260,7 +285,7 @@ export default function RootLayout({
 
             {/* Contact Information */}
             <div className="border-t border-gray-700 pt-8 mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -293,8 +318,21 @@ export default function RootLayout({
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1">Office</h4>
+                    <h4 className="font-semibold text-white mb-1">Varanasi Office</h4>
                     <span className="text-gray-300 text-sm">Varanasi, Uttar Pradesh, India</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Noida Virtual Office</h4>
+                    <span className="text-gray-300 text-sm">7th Floor, Plot A/8A, Knowledge Boulevard, Block A, Industrial Area, Sector 62, Noida, Uttar Pradesh</span>
                   </div>
                 </div>
               </div>
