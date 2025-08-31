@@ -105,7 +105,10 @@ export async function POST(request: NextRequest) {
                 connectionSuccess = true;
                 break;
               } catch (error) {
-                console.log(`❌ ${smtpConfig.name} failed:`, error.message);
+                const errorMessage = error && typeof error === 'object' && 'message' in error 
+                  ? (error as { message: string }).message 
+                  : 'Unknown error';
+                console.log(`❌ ${smtpConfig.name} failed:`, errorMessage);
               }
             }
             
@@ -115,6 +118,9 @@ export async function POST(request: NextRequest) {
           }
 
           // Verify connection configuration
+          if (!transporter) {
+            throw new Error('Failed to create email transporter');
+          }
           await transporter.verify();
           console.log('Email connection verified successfully');
 

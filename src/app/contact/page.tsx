@@ -72,7 +72,7 @@ export default function ContactPage() {
           message: result.error || 'Something went wrong. Please try again.'
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: 'error',
         message: 'Network error. Please check your connection and try again.'
@@ -443,7 +443,7 @@ export default function ContactPage() {
                    <option value="25k-50k">$25,000 - $50,000</option>
                    <option value="50k-100k">$50,000 - $100,000</option>
                    <option value="over-100k">Over $100,000</option>
-                   <option value="discuss">Let's discuss</option>
+                   <option value="discuss">Let&apos;s discuss</option>
                  </select>
                </div>
 
@@ -483,7 +483,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-                    placeholder="Tell us about your project requirements, goals, and any specific challenges you're facing..."
+                    placeholder="Tell us about your project requirements, goals, and any specific challenges you&apos;re facing..."
                     suppressHydrationWarning={true}
                   ></textarea>
                </div>
