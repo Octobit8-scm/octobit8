@@ -105,6 +105,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 min-h-screen flex flex-col`}
+        suppressHydrationWarning={true}
       >
         {/* Header with Navigation */}
         <header className="bg-gray-900 shadow sticky top-0 z-50">
@@ -122,29 +123,26 @@ export default function RootLayout({
             {/* Desktop Menu - centralized */}
             <ul className="hidden md:flex gap-6 text-gray-100 font-medium flex-1 justify-center items-center">
               {menuItems.map((item) => {
-                const isActive = typeof window !== 'undefined' && window.location.pathname === (item.href || (item.dropdown && item.dropdown[0]?.href));
                 if (item.dropdown) {
                   return (
                     <li key={item.label} className="relative group">
                       <button
-                        className={`px-4 py-2 transition focus:outline-none flex items-center gap-1 ${isActive ? 'text-blue-400' : ''}`}
+                        className="px-4 py-2 transition focus:outline-none flex items-center gap-1 hover:text-blue-400"
                         type="button"
+                        suppressHydrationWarning={true}
                       >
                         {item.label}
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                       </button>
                       <ul className="absolute left-0 mt-3 w-48 bg-gray-900 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity z-50 border border-gray-700">
-                        {item.dropdown.map((sub) => {
-                          const isSubActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
-                          return (
-                            <li key={sub.href}>
-                              <Link
-                                href={sub.href}
-                                className={`block px-4 py-2 rounded transition ${isSubActive ? 'text-blue-400' : ''}`}
-                              >{sub.label}</Link>
-                            </li>
-                          );
-                        })}
+                        {item.dropdown.map((sub) => (
+                          <li key={sub.href}>
+                            <Link
+                              href={sub.href}
+                              className="block px-4 py-2 rounded transition hover:text-blue-400"
+                            >{sub.label}</Link>
+                          </li>
+                        ))}
                       </ul>
                     </li>
                   );
@@ -153,7 +151,7 @@ export default function RootLayout({
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className={`px-4 py-2 transition focus:outline-none ${isActive ? 'text-blue-400' : ''}`}
+                        className="px-4 py-2 transition focus:outline-none hover:text-blue-400"
                       >
                         {item.label}
                       </Link>
@@ -174,29 +172,25 @@ export default function RootLayout({
               <div className="absolute top-20 left-0 w-full bg-gray-900 shadow-lg z-50 hidden peer-checked:block animate-fade-in">
                 <ul className="flex flex-col gap-2 py-4 px-6 text-gray-100 font-medium">
                   {menuItems.map((item) => {
-                    const isActive = typeof window !== 'undefined' && window.location.pathname === (item.href || (item.dropdown && item.dropdown[0]?.href));
                     return item.dropdown ? (
                       <li key={item.label} className="flex flex-col">
                         <span className="font-semibold px-4 py-2">{item.label}</span>
                         <ul className="pl-4">
-                          {item.dropdown.map((sub) => {
-                            const isSubActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
-                            return (
-                              <li key={sub.href}>
-                                <Link
-                                  href={sub.href}
-                                  className={`block px-4 py-2 rounded transition ${isSubActive ? 'text-blue-400' : ''}`}
-                                >{sub.label}</Link>
-                              </li>
-                            );
-                          })}
+                          {item.dropdown.map((sub) => (
+                            <li key={sub.href}>
+                              <Link
+                                href={sub.href}
+                                className="block px-4 py-2 rounded transition hover:text-blue-400"
+                              >{sub.label}</Link>
+                            </li>
+                          ))}
                         </ul>
                       </li>
                     ) : (
                       <li key={item.href}>
                         <Link
                           href={item.href}
-                          className={`block px-4 py-2 rounded-full transition ${isActive ? 'text-blue-400' : ''}`}
+                          className="block px-4 py-2 rounded-full transition hover:text-blue-400"
                         >
                           {item.label}
                         </Link>

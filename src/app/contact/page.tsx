@@ -1,9 +1,86 @@
 "use client";
 
-
-
+import { useState } from 'react';
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    website: '',
+    projectType: '',
+    budget: '',
+    timeline: '',
+    message: '',
+    additionalInfo: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: result.message
+        });
+        // Reset form on success
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          website: '',
+          projectType: '',
+          budget: '',
+          timeline: '',
+          message: '',
+          additionalInfo: ''
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.error || 'Something went wrong. Please try again.'
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Network error. Please check your connection and try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen">
       {/* Hero Section */}
@@ -214,11 +291,259 @@ export default function ContactPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Tell us about your project and we&apos;ll get back to you with a customized solution.</p>
           </div>
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Get Started with Octobit8</h3>
-            <p className="text-gray-700 text-center mb-6">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
-            <div className="text-center">
-              <a href="mailto:contact@octobit8.com" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition text-lg">Email Us</a>
-            </div>
+            <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">Get Started with Octobit8</h3>
+            <p className="text-gray-700 text-center mb-8">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
+            
+                         <form onSubmit={handleSubmit} className="space-y-6">
+               {/* Personal Information */}
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div>
+                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                     First Name <span className="text-red-500">*</span>
+                   </label>
+                                       <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Enter your first name"
+                      suppressHydrationWarning={true}
+                    />
+                 </div>
+                 <div>
+                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                     Last Name <span className="text-red-500">*</span>
+                   </label>
+                                       <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Enter your last name"
+                      suppressHydrationWarning={true}
+                    />
+                 </div>
+               </div>
+
+                             {/* Contact Information */}
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div>
+                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                     Email Address <span className="text-red-500">*</span>
+                   </label>
+                                       <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Enter your email address"
+                      suppressHydrationWarning={true}
+                    />
+                 </div>
+                 <div>
+                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                     Phone Number
+                   </label>
+                                       <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Enter your phone number"
+                      suppressHydrationWarning={true}
+                    />
+                 </div>
+               </div>
+
+                             {/* Company Information */}
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div>
+                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                     Company Name
+                   </label>
+                                       <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Enter your company name"
+                      suppressHydrationWarning={true}
+                    />
+                 </div>
+                 <div>
+                   <label htmlFor="website" className="block text-sm font-medium text-gray-700 mb-2">
+                     Website
+                   </label>
+                                       <input
+                      type="url"
+                      id="website"
+                      name="website"
+                      value={formData.website}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      placeholder="https://your-website.com"
+                      suppressHydrationWarning={true}
+                    />
+                 </div>
+               </div>
+
+                             {/* Project Type */}
+               <div>
+                 <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
+                   Project Type <span className="text-red-500">*</span>
+                 </label>
+                                   <select
+                    id="projectType"
+                    name="projectType"
+                    value={formData.projectType}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    suppressHydrationWarning={true}
+                  >
+                   <option value="">Select a project type</option>
+                   <option value="ai-development">AI Development</option>
+                   <option value="devops-cloud">DevOps & Cloud Solutions</option>
+                   <option value="it-staffing">IT Staffing</option>
+                   <option value="custom-software">Custom Software Development</option>
+                   <option value="consultation">Consultation</option>
+                   <option value="other">Other</option>
+                 </select>
+               </div>
+
+                             {/* Budget Range */}
+               <div>
+                 <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                   Budget Range
+                 </label>
+                                   <select
+                    id="budget"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    suppressHydrationWarning={true}
+                  >
+                   <option value="">Select budget range</option>
+                   <option value="under-10k">Under $10,000</option>
+                   <option value="10k-25k">$10,000 - $25,000</option>
+                   <option value="25k-50k">$25,000 - $50,000</option>
+                   <option value="50k-100k">$50,000 - $100,000</option>
+                   <option value="over-100k">Over $100,000</option>
+                   <option value="discuss">Let's discuss</option>
+                 </select>
+               </div>
+
+               {/* Timeline */}
+               <div>
+                 <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
+                   Project Timeline
+                 </label>
+                                   <select
+                    id="timeline"
+                    name="timeline"
+                    value={formData.timeline}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    suppressHydrationWarning={true}
+                  >
+                   <option value="">Select timeline</option>
+                   <option value="asap">ASAP</option>
+                   <option value="1-3-months">1-3 months</option>
+                   <option value="3-6-months">3-6 months</option>
+                   <option value="6-12-months">6-12 months</option>
+                   <option value="over-12-months">Over 12 months</option>
+                   <option value="flexible">Flexible</option>
+                 </select>
+               </div>
+
+                             {/* Project Description */}
+               <div>
+                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                   Project Description <span className="text-red-500">*</span>
+                 </label>
+                                   <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                    placeholder="Tell us about your project requirements, goals, and any specific challenges you're facing..."
+                    suppressHydrationWarning={true}
+                  ></textarea>
+               </div>
+
+               {/* Additional Information */}
+               <div>
+                 <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700 mb-2">
+                   Additional Information
+                 </label>
+                                   <textarea
+                    id="additionalInfo"
+                    name="additionalInfo"
+                    rows={3}
+                    value={formData.additionalInfo}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                    placeholder="Any other details, questions, or specific requirements..."
+                    suppressHydrationWarning={true}
+                  ></textarea>
+               </div>
+
+                             {/* Status Messages */}
+               {submitStatus.type && (
+                 <div className={`text-center p-4 rounded-lg ${
+                   submitStatus.type === 'success' 
+                     ? 'bg-green-100 text-green-800 border border-green-200' 
+                     : 'bg-red-100 text-red-800 border border-red-200'
+                 }`}>
+                   {submitStatus.message}
+                 </div>
+               )}
+
+               {/* Submit Button */}
+               <div className="text-center pt-4">
+                                   <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className={`inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-lg min-w-[200px] ${
+                      isSubmitting 
+                        ? 'opacity-50 cursor-not-allowed' 
+                        : 'hover:scale-105'
+                    }`}
+                    suppressHydrationWarning={true}
+                  >
+                   {isSubmitting ? (
+                     <div className="flex items-center justify-center gap-2">
+                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                       Sending...
+                     </div>
+                   ) : (
+                     'Send Message'
+                   )}
+                 </button>
+               </div>
+
+               {/* Form Note */}
+               <div className="text-center text-sm text-gray-500 mt-4">
+                 <p>By submitting this form, you agree to our <a href="/privacy" className="text-blue-600 hover:text-blue-800 underline">Privacy Policy</a> and <a href="/terms" className="text-blue-600 hover:text-blue-800 underline">Terms of Service</a>.</p>
+               </div>
+            </form>
           </div>
         </div>
       </section>
