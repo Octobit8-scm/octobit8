@@ -94,7 +94,7 @@ export default function Home() {
               Transform Your Business with <span className="text-blue-700">Innovative Solutions</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-xl mb-2 text-center">
-              Unlock innovation, agility, and growth with Octobit8. We deliver comprehensive solutions—AI development, DevOps & cloud, IT staffing, industry solutions, and career development.
+              Unlock innovation, agility, and growth with Octobit8. We deliver comprehensive solutions—AI development, DevOps & cloud, digital marketing, IT staffing, industry solutions, and career development.
             </p>
 
             <a href="/contact" className="inline-block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 text-white px-12 py-4 rounded-full font-semibold shadow-2xl text-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200 ring-offset-2 ring-offset-white glow-effect">Get Started</a>
@@ -265,6 +265,53 @@ export default function Home() {
         </div>
       </section>
 
+       {/* Digital Marketing Section */}
+       <section className="w-full py-20 px-4 bg-gradient-to-br from-green-50 via-white to-emerald-100">
+         <div className="container mx-auto">
+           <div className="flex flex-col items-center mb-10">
+             <div className="flex items-center gap-3 mb-2">
+               <h2 className="text-3xl font-bold text-green-800 text-center">Digital Marketing</h2>
+             </div>
+             <p className="text-lg text-gray-700 text-center max-w-2xl">Drive growth and increase brand visibility with our comprehensive digital marketing strategies.</p>
+           </div>
+           <div className="grid md:grid-cols-3 gap-8">
+             <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center transition-transform hover:scale-105">
+               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                 </svg>
+               </div>
+               <h3 className="text-xl font-bold text-green-800 mb-3 text-center">SEO & Analytics</h3>
+               <p className="text-gray-700 text-center text-sm mb-4">Improve search rankings and track performance with data-driven insights.</p>
+               <a href="/digital-marketing" className="text-green-600 font-semibold hover:text-green-800 transition">Learn More →</a>
+             </div>
+             <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center transition-transform hover:scale-105">
+               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                 <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                 </svg>
+               </div>
+               <h3 className="text-xl font-bold text-blue-800 mb-3 text-center">Social Media Marketing</h3>
+               <p className="text-gray-700 text-center text-sm mb-4">Build brand presence and engage with your audience across platforms.</p>
+               <a href="/digital-marketing" className="text-blue-600 font-semibold hover:text-blue-800 transition">Learn More →</a>
+             </div>
+             <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center transition-transform hover:scale-105">
+               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                 <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                 </svg>
+               </div>
+               <h3 className="text-xl font-bold text-purple-800 mb-3 text-center">PPC & Advertising</h3>
+               <p className="text-gray-700 text-center text-sm mb-4">Drive targeted traffic and generate leads with strategic paid campaigns.</p>
+               <a href="/digital-marketing" className="text-purple-600 font-semibold hover:text-purple-800 transition">Learn More →</a>
+             </div>
+           </div>
+           <div className="text-center mt-8">
+             <a href="/digital-marketing" className="inline-block bg-gradient-to-r from-green-600 via-emerald-500 to-blue-400 text-white px-8 py-3 rounded-full font-semibold transition hover:scale-105">Explore Digital Marketing</a>
+           </div>
+         </div>
+       </section>
+
 
 
       {/* How It Works / Process */}
@@ -431,7 +478,7 @@ export default function Home() {
             <div className="flex items-center gap-3 mb-4">
               <h2 className="text-3xl font-bold text-white">Ready to Transform Your Business?</h2>
             </div>
-            <p className="text-lg text-white mb-8">Contact our experts to start your journey with AI, DevOps, IT staffing, or career development today.</p>
+            <p className="text-lg text-white mb-8">Contact our experts to start your journey with AI, DevOps, digital marketing, IT staffing, or career development today.</p>
             <a href="/contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-semibold shadow hover:bg-blue-100 transition">Get in Touch</a>
           </div>
         </div>

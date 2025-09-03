@@ -19,6 +19,13 @@ export default function SolutionsPage() {
       href: "/solutions/edtech"
     },
     {
+      title: "Digital Marketing",
+      description: "SEO, PPC, social, content, and analytics to grow your brand.",
+      icon: "📈",
+      color: "green",
+      href: "/solutions/digital-marketing"
+    },
+    {
       title: "Logistics",
       description: "Supply chain optimization, real-time tracking, and logistics management solutions.",
       icon: "🚚",
@@ -50,6 +57,36 @@ export default function SolutionsPage() {
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
             Tailored digital solutions designed specifically for your industry needs and challenges
           </p>
+        </div>
+      </section>
+
+      {/* Solutions Navigation Menu */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Quick Navigation</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Jump directly to the solution that fits your industry needs
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {solutions.map((solution, index) => (
+              <Link 
+                key={index}
+                href={solution.href}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg ${
+                  solution.color === 'blue' ? 'bg-blue-100 text-blue-800 hover:bg-blue-200' :
+                  solution.color === 'green' ? 'bg-green-100 text-green-800 hover:bg-green-200' :
+                  solution.color === 'purple' ? 'bg-purple-100 text-purple-800 hover:bg-purple-200' :
+                  'bg-orange-100 text-orange-800 hover:bg-orange-200'
+                }`}
+              >
+                <span className="mr-2">{solution.icon}</span>
+                {solution.title}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
